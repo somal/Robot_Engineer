@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/install
+
+Name: motion_editor_core
+Description: Description of motion_editor_core
+Version: 0.0.0
+Cflags: -I/home/somal/catkin_ws/install/include
+Libs: -L/home/somal/catkin_ws/install/lib 
+Requires: message_runtime

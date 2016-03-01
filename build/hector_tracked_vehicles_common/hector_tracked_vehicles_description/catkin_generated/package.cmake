@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_tracked_vehicles_description")
+set(hector_tracked_vehicles_description_MAINTAINER "Stefan Kohlbrecher <kohlbrecher@sim.tu-darmstadt.de>")
+set(hector_tracked_vehicles_description_DEPRECATED "")
+set(hector_tracked_vehicles_description_VERSION "0.1.0")
+set(hector_tracked_vehicles_description_BUILD_DEPENDS )
+set(hector_tracked_vehicles_description_RUN_DEPENDS "xacro")
+set(hector_tracked_vehicles_description_BUILDTOOL_DEPENDS "catkin")

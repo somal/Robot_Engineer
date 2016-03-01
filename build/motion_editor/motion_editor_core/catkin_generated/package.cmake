@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "motion_editor_core")
+set(motion_editor_core_MAINTAINER "Martin Oehler <oehler@sim.tu-darmstadt.de>")
+set(motion_editor_core_DEPRECATED "")
+set(motion_editor_core_VERSION "0.0.0")
+set(motion_editor_core_BUILD_DEPENDS "message_generation" "actionlib" "actionlib_msgs")
+set(motion_editor_core_RUN_DEPENDS "sensor_msgs" "trajectory_msgs" "message_runtime" "actionlib" "actionlib_msgs")
+set(motion_editor_core_BUILDTOOL_DEPENDS "catkin" "python-catkin-pkg")

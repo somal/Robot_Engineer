@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<robot name="bertl_ugv" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+    <!--Include complete standard bertl setup-->
+    <xacro:include filename="$(find hector_tracked_vehicles_description)/urdf/bertl_ugv_vision_box.urdf.xacro"/>
+    
+    <!-- Add gazebo specific additions -->
+    <xacro:include filename="$(find taurob_tracker_description)/urdf/tracker_chassis.gazebo.xacro.xml" />
+    
+    <!--Choose one of two modes of simulated locomotion-->
+    <!--<xacro:tracker_chassis_gazebo_fake_wheels_macro />-->
+    <xacro:tracker_chassis_gazebo_force_based_move_macro />    
+    
+</robot>

@@ -1,0 +1,6 @@
+set(motion_editor_core_SETUP_PY_VERSION "0.0.0")
+set(motion_editor_core_SETUP_PY_SCRIPTS "scripts/kinematic_trajectory_controller;scripts/motion_service")
+set(motion_editor_core_SETUP_PY_PACKAGES "motion_editor_core")
+set(motion_editor_core_SETUP_PY_PACKAGE_DIRS "src/motion_editor_core")
+set(motion_editor_core_SETUP_PY_MODULES "")
+set(motion_editor_core_SETUP_PY_MODULE_DIRS "")

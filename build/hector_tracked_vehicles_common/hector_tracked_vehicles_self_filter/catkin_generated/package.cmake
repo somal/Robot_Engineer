@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_tracked_vehicles_self_filter")
+set(hector_tracked_vehicles_self_filter_MAINTAINER "kohlbrecher <kohlbrecher@todo.todo>")
+set(hector_tracked_vehicles_self_filter_DEPRECATED "")
+set(hector_tracked_vehicles_self_filter_VERSION "0.0.0")
+set(hector_tracked_vehicles_self_filter_BUILD_DEPENDS )
+set(hector_tracked_vehicles_self_filter_RUN_DEPENDS )
+set(hector_tracked_vehicles_self_filter_BUILDTOOL_DEPENDS "catkin")

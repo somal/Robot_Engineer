@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+
+<launch>
+    <!-- 
+    Mission name is set in separate launch file, so it can be included
+    in different places
+    -->
+    <include file="$(find hector_launch)/launch/mission_name.launch" />
+
+    <arg name="use_smach" default="true"/>
+    <arg name="use_ground_truth_for_tf" default="true"/>
+
+    <!--Below only started on real robot-->
+    <group if="$(optenv REALROBOT 0)">
+      <include file="$(find monstertruck_robot)/launch/bringup.launch">
+        <arg name="robot_description" value="$(find xacro)/xacro.py $(find hector_tracked_vehicles_description)/urdf/obelix_ugv_vision_box.urdf.xacro" />
+        <arg name="publish_odometry_to_tf" value="false" />
+	<arg name="start_thermaleye_camera" value="0" />
+	<arg name="start_openni2_camera" value="0" />
+      </include>
+      
+      <!--Split out laser driver as urg_node used on hector2 now-->
+      
+      <include file="$(find monstertruck_urdf)/hector/hokuyo_ids_$(optenv ROBOT).launch" />
+      <node pkg="hokuyo_node" type="hokuyo_node" name="hokuyo_node" ns="laser1" output="screen">
+        <param name="min_ang" value=" -2.2689" />
+        <param name="max_ang" value="  2.2689" />
+        <param name="frame_id" value="/laser1_frame" />
+      </node>
+      
+            
+      <!--<include file="$(find hector_jasmine_launch)/launch/urg_node.launch"/>-->
+      
+      <include file="$(find hector_jasmine_launch)/launch/base_control_obelix.launch"/>
+      <node pkg="hector_flipper_cmd_translator" type="element_flipper_translator.py" name="element_flipper_translator" output="screen"/>
+      
+      
+      <!--<include file="$(find chr_6d_imu_cpp)/launch/publish_imu_quaternion.launch"/>-->
+      
+      <include file="$(find hector_mpu6050_imu_driver)/launch/hector_mpu6050_imu_driver.launch">
+	<arg name="port" value="/dev/mpu6050_imu_0" />
+      </include>
+            
+
+      
+      
+      <include file="$(find hector_co2_processing)/launch/co2process.launch" />
+      
+      <include file="$(find gscam)/examples/logitech_c920_h264_full_hd.launch"/>
+      
+      <!--Moved here as not used when using ground truth in sim-->
+      <include file="$(find hector_imu_tools)/launch/jasmine_robot.launch"/>
+      
+      <node name="relay_real_robot_scan" pkg="topic_tools" type="relay" args="/thor_mang/last /multi_sensor_scan" />
+      
+      <include file="$(find hector_sensor_proc_launch)/launch/obelix_odom_fusion.launch">      
+      </include>
+
+    </group>
+
+    <!--Only started in sim-->
+    <group unless="$(optenv REALROBOT 0)">-->
+      <include file="$(find hector_jasmine_launch)/launch/simulator.launch">
+        <arg name="use_ground_truth_for_tf" value="$(arg use_ground_truth_for_tf)"/>
+        <arg name="robot_description" value="$(find xacro)/xacro.py $(find hector_tracked_vehicles_description)/urdf/obelix_ugv_vision_box.urdf.xacro" />
+      </include>
+      
+      <!-- Load joint controller configurations from YAML file to parameter server -->
+      <rosparam file="$(find hector_tracked_vehicles_description)/config/obelix_flippers_gazebo.yaml" command="load"/>
+
+      <!-- load the controllers -->
+      <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+            output="screen" ns="obelix_robot"
+            args="joint_state_controller flipper_traj_controller"/>
+
+      <node name="relay_flipper_joint_states" pkg="topic_tools" type="relay" args="/obelix_robot/joint_states /joint_states" respawn="true"/>
+      
+      <node name="gazebo_laser_intensity_modifier_node" pkg="vigir_lidar_intensity_modifier" type="laser_intensity_modifier_node" output="screen">
+        <remap from="scan" to="/head_lidar/scan"/>
+        <remap from="scan_out" to="/multi_sensor_scan"/>
+      </node>
+      
+      <include file="$(find hector_icp_mapping)/launch/multisensor_head_controller.launch" />
+      
+      <group unless="$(arg use_ground_truth_for_tf)">
+	
+	<node name="relay_imu_from_gazebo" pkg="topic_tools" type="relay" args="/imu_quat /imu/data" respawn="true"/>
+      
+        <include file="$(find hector_sensor_proc_launch)/launch/obelix_odom_fusion.launch">      
+        </include>
+      </group>
+      
+    </group>
+    
+    <!--*******************Have to decide wether to publish tf*********************-->
+    <!--
+    <group if="$(arg use_ground_truth_for_tf)">
+      <include file="$(find hector_onboard_launch)/launch/mapping.launch">
+        <arg name="pub_map_odom_transform" value="false"/>
+        <arg name="use_tf_pose_start_estimate" value="true"/>        
+        <arg name="odom_frame" value="base_stabilized"/>
+        <arg name="map_topic" value="scanmatcher_map_remap_away"/>
+      </include>     
+    </group>  
+  
+    <group unless="$(arg use_ground_truth_for_tf)">
+      <include file="$(find hector_onboard_launch)/launch/mapping.launch">
+        <arg name="pub_map_odom_transform" value="true"/>
+        <arg name="odom_frame" value="base_stabilized"/>       
+      </include>
+    </group>
+    -->
+    <!--*******************Have to decide wether to publish tf*********************-->
+
+    <!--<include file="$(find hector_mapping_known_poses)/launch/mapping_filter_veil_wall.launch" />-->
+    
+    <include file="$(find hector_launch)/launch/3d_mapping.launch" />
+    
+    <!--<include file="$(find hector_launch)/launch/navigation.launch" />-->
+    <include file="$(find hector_move_base)/launch/hector_move_base_bertl.launch">
+      <arg name="use_alternate_planner" value="false" />  
+    </include>
+    
+    <include file="$(find vehicle_controller)/launch/obelix_controller.launch" />
+    
+    <include file="$(find hector_launch)/launch/worldmodel.launch" />
+    <include file="$(find hector_thermal_self_filter)/launch/thermal_self_filter_obelix_ugv.launch" />
+    
+    <group if="$(arg use_smach)">
+    	<include file="$(find hector_launch)/launch/behavior.launch"/>
+    </group>
+    <group unless="$(arg use_smach)">
+    	<include file="$(find hector_launch)/launch/sar.launch" />
+    </group>
+    
+    <include file="$(find hector_launch)/launch/taskallocation.launch" />
+    
+    <include file="$(find hector_octomap_server)/launch/octomap_server_hector_ugv.launch">
+      <arg name="point_cloud" value="/scan_cloud_filtered" />
+    </include>
+    
+    <node name="relay_mid_lvl_map" pkg="topic_tools" type="relay" args="/map_mid_level /map" />
+       
+    <rosparam file="$(find hector_tracked_vehicles_self_filter)/config/self_filter_obelix_multisensor_experimental.yaml" command="load" ns="nav_lidar_self_filter_lidar" />
+    <!--<rosparam command="load" file="$(find vigir_laserscan_to_pointcloud)/config/argo_scan_filter.yaml" ns="nav_lidar_scan_filter" />-->
+    <include file="$(find hector_sensor_proc_launch)/launch/lidar_proc.launch">
+      <arg name="scan_topic" value="/multi_sensor_scan"/>  
+      <arg name="use_high_fidelity_projection" value="true"/>  
+      <arg name="lidar_filter_target_frame" value="/head_lidar_mount_link"/>  
+    </include>
+    
+
+    
+</launch>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <name>rqt_motion_editor</name>
+  <version>0.0.0</version>
+  <description>The rqt_motion_editor package</description>
+
+  <maintainer email="oehler@sim.tu-darmstadt.de">Martin Oehler</maintainer>
+  
+  <author email="oehler@sim.tu-darmstadt.de">Martin Oehler</author>
+  <author email="scholz@sim.tu-darmstadt.de">Dorian Scholz</author>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>motion_editor_core</build_depend>
+  <run_depend>motion_editor_core</run_depend>
+
+  <export>
+    <rqt_gui plugin="${prefix}/plugin.xml"/>
+  </export>
+  
+</package>

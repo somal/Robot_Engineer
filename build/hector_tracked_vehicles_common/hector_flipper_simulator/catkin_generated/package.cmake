@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_flipper_simulator")
+set(hector_flipper_simulator_MAINTAINER "Christian Rose <christian.j.rose@gmx.de>")
+set(hector_flipper_simulator_DEPRECATED "")
+set(hector_flipper_simulator_VERSION "0.0.1")
+set(hector_flipper_simulator_BUILD_DEPENDS "roscpp" "std_msgs")
+set(hector_flipper_simulator_RUN_DEPENDS "roscpp" "std_msgs")
+set(hector_flipper_simulator_BUILDTOOL_DEPENDS "catkin")

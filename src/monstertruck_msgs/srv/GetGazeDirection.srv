@@ -1,0 +1,8 @@
+# Turn camera head to look at point that was not covered yet)
+
+time stamp
+
+---
+# point to look at
+geometry_msgs/PointStamped pointOut
+

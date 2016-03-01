@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node pkg="vehicle_controller" type="controller_node" name="vehicle_controller" output="screen">
+    <param name="carrot_distance" value="0.5" />
+    <param name="speed" value="0.25" />
+    <param name="max_controller_speed" value="1.0" />
+    <param name="velocity_blocked_limit" value="0.8" />
+
+    <param name="vehicle_type" value="monstertruck" />
+    <param name="vehicle_control_type" value="ackermann_steering" />
+
+    <param name="goal_position_tolerance" value="0.1" />
+    <param name="goal_angle_tolerance" value="0.087266463" /><!-- 5 deg -->
+    <param name="pd_params" value="PdParams" />
+
+    <param name="check_stuck" value="true" />
+    <param name="stuck_detection_window" value="4.0" />
+  </node>
+</launch>
+

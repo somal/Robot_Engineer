@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_sensor_proc_launch")
+set(hector_sensor_proc_launch_MAINTAINER "kohlbrecher <kohlbrecher@todo.todo>")
+set(hector_sensor_proc_launch_DEPRECATED "")
+set(hector_sensor_proc_launch_VERSION "0.0.0")
+set(hector_sensor_proc_launch_BUILD_DEPENDS )
+set(hector_sensor_proc_launch_RUN_DEPENDS )
+set(hector_sensor_proc_launch_BUILDTOOL_DEPENDS "catkin")

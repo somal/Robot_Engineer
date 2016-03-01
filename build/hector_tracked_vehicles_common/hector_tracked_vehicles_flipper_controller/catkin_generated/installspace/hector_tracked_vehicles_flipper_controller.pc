@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/install
+
+Name: hector_tracked_vehicles_flipper_controller
+Description: Description of hector_tracked_vehicles_flipper_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/somal/catkin_ws/install/lib 
+Requires: roscpp sensor_msgs

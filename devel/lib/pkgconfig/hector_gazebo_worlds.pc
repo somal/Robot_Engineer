@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/devel
+
+Name: hector_gazebo_worlds
+Description: Description of hector_gazebo_worlds
+Version: 0.3.7
+Cflags: 
+Libs: -L/home/somal/catkin_ws/devel/lib 
+Requires: 

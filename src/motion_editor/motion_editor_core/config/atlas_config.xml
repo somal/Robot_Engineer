@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config>
+	<robot name="atlas">
+	  <group name="right_arm" type="arm" topic="right_arm_traj_controller/command">
+	    <joint name="r_arm_shz"/>
+	    <joint name="r_arm_shx"/>
+	    <joint name="r_arm_ely"/>
+	    <joint name="r_arm_elx"/>
+	    <joint name="r_arm_wry"/>
+	    <joint name="r_arm_wrx"/>
+	    <joint name="r_arm_wry2"/>    
+	  </group>
+
+	  <group name="left_arm" type="arm" topic="left_arm_traj_controller/command">
+	    <joint name="l_arm_shz" mirrored="true"/>
+	    <joint name="l_arm_shx" mirrored="true"/>
+	    <joint name="l_arm_ely"/>
+	    <joint name="l_arm_elx" mirrored="true"/>
+	    <joint name="l_arm_wry"/>
+	    <joint name="l_arm_wrx" mirrored="true"/>
+	    <joint name="l_arm_wry2" mirrored="true"/>  
+	  </group>
+
+          <group name="neck" type="neck" topic="neck_traj_controller/command">
+            <joint name="neck_ry"/>
+          </group>
+
+          <group name="torso" type="torso" topic="torso_traj_controller/command">
+            <joint name="waist_pan"/>
+            <joint name="waist_tilt"/>
+          </group>
+
+	  <group name="right_leg" type="leg" topic="right_leg_traj_controller/command">
+	    <joint name="r_leg_hpz"/>
+	    <joint name="r_leg_hpx"/>
+	    <joint name="r_leg_hpy"/>
+	    <joint name="r_leg_kny"/>
+	    <joint name="r_leg_aky"/>
+	    <joint name="r_leg_akx"/>  
+	  </group>
+
+	  <group name="left_leg" type="leg" topic="left_leg_traj_controller/command">
+	    <joint name="l_leg_hpz" mirrored="true"/>
+	    <joint name="l_leg_hpx" mirrored="true"/>
+	    <joint name="l_leg_hpy"/>
+	    <joint name="l_leg_kny"/>
+	    <joint name="l_leg_aky"/>
+	    <joint name="l_leg_akx" mirrored="true"/>  
+	  </group>
+	</robot>
+
+	<target name="Atlas" joint_state_topic="/atlas/joint_states" publish_prefix="/joint_controllers"/>
+	<target name="Ghost" joint_state_topic="/flor/ghost/get_joint_states" publish_prefix="/flor/ghost/set_joint_states"/>	
+</config>

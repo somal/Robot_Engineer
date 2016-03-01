@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "rqt_motion_editor")
+set(rqt_motion_editor_MAINTAINER "Martin Oehler <oehler@sim.tu-darmstadt.de>")
+set(rqt_motion_editor_DEPRECATED "")
+set(rqt_motion_editor_VERSION "0.0.0")
+set(rqt_motion_editor_BUILD_DEPENDS "motion_editor_core")
+set(rqt_motion_editor_RUN_DEPENDS "motion_editor_core")
+set(rqt_motion_editor_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,8 @@
+# Turn camera head to look at point (given in an arbitrary frame known to tf)
+geometry_msgs/PointStamped point
+
+# Duration for which this command is valid
+# If zero, the service call returns immediately and the cameras look at the given direction until a new command is received.
+duration duration
+---
+# empty response

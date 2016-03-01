@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_gazebo_plugins")
+set(hector_gazebo_plugins_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
+set(hector_gazebo_plugins_DEPRECATED "")
+set(hector_gazebo_plugins_VERSION "0.3.7")
+set(hector_gazebo_plugins_BUILD_DEPENDS "roscpp" "gazebo" "std_msgs" "std_srvs" "geometry_msgs" "nav_msgs" "tf" "dynamic_reconfigure")
+set(hector_gazebo_plugins_RUN_DEPENDS "roscpp" "gazebo_ros" "std_msgs" "std_srvs" "geometry_msgs" "nav_msgs" "tf" "dynamic_reconfigure")
+set(hector_gazebo_plugins_BUILDTOOL_DEPENDS "catkin")

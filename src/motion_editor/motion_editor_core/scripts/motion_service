@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+
+import roslib
+
+pkg = 'motion_editor_core'
+roslib.load_manifest(pkg)
+
+from motion_editor_core.motion_service import main
+
+main()

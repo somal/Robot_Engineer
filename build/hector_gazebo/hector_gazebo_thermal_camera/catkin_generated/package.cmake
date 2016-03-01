@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_gazebo_thermal_camera")
+set(hector_gazebo_thermal_camera_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
+set(hector_gazebo_thermal_camera_DEPRECATED "")
+set(hector_gazebo_thermal_camera_VERSION "0.3.7")
+set(hector_gazebo_thermal_camera_BUILD_DEPENDS "roscpp" "nodelet" "gazebo" "image_transport" "dynamic_reconfigure" "driver_base" "gazebo_plugins")
+set(hector_gazebo_thermal_camera_RUN_DEPENDS "roscpp" "nodelet" "gazebo_ros" "image_transport" "dynamic_reconfigure" "driver_base" "gazebo_plugins")
+set(hector_gazebo_thermal_camera_BUILDTOOL_DEPENDS "catkin")

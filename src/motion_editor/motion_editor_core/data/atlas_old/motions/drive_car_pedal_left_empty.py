@@ -1,0 +1,13 @@
+{ 'drive_car_pedal_left_empty': { 'l_arm': [],
+                                  'l_leg': [ { 'duration': 1.0,
+                                               'name': u'vm_leg_l_pedal_left_empty',
+                                               'positions': [ 0.1281,
+                                                              0.0273,
+                                                              -1.75,
+                                                              1.9382,
+                                                              -0.229,
+                                                              -0.0268],
+                                               'starttime': 0.0}],
+                                  'r_arm': [],
+                                  'r_leg': [],
+                                  'torso': []}}

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+  <node pkg="hector_flipper_simulator" type="hector_flipper_simulator_node" name="hector_flipper_simulator" output="screen">
+    
+  </node>
+</launch>
+  
+  

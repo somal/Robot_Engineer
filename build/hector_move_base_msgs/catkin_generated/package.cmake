@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_move_base_msgs")
+set(hector_move_base_msgs_MAINTAINER "Stefan Kohlbrecher <kohlbrecher@sim.tu-darmstadt.de>")
+set(hector_move_base_msgs_DEPRECATED "")
+set(hector_move_base_msgs_VERSION "0.1.0")
+set(hector_move_base_msgs_BUILD_DEPENDS "std_msgs" "actionlib_msgs" "geometry_msgs" "nav_msgs")
+set(hector_move_base_msgs_RUN_DEPENDS "std_msgs" "actionlib_msgs" "geometry_msgs" "nav_msgs")
+set(hector_move_base_msgs_BUILDTOOL_DEPENDS "catkin")

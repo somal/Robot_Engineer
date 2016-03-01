@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<launch>
+    <param name="competition" value="RRL_2013" />
+    <param name="mission" value="BCAuto" /> <!-- Prelim1, Prelim2, ..., Semi1, Semi2, Final, BCAuto -->
+    <param name="team" value="HectorDarmstadt" />
+
+    <arg name="use_smach" default="true"/>
+    <arg name="use_ground_truth_for_tf" default="false"/>
+
+    <group if="$(optenv REALROBOT 0)">
+      <include file="$(find monstertruck_robot)/launch/bringup.launch">
+        <arg name="robot_description" value="$(find xacro)/xacro.py $(find hector_tracked_vehicles_description)/urdf/obelix_ugv_vision_box_small_arm.urdf.xacro" />
+        <arg name="publish_odometry_to_tf" value="false" />
+      </include>
+
+      <include file="$(find hector_jasmine_launch)/launch/base_control_obelix.launch"/>
+      <include file="$(find chr_6d_imu_cpp)/launch/publish_imu_quaternion.launch"/>
+
+
+<!--      <node pkg="tf" type="static_transform_publisher" name="base_link_to_base_footprint_broadcaster" args="0 0 0 0 0 0 base_link base_footprint 100" />-->
+
+    </group>
+
+    <group unless="$(optenv REALROBOT 0)">-->
+      <include file="$(find hector_jasmine_launch)/launch/simulator.launch">
+        <arg name="use_ground_truth_for_tf" value="$(arg use_ground_truth_for_tf)"/>
+      </include>
+    </group>
+
+    <include file="$(find hector_imu_tools)/launch/jasmine_robot.launch"/>
+
+    <include file="$(find hector_launch)/launch/mapping.launch">
+     <!-- <arg name="pub_map_odom_transform" value="false"/>-->
+      <arg name="odom_frame" value="base_stabilized"/>
+    </include>
+
+    <include file="$(find hector_launch)/launch/3d_mapping.launch" />
+
+    <!--<include file="$(find hector_launch)/launch/navigation.launch" />-->
+    <include file="$(find hector_move_base)/launch/hector_move_base.launch">
+      <arg name="use_alternate_planner" value="false" />
+    </include>
+
+    <include file="$(find monstertruck_controller)/launch/obelix_controller.launch" />
+
+    <include file="$(find hector_launch)/launch/worldmodel.launch" />
+
+    <group if="$(arg use_smach)">
+    	<include file="$(find hector_launch)/launch/behavior.launch"/>
+    </group>
+    <group unless="$(arg use_smach)">
+    	<include file="$(find hector_launch)/launch/sar.launch" />
+    </group>
+
+    <include file="$(find hector_launch)/launch/taskallocation.launch" />
+
+    <include file="$(find hector_octomap_server)/launch/octomap_server_hector_ugv.launch" />
+</launch>

@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "vehicle_controller")
+set(vehicle_controller_MAINTAINER "Stefan Kohlbrecher <kohlbrecher@sim.tu-darmstadt.de>")
+set(vehicle_controller_DEPRECATED "")
+set(vehicle_controller_VERSION "0.0.1")
+set(vehicle_controller_BUILD_DEPENDS "tf" "hector_move_base_msgs" "monstertruck_msgs" "nav_msgs" "geometry_msgs" "cmake_modules" "dynamic_reconfigure")
+set(vehicle_controller_RUN_DEPENDS "tf" "hector_move_base_msgs" "monstertruck_msgs" "nav_msgs" "geometry_msgs" "dynamic_reconfigure")
+set(vehicle_controller_BUILDTOOL_DEPENDS "catkin")

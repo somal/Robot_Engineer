@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="robot_config" default="thor"/>
+  <arg name="cmd_topic" default="/flor/ghost/set_joint_states"/>
+
+  <node name="kinematic_trajectory_controller" pkg="motion_editor_core" type="kinematic_trajectory_controller" respawn="false" output="screen">
+    <param name="robot_config" value="$(arg robot_config)"/>
+    <param name="cmd_topic" value="$(arg cmd_topic)"/>
+  </node>
+</launch>

@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "monstertruck_msgs")
+set(monstertruck_msgs_MAINTAINER "Stefan Kohlbrecher <kohlbrecher@sim.tu-darmstadt.de>")
+set(monstertruck_msgs_DEPRECATED "")
+set(monstertruck_msgs_VERSION "0.1.0")
+set(monstertruck_msgs_BUILD_DEPENDS "geometry_msgs" "actionlib_msgs")
+set(monstertruck_msgs_RUN_DEPENDS "geometry_msgs" "actionlib_msgs")
+set(monstertruck_msgs_BUILDTOOL_DEPENDS "catkin")

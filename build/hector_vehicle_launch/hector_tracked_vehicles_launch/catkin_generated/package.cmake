@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_tracked_vehicles_launch")
+set(hector_tracked_vehicles_launch_MAINTAINER "kohlbrecher <kohlbrecher@todo.todo>")
+set(hector_tracked_vehicles_launch_DEPRECATED "")
+set(hector_tracked_vehicles_launch_VERSION "0.0.0")
+set(hector_tracked_vehicles_launch_BUILD_DEPENDS )
+set(hector_tracked_vehicles_launch_RUN_DEPENDS )
+set(hector_tracked_vehicles_launch_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_components_description")
+set(hector_components_description_MAINTAINER "Stefan Kohlbrecher <kohlbrecher@sim.tu-darmstadt.de>")
+set(hector_components_description_DEPRECATED "")
+set(hector_components_description_VERSION "0.4.1")
+set(hector_components_description_BUILD_DEPENDS )
+set(hector_components_description_RUN_DEPENDS "xacro" "hector_sensors_description" "hector_xacro_tools")
+set(hector_components_description_BUILDTOOL_DEPENDS "catkin")

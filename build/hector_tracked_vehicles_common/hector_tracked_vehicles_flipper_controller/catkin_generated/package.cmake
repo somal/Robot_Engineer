@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_tracked_vehicles_flipper_controller")
+set(hector_tracked_vehicles_flipper_controller_MAINTAINER "christian <christian@todo.todo>")
+set(hector_tracked_vehicles_flipper_controller_DEPRECATED "")
+set(hector_tracked_vehicles_flipper_controller_VERSION "0.0.0")
+set(hector_tracked_vehicles_flipper_controller_BUILD_DEPENDS "roscpp" "sensor_msgs")
+set(hector_tracked_vehicles_flipper_controller_RUN_DEPENDS "roscpp" "sensor_msgs")
+set(hector_tracked_vehicles_flipper_controller_BUILDTOOL_DEPENDS "catkin")

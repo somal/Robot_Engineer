@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/install
+
+Name: vehicle_controller
+Description: Description of vehicle_controller
+Version: 0.0.1
+Cflags: -I/home/somal/catkin_ws/install/include
+Libs: -L/home/somal/catkin_ws/install/lib 
+Requires: 

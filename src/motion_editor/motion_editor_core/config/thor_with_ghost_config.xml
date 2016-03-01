@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<config>
+	<robot name="thor">
+	  <group name="right_arm" type="arm" topic="right_arm_traj_controller">
+	    <joint name="r_elbow"/>
+	    <joint name="r_shoulder_pitch"/>
+	    <joint name="r_shoulder_roll"/>
+	    <joint name="r_shoulder_yaw"/>
+	    <joint name="r_wrist_roll"/>
+	    <joint name="r_wrist_yaw1"/>
+	    <joint name="r_wrist_yaw2"/>    
+	  </group>
+
+	  <group name="left_arm" type="arm" mirrored="true" topic="left_arm_traj_controller">
+	    <joint name="l_elbow"/>
+	    <joint name="l_shoulder_pitch"/>
+	    <joint name="l_shoulder_roll"/>
+	    <joint name="l_shoulder_yaw"/>
+	    <joint name="l_wrist_roll"/>
+	    <joint name="l_wrist_yaw1"/>
+	    <joint name="l_wrist_yaw2"/>
+	  </group>
+
+          <group name="head" type="head" topic="head_traj_controller">
+            <joint name="head_pan"/>
+            <joint name="head_tilt"/>
+          </group>
+
+          <group name="torso" type="torso" topic="torso_traj_controller">
+            <joint name="waist_pan"/>
+            <joint name="waist_tilt"/>
+          </group>
+
+	  <group name="right_leg" type="leg" topic="right_leg_traj_controller">
+	    <joint name="r_hip_yaw"/>
+	    <joint name="r_hip_roll"/>
+	    <joint name="r_hip_pitch"/>
+	    <joint name="r_knee"/>
+	    <joint name="r_ankle_pitch"/>
+	    <joint name="r_ankle_roll"/>  
+	  </group>
+
+	  <group name="left_leg" type="leg" mirrored="true" topic="left_leg_traj_controller">
+	    <joint name="l_hip_yaw"/>
+	    <joint name="l_hip_roll"/>
+	    <joint name="l_hip_pitch"/>
+	    <joint name="l_knee"/>
+	    <joint name="l_ankle_pitch"/>
+	    <joint name="l_ankle_roll"/>  
+	  </group>
+	</robot>
+
+	<target name="Thor" joint_state_topic="/thor_mang/joint_states" publish_prefix="/thor_mang"/>
+	<target name="Ghost" joint_state_topic="/flor/ghost/get_joint_states" publish_prefix="/flor/ghost"/>
+</config>

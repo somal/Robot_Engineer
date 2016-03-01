@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+  <arg name="odom_frame" default="nav" />
+  <arg name="poseupdate_topic_name" default="poseupdate"/>
+  <arg name="pub_map_odom_transform" default="true"/>
+  <arg name="scan_topic" default="laser1/scan"/>
+  <arg name="use_tf_pose_start_estimate" default="false"/>
+  <arg name="map_topic" default="scanmatcher_map" />
+
+
+  
+  <node pkg="hector_mapping" type="hector_mapping" name="hector_mapping" output="screen" respawn="$(optenv RESPAWN false)">
+    
+    <remap from="scan" to="$(arg scan_topic)" />
+    <remap from="poseupdate" to="$(arg poseupdate_topic_name)"/>
+
+    
+    <param name="base_frame" value="base_stabilized" />
+    <param name="odom_frame" value="$(arg odom_frame)"/>
+
+    <param name="output_timing" value="false"/>
+    
+    <param name="pub_map_odom_transform" value="$(arg pub_map_odom_transform)" />
+    <param name="use_tf_scan_transformation" value="true"/>
+    <param name="use_tf_pose_start_estimate" value="$(arg use_tf_pose_start_estimate)"/>
+
+    <param name="map_pub_period" value="1.0"/>
+
+    <param name="laser_z_min_value" value = "-0.3"/>
+    
+    <param name="update_factor_free" value="0.3"/>
+
+    <param name="map_resolution" value="0.05"/>
+    <param name="map_size" value="1024"/>
+    <param name="map_start_x" value="0.5"/>
+    <param name="map_start_y" value="0.5"/>
+    <param name="map_multi_res_levels" value="1"/>
+    
+    <param name="laser_min_dist" value="0.3"/> 
+
+    <remap from="map" to="$(arg map_topic)" />
+  </node>
+
+  <node pkg="hector_map_server" type="hector_map_server" name="hector_map_server" output="screen" respawn="true">
+    <remap from="map" to="scanmatcher_map" />
+    <remap from="~/get_search_position" to="get_search_position" />
+  </node>
+
+<!--  <remap from="cost_map/map" to="cost_map" />
+  <node pkg="hector_map_server" type="hector_map_server" name="hector_map_server" ns="cost_map" output="screen">
+  </node>-->
+  
+  <node pkg="hector_trajectory_server" type="hector_trajectory_server" name="hector_trajectory_server" output="screen">
+  </node>
+
+<!--  <node pkg="map_to_image_tools" type="map_to_image_node" name="map_to_image_node" output="screen" launch-prefix="nice -n 15">
+  </node>-->
+
+  <node pkg="hector_geotiff" type="geotiff_node" name="hector_geotiff_node" output="screen" launch-prefix="nice -n 15">
+    <remap from="map" to="scanmatcher_map" />
+    <param name="map_file_path" type="string" value="$(find hector_geotiff)/maps" />
+    <param name="map_file_base_name" type="string" value="" />
+    <param name="geotiff_save_period" type="double" value="45" />
+    <param name="robot_default_name" type="string" value="Hector" />
+
+    <param name="plugins" type="string" value="hector_barrel_geotiff_plugin/BarrelMapWriter hector_geotiff_plugins/TrajectoryMapWriter hector_worldmodel_geotiff_plugins/QRCodeMapWriter hector_worldmodel_geotiff_plugins/VictimMapWriter" />
+    <param name="VictimMapWriter/draw_all_objects" value="false" />
+    <param name="VictimMapWriter/class_id" value="victim" />
+    <param name="QRCodeMapWriter/draw_all_objects" value="true" />
+    <param name="QRCodeMapWriter/class_id" value="qrcode" />
+    <param name="BarrelMapWriter/pkg_path" value="$(find hector_barrel_geotiff_plugin)" />
+    <param name="BarrelMapWriter/barrel_threshold" value="0.8" /> 
+    <param name="BarrelMapWriter/draw_all_objects" value="true" />
+    <param name="BarrelMapWriter/class_id" value="barrel" />
+
+     
+  </node>
+
+<!--  <remap from="cost_map/map" to="cost_map" />
+  <node pkg="hector_geotiff" type="geotiff_node" name="hector_geotiff_node" ns="cost_map" output="screen" launch-prefix="nice -n 15">
+    <param name="map_file_path" type="string" value="$(find hector_geotiff)/maps" />
+    <param name="map_file_base_name" type="string" value="RRL_2011_HectorDarmstadt_BCAuto_CostMap" />
+    <param name="geotiff_save_period" type="double" value="50" />
+  </node>-->
+
+<!--  <node pkg="topic_tools" type="mux" name="map_mux" args="map cost_map scanmatcher_map" output="screen">
+    <remap from="mux" to="map/mux"/>
+  </node>-->
+  <node pkg="topic_tools" type="throttle" name="map_throttle" args="messages map 0.1 throttled_map" />
+
+  <!--  
+  <group if="$(optenv USE_HEIGHT_MAPPING false)">
+    <include file="$(find hector_slam_launch)/launch/height_mapping.launch" />
+  </group>
+  -->
+</launch>
+

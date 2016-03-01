@@ -1,0 +1,10 @@
+# name of the motion to be executed (a motion has to be saved under this name using the rqt_motion_editor)
+string motion_name
+
+# time factor for playback (>1 -> slower)
+float32 time_factor
+---
+# ok, if motion with this name was found
+bool ok
+# rostime, when the motion has been completely played back (the robot may continue to move through its dynamics though)
+std_msgs/Time finish_time

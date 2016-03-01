@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find rqt_motion_editor)/launch/motion_editor.launch">
+    <arg name="robot_config" value="thor" />
+  </include>
+</launch>

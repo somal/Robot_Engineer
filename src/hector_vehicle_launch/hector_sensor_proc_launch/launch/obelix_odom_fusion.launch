@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+	<rosparam command="load" file="$(find hector_sensor_proc_launch)/config/obelix_odom_filter.yaml" />
+	<node pkg="robot_localization" type="ekf_localization_node" name="odom_filter" output="screen">
+	  <remap from="odometry/filtered" to="odom" />
+	</node>
+	
+<!--	<rosparam command="load" file="$(find argo_nav_launch)/config/world_filter.yaml" />
+	<node pkg="robot_localization" type="ekf_localization_node" name="world_filter" output="screen">
+	</node>
+	
+	<node pkg="hector_odom_adjuster" type="odom_adjuster_node" name="icp_odom_adjuster">
+	  <remap from="~odom" to="/icp_odom" />
+	  <remap from="~odom_adjusted" to="/icp_odom_adjusted" />
+	</node>-->
+	
+</launch>

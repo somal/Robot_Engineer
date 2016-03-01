@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find motion_editor_core)/launch/motion_service.launch">
+    <arg name="robot_config" value="atlas" />
+  </include>
+</launch>

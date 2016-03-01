@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+
+<launch>
+<!--  <include file="$(find hector_icp_mapping)/launch/preprocessing.launch" >
+  </include>-->
+  <arg name="real_robot" default="true" />
+  <arg name="publish_tf_as_parent" default="true" />
+  <arg name="map_frame" default="map" />
+
+<!--   <group if="$(optenv REALROBOT 0)"> -->
+  <group if="$(arg real_robot)">
+<!--    <include file="$(find hector_icp_mapping)/launch/preprocessing_obelix.launch" >
+      <arg name="namespace" value="/scan_cloud" />
+      <arg name="scan_topic" value="/head_lidar/scan" />
+      <arg name="assemble_full_swipe" value="false" />
+      <arg name="min_point_count" value="20" />
+      <arg name="publish_tf_as_parent" value="$(arg publish_tf_as_parent)" />
+    </include>-->
+
+    <include file="$(find hector_icp_mapping)/launch/icp_mapper_obelix.launch" >
+      <arg name="publish_tf_as_parent" value="$(arg publish_tf_as_parent)" />
+      <arg name="map_frame" value="$(arg map_frame)" />
+    </include>
+  </group>
+
+<!--   <group unless="$(optenv REALROBOT 0)"> -->
+<!--  <group unless="$(arg real_robot)">
+    <include file="$(find hector_icp_mapping)/launch/hydra_head_controllers.launch" >
+    </include>
+
+    <include file="$(find hector_icp_mapping)/launch/preprocessing_obelix_sim.launch" >
+      <arg name="namespace" value="/scan_cloud" />
+      <arg name="scan_topic" value="/head1_lidar/scan" />
+      <arg name="assemble_full_swipe" value="false" />
+      <arg name="min_point_count" value="20" />
+      <arg name="publish_tf_as_parent" value="$(arg publish_tf_as_parent)" />
+    </include>
+
+    <include file="$(find hector_icp_mapping)/launch/icp_mapper_obelix_sim.launch" >
+      <arg name="publish_tf_as_parent" value="$(arg publish_tf_as_parent)" />
+      <arg name="map_frame" value="$(arg map_frame)" />
+    </include>
+  </group>-->
+  
+  <arg name="namespace" default="/scan_cloud" />
+  <arg name="scan_topic" default="/laser1/scan" />
+  <arg name="assemble_full_swipe" default="false" />
+  <arg name="min_point_count" default="20" />
+<!--  <arg name="publish_tf_as_parent" default="false" />-->
+
+  <!--
+  <include file="$(find hector_icp_mapping)/launch/lidar_proc.launch" >
+    <arg name="min_range" value="0.5" />
+    <arg name="scan_topic" value="$(arg scan_topic)" />
+    <arg name="robot_description_name" value="$(find xacro)/xacro.py $(find hector_tracked_vehicles_description)/urdf/obelix_ugv_vision_box.urdf.xacro"/>
+    <arg name="filter_config_file" value="$(find hector_icp_mapping)/config/hector_lidar_self_filter.yaml" />
+  </include>-->
+
+<!--  <node name="header_manipulation_node" type="header_manipulation_node" pkg="header_manipulation" output="screen" ns="$(arg namespace)" >
+    <remap from="header_manipulation_node/input" to="/scan_cloud/filtered" />
+    <remap from="header_manipulation_node/output" to="/scan_cloud/modified" />
+    <param name="time_offset_milliseconds" value="0.0" />
+  </node>-->
+
+  <node type="point_cloud2_assembler" pkg="laser_assembler" name="assembler" ns="$(arg namespace)" output="screen" >
+    <remap from="cloud" to="/scan_cloud_filtered" />
+    <param name="max_clouds" type="int" value="400" />
+    <param name="fixed_frame" type="string" value="odom" />
+  </node>
+
+  <node type="assembler_trigger_old" pkg="pointcloud_assembler_trigger" name="trigger" ns="$(arg namespace)" output="screen" >
+    <remap from="trigger/modified" to="/scan_cloud/filtered" />
+    <remap from="syscommand" to="/syscommand" />
+    <param name="assemble_full_swipe" value="$(arg assemble_full_swipe)" />
+    <param name="min_point_count" value="$(arg min_point_count)" />
+    <param name="check_sensor_pos" value="false" />
+    <param name="init_assembler_duration" value="2.0" />
+    <param name="laser_assembler_duration" value="0.666" />
+  </node>
+
+<!--  <node pkg="hector_imu_tools" type="pose_and_orientation_to_imu_node" name="pose_and_orientation_to_imu_node" output="screen">
+    <remap from="/imu" to="/imu_quat" />
+    <remap from="/fused_imu" to="/imu_in" />
+    <remap from="/pose" to="/slam_out_pose" />
+  </node>-->
+
+<!--  <node pkg="odometry_manipulation" type="odometry_manipulation_node" name="odom_manipulator" output="screen">
+    <param name="angular_factor" value="-0.02"/>
+    <param name="linear_factor" value="2.5"/>
+  </node>-->
+
+<!--  <include file="$(find hector_icp_mapping)/launch/ekf_localization.launch">
+    <param name="odom_topic" value="manipulated_odom" />
+  </include>-->
+
+  
+</launch>

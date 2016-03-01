@@ -1,0 +1,16 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~angle_p_gain" : \b [double] P gain 4 angle control in differential drive controller min: 0.0, default: 1.0, max: 100.0
+- \b "~angle_d_gain" : \b [double] D gain 4 angle control in differential drive controller min: 0.0, default: 0.5, max: 100.0
+- \b "~position_p_gain" : \b [double] P gain 4 position control in differential drive controller min: 0.0, default: 0.5, max: 100.0
+- \b "~position_d_gain" : \b [double] D gain 4 position control in differential drive controller min: 0.0, default: 0.0, max: 100.0
+- \b "~speed" : \b [double] Desired speed 4 position control in differential drive controller min: 0.0, default: 0.075, max: 1.0
+- \b "~speed_reduction_gain" : \b [double] Gain to control the linear speed reduction for rising angular rate min: 0.0, default: 1.0, max: 100.0
+- \b "~use_final_twist" : \b [bool] Flag determining if orientation is corrected at the end of a path min: False, default: True, max: True
+- \b "~final_twist_trials_max" : \b [int] Maximum number of control trials for final position approach min: 0, default: 200, max: 2000
+- \b "~flipper_low_position" : \b [double] Low position of the flippers for driving min: 0.0, default: 0.1, max: 0.75
+- \b "~flipper_high_position" : \b [double] High position of the flippers for driving min: 0.0, default: 0.4, max: 0.75
+- \b "~flipper_switch_position" : \b [double] Flipper toggle command: set to high position if its below this value, else to the low min: 0.0, default: 0.25, max: 0.75
+

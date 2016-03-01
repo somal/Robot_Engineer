@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_sensors_gazebo")
+set(hector_sensors_gazebo_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
+set(hector_sensors_gazebo_DEPRECATED "")
+set(hector_sensors_gazebo_VERSION "0.3.7")
+set(hector_sensors_gazebo_BUILD_DEPENDS )
+set(hector_sensors_gazebo_RUN_DEPENDS "hector_sensors_description" "gazebo_plugins" "hector_gazebo_plugins")
+set(hector_sensors_gazebo_BUILDTOOL_DEPENDS "catkin")

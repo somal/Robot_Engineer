@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_sensors_description")
+set(hector_sensors_description_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
+set(hector_sensors_description_DEPRECATED "")
+set(hector_sensors_description_VERSION "0.4.1")
+set(hector_sensors_description_BUILD_DEPENDS )
+set(hector_sensors_description_RUN_DEPENDS "xacro")
+set(hector_sensors_description_BUILDTOOL_DEPENDS "catkin")

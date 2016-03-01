@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find motion_editor_core)/launch/kinematic_traj_controller.launch">
+    <arg name="robot_config" value="thor_with_ghost" />
+    <arg name="cmd_topic" value="/flor/ghost/set_joint_states"/>
+  </include>
+</launch>

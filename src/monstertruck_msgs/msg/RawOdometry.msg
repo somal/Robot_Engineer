@@ -1,0 +1,11 @@
+Header header
+uint32 tics_fl
+uint32 tics_fr
+uint32 tics_rl
+uint32 tics_rr
+float32 v_fl
+float32 v_fr
+float32 v_rl
+float32 v_rr
+float32 speed
+float32 yawRate

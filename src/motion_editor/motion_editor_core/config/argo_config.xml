@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config>
+  <robot name="argo">
+    <group name="arm" type="arm" mirrored="false" topic="arm_traj_controller">
+      <joint name="arm_joint_0"/>
+      <joint name="arm_joint_1"/>
+      <joint name="arm_joint_2"/>
+      <joint name="arm_joint_3"/>
+      <joint name="arm_joint_4"/>
+    </group>
+    
+    <group name="flipper" type="flipper" mirrored="false" topic="flipper_traj_controller">
+      <joint name="front_flipper_joint"/>
+      <joint name="rear_flipper_joint"/>
+    </group>
+   </robot>
+	<target name="Argo" joint_state_topic="/argonaut_robot/joint_states" publish_prefix="/argonaut_robot"/>
+</config>

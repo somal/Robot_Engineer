@@ -1,0 +1,11 @@
+build
+devel
+bin
+lib
+msg_gen
+srv_gen
+qtcreator-build
+*.pyc
+*.user
+*~
+src/vigir_rqt_motion_editor/srv

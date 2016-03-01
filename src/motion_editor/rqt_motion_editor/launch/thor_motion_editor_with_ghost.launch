@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find rqt_motion_editor)/launch/motion_editor.launch">
+    <arg name="robot_config" value="thor_with_ghost" />
+  </include>
+
+  <include file="$(find motion_editor_core)/launch/thor_kinematic_traj_controller.launch"/>
+</launch>

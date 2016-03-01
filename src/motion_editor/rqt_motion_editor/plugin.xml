@@ -1,0 +1,12 @@
+<library path="src">
+  <class name="MotionEditorPlugin" type="rqt_motion_editor.motion_editor.MotionEditorPlugin" base_class_type="rqt_gui_py::Plugin">
+    <description>
+      A Python GUI plugin to save robot positions and combine them to motions
+    </description>
+    <qtgui>
+      <label>Flor Motion Editor</label>
+      <icon type="theme">system-search</icon>
+      <statustip>A Python GUI plugin to save robot positions and combine them to motions</statustip>
+    </qtgui>
+  </class>
+</library>

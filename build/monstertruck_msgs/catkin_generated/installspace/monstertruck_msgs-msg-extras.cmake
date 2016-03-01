@@ -1,0 +1,2 @@
+set(monstertruck_msgs_MESSAGE_FILES "msg/Compass.msg;msg/PositionFeedback.msg;msg/ServoCommands.msg;msg/Gps.msg;msg/RawImu.msg;msg/ServoPosition.msg;msg/MotionCommand.msg;msg/RawOdometry.msg;msg/ServoPositions.msg;msg/NavigationSolution.msg;msg/ServoCommand.msg;msg/Status.msg;msg/Pdout.msg")
+set(monstertruck_msgs_SERVICE_FILES "srv/GetGazeDirection.srv;srv/LookAt.srv;srv/SetAlternativeTolerance.srv")

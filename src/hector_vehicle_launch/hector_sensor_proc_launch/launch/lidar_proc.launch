@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<launch>
+  
+  <arg name="lidar_filter_target_frame"   default="odom"/>
+  <arg name="node_name_prefix" default="nav_lidar_" />
+  <arg name="scan_topic" default="/laser1/scan" />
+  <arg name="scan_cloud_topic" default="/scan_cloud" />
+  <arg name="scan_cloud_filtered_topic" default="/scan_cloud_filtered" />
+  <arg name="use_high_fidelity_projection" default="false" />
+
+  <include file="$(find vigir_lidar_proc_launch)/launch/lidar_proc.launch">
+    <arg name="node_name_prefix" value="$(arg node_name_prefix)" />
+    <arg name="scan_topic" value="$(arg scan_topic)" />
+    <arg name="scan_cloud_topic" value="$(arg scan_cloud_topic)" />
+    <arg name="scan_cloud_filtered_topic" value="$(arg scan_cloud_filtered_topic)" />
+
+    <arg name="target_frame" value="$(arg lidar_filter_target_frame)" />
+    <arg name="use_high_fidelity_projection" value="$(arg use_high_fidelity_projection)" />
+  </include>
+      
+</launch>

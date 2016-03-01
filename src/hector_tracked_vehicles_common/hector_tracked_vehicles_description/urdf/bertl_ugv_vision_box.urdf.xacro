@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<robot name="bertl_ugv" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    
+    <xacro:property name="M_PI" value="3.14159" />
+
+    <xacro:include filename="$(find taurob_tracker_description)/urdf/tracker_chassis.urdf.xacro.xml" />
+    <xacro:include filename="$(find hector_components_description)/urdf/vision_box_common.urdf.xacro"/>
+    <xacro:include filename="$(find hector_components_description)/urdf/vision_box_dimensions_hector2.urdf.xacro" />
+    
+    <xacro:tracker_chassis_macro />
+
+    <xacro:vision_box parent="chassis_link" box_type="hector2">
+      <origin xyz="-0.155 0 0.105" rpy="0 0 0"/>
+    </xacro:vision_box>
+    
+    <xacro:include filename="$(find hector_components_description)/urdf/vision_box_hector2_addons.urdf.xacro" />
+
+</robot>

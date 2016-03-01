@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/devel
+
+Name: hector_tracked_vehicles_launch
+Description: Description of hector_tracked_vehicles_launch
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/somal/catkin_ws/devel/lib 
+Requires: 

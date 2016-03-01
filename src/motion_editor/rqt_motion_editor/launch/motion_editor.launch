@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="robot_config" default="thor"/>
+
+  <node name="motion_editor" pkg="rqt_motion_editor" type="motion_editor" respawn="false" output="screen">
+    <param name="robot_config" value="$(arg robot_config)"/>
+  </node>
+</launch>
