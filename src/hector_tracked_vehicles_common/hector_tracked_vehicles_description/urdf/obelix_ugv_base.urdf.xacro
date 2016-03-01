@@ -8,18 +8,18 @@
   <!-- Properties (Constants) -->
   <xacro:property name="M_PI" value="3.14159"/>
   
-  <xacro:property name="base_link_size_x" value="0.52" />
-  <xacro:property name="base_link_size_y" value="0.18" />
-  <xacro:property name="base_link_size_z" value="0.118" />
+  <xacro:property name="base_link_size_x" value="0.397" />
+  <xacro:property name="base_link_size_y" value="0.1789" /> <!--was 0.18-->
+  <xacro:property name="base_link_size_z" value="0.102" /><!-- it equal double radius, old 0.118-->
   
-  <xacro:property name="wheel_radius_big" value="0.085" />
+  <xacro:property name="wheel_radius_big" value="0.1" /> <!--was 0.085--> <!--it's must be into file, but it isn't used-->
   
-  <xacro:property name="wheel_offset_x" value="${base_link_size_x*0.5}" /> <!--del -0.42-->
-  <xacro:property name="wheel_offset_z" value="${base_link_size_z*0.5 - 0.065}" />
-  <xacro:property name="wheel_radius"   value="0.09" />
+  <xacro:property name="wheel_offset_x" value="${base_link_size_x*0.5}" /> <!--del -0.42 -->
+  <xacro:property name="wheel_offset_z" value="0" /> <!--was ${base_link_size_z*0.5-0.065}-->
+  <xacro:property name="wheel_radius"   value="0.051" /> <!--was 0.09-->
   
-  <xacro:property name="track_width"    value="0.1" />
-  <xacro:property name="track_offset_y"    value="0.155" />
+  <xacro:property name="track_width"    value="0.04" /> <!--old 0.1-->
+  <xacro:property name="track_offset_y"    value="${base_link_size_y*0.5}" />  <!--old 0.155-->
   
   <xacro:property name="flipper_width"    value="0.08" />    
   <xacro:property name="flipper_offset_y"    value="0.245" />
@@ -36,7 +36,7 @@
   
   <xacro:property name="ground_clearance" value="0.05" />
   
-  <xacro:property name="top_size_x" value="0.3937" />
+  <xacro:property name="top_size_x" value="0.6" />   <!--was 0.3937-->
   <xacro:property name="top_size_y" value="0.3556" />
   <xacro:property name="top_size_z" value="0.0020" />
   
