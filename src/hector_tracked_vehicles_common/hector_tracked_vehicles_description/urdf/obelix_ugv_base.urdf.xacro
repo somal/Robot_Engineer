@@ -14,7 +14,7 @@
   
   <xacro:property name="wheel_radius_big" value="0.085" />
   
-  <xacro:property name="wheel_offset_x" value="${base_link_size_x*0.5 - 0.042}" />
+  <xacro:property name="wheel_offset_x" value="${base_link_size_x*0.5}" /> <!--del -0.42-->
   <xacro:property name="wheel_offset_z" value="${base_link_size_z*0.5 - 0.065}" />
   <xacro:property name="wheel_radius"   value="0.09" />
   
