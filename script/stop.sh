@@ -1,3 +1,5 @@
 #!/bin/bash
 
-killall roslaunch rosrun rostopic
+killall roslaunch 
+killall rosrun 
+killall rostopic 
