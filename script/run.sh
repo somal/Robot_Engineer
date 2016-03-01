@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source stop.sh
+
 source ../devel/setup.bash 
 echo 'Run clear gazebo'
 roslaunch gazebo_ros empty_world.launch & 
