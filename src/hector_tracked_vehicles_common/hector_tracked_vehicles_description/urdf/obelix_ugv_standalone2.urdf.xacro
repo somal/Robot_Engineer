@@ -11,11 +11,11 @@
   <!-- use for 2*2 flippers --> 
   <xacro:obelix_flipper_macro parent="base_link" name="front" front="1">
     <origin xyz="${wheel_offset_x}  ${flipper_offset_y}  0 " rpy="0 0 0"/>
-  </xacro:obelix_flipper_macro > 
+  </xacro:obelix_flipper_macro >   
   
-<!--  <xacro:obelix_flipper_macro parent="base_link" name="rear" front="-1">
-    <origin xyz="${-wheel_offset_x}  ${flipper_offset_y}  0  " rpy="0 0 0"/>
-  </xacro:obelix_flipper_macro >-->
+  <xacro:obelix_flipper_macro parent="base_link" name="rear" front="1">
+    <origin xyz="${-wheel_offset_x+base_link_size_x}  ${flipper_offset_y}  0  " rpy="0 0 0"/>
+  </xacro:obelix_flipper_macro >
   
   
   

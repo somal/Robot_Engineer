@@ -19,10 +19,10 @@
   <xacro:property name="wheel_radius"   value="0.051" /> <!--was 0.09-->
   
   <xacro:property name="track_width"    value="0.04" /> <!--old 0.1-->
-  <xacro:property name="track_offset_y"    value="${(base_link_size_y-track_width)*0.5}" />  <!--old 0.155-->
+  <xacro:property name="track_offset_y"    value="${(base_link_size_y-flipper_width)*0.5}" />  <!--old 0.155-->
   
   <xacro:property name="flipper_width"    value="0.028" />    <!--was 0.08-->
-  <xacro:property name="flipper_offset_y"    value="${0.5*(base_link_size_y+flipper_width)}" />  <!--old 0.245-->
+  <xacro:property name="flipper_offset_y"    value="${0.5*(base_link_size_y+*track_width)}" />  <!--old 0.245-->
   <xacro:property name="flipper_offset_wheel_axis_x"    value="0.355" /> <!--old 0.225 --> 
   
   <!-- I have added it-->

@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!--xacro:include filename="$(find hector_tracked_vehicles_description)/urdf/tracked_wheel.urdf.xacro" /--> 
+  
   <xacro:property name="flipper_base_mass" value="2.0"/>
   <xacro:property name="flipper_x" value="0.3"/>
   <xacro:property name="flipper_y" value="0.1"/>
@@ -34,7 +36,7 @@
       </geometry>
     </visual>  
     <visual>
-      <origin xyz="${front*flipper_offset_wheel_axis_x*0.5} 0 ${0.5*(2*front*flipper_offset_wheel_axis_z-wheel_radius)}" rpy="${M_PI*0.5} ${M_PI*0.5+1.4874686} 0" />
+      <origin xyz="${front*flipper_offset_wheel_axis_x*0.5} 0 ${0.5*(front*flipper_offset_wheel_axis_z-wheel_radius)}" rpy="${M_PI*0.5} ${M_PI*0.5+1.4874686} 0" />
       <geometry>
         <box size="${flipper_offset_wheel_axis_x} ${track_thickness} ${flipper_width} " />
       </geometry>
@@ -61,7 +63,7 @@
       </geometry>
     </collision> 
    <collision>
-      <origin xyz="${front*flipper_offset_wheel_axis_x*0.5} 0 ${0.5*(2*front*flipper_offset_wheel_axis_z-wheel_radius)}" rpy="${M_PI*0.5} ${M_PI*0.5+1.4874686} 0" />
+      <origin xyz="${front*flipper_offset_wheel_axis_x*0.5} 0 ${0.5*(front*flipper_offset_wheel_axis_z-wheel_radius)}" rpy="${M_PI*0.5} ${M_PI*0.5+1.4874686} 0" />
       <geometry>
         <box size="${flipper_offset_wheel_axis_x} ${track_thickness} ${flipper_width} " />
       </geometry>
