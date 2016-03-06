@@ -1,8 +1,0 @@
-prefix=/home/somal/catkin_ws/devel
-
-Name: hector_map_tools
-Description: Description of hector_map_tools
-Version: 0.3.4
-Cflags: -I/home/somal/catkin_ws/src/hector_slam/hector_map_tools/include
-Libs: -L/home/somal/catkin_ws/devel/lib 
-Requires: nav_msgs

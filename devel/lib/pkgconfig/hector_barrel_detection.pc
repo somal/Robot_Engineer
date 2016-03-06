@@ -1,8 +1,0 @@
-prefix=/home/somal/catkin_ws/devel
-
-Name: hector_barrel_detection
-Description: Description of hector_barrel_detection
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/somal/catkin_ws/devel/lib 
-Requires: pcl_ros roscpp message_filters pcl_conversions geometry_msgs visualization_msgs cv_bridge hector_worldmodel_msgs image_transport tf_conversions image_geometry

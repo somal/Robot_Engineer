@@ -1,8 +1,0 @@
-prefix=/home/somal/catkin_ws/devel
-
-Name: hector_uav_msgs
-Description: Description of hector_uav_msgs
-Version: 0.3.5
-Cflags: -I/home/somal/catkin_ws/devel/include -I/home/somal/catkin_ws/src/hector_quadrotor/hector_uav_msgs/include
-Libs: -L/home/somal/catkin_ws/devel/lib 
-Requires: message_runtime std_msgs

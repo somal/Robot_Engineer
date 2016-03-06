@@ -1,8 +1,0 @@
-prefix=/home/somal/catkin_ws/install
-
-Name: hector_map_tools
-Description: Description of hector_map_tools
-Version: 0.3.4
-Cflags: -I/home/somal/catkin_ws/install/include
-Libs: -L/home/somal/catkin_ws/install/lib 
-Requires: nav_msgs

@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "hector_co2_detection_plugin")
-set(hector_co2_detection_plugin_MAINTAINER "doro <doro@todo.todo>")
-set(hector_co2_detection_plugin_DEPRECATED "")
-set(hector_co2_detection_plugin_VERSION "0.0.0")
-set(hector_co2_detection_plugin_BUILD_DEPENDS "rospy" "rqt_gui" "rqt_gui_py" "std_msgs")
-set(hector_co2_detection_plugin_RUN_DEPENDS "rospy" "rqt_gui" "rqt_gui_py" "std_msgs")
-set(hector_co2_detection_plugin_BUILDTOOL_DEPENDS "catkin")

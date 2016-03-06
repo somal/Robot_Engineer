@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "hector_mapstitch")
-set(hector_mapstitch_MAINTAINER "benedikt <benedikt@todo.todo>")
-set(hector_mapstitch_DEPRECATED "")
-set(hector_mapstitch_VERSION "0.0.0")
-set(hector_mapstitch_BUILD_DEPENDS "cv_bridge" "rosconsole" "roscpp" "tf")
-set(hector_mapstitch_RUN_DEPENDS "cv_bridge" "rosconsole" "roscpp" "tf")
-set(hector_mapstitch_BUILDTOOL_DEPENDS "catkin")

@@ -1,8 +1,0 @@
-prefix=/home/somal/catkin_ws/devel
-
-Name: hector_quadrotor_controller_gazebo
-Description: Description of hector_quadrotor_controller_gazebo
-Version: 0.3.5
-Cflags: -I/home/somal/catkin_ws/src/hector_quadrotor/hector_quadrotor_controller_gazebo/include
-Libs: -L/home/somal/catkin_ws/devel/lib -lhector_quadrotor_controller_gazebo
-Requires: gazebo_ros_control hector_quadrotor_controller

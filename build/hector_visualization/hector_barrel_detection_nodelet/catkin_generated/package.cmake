@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "hector_barrel_detection_nodelet")
-set(hector_barrel_detection_nodelet_MAINTAINER "doro <doro@todo.todo>")
-set(hector_barrel_detection_nodelet_DEPRECATED "")
-set(hector_barrel_detection_nodelet_VERSION "0.0.0")
-set(hector_barrel_detection_nodelet_BUILD_DEPENDS "pcl_ros" "roscpp" "sensor_msgs" "pcl_conversions" "geometry_msgs" "visualization_msgs" "cv_bridge" "hector_worldmodel_msgs" "image_transport" "message_filters" "tf_conversions" "image_geometry" "nodelet")
-set(hector_barrel_detection_nodelet_RUN_DEPENDS "pcl_ros" "roscpp" "sensor_msgs" "pcl_conversions" "geometry_msgs" "visualization_msgs" "cv_bridge" "hector_worldmodel_msgs" "image_transport" "message_filters" "tf_conversions" "image_geometry" "nodelet")
-set(hector_barrel_detection_nodelet_BUILDTOOL_DEPENDS "catkin")

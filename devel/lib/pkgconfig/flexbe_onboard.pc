@@ -1,8 +1,0 @@
-prefix=/home/somal/catkin_ws/devel
-
-Name: flexbe_onboard
-Description: Description of flexbe_onboard
-Version: 1.0.0
-Cflags: -I/home/somal/catkin_ws/src/flexbe_behavior_engine/flexbe_onboard/src
-Libs: -L/home/somal/catkin_ws/devel/lib -lflexbe_onboard
-Requires: 

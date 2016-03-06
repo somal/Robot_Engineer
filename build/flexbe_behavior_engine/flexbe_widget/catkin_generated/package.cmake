@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "flexbe_widget")
-set(flexbe_widget_MAINTAINER "Philipp Schillinger <schillinger@sim.tu-darmstadt.de>")
-set(flexbe_widget_DEPRECATED "")
-set(flexbe_widget_VERSION "1.0.0")
-set(flexbe_widget_BUILD_DEPENDS )
-set(flexbe_widget_RUN_DEPENDS "smach_ros" "rospy" "flexbe_core" "flexbe_msgs")
-set(flexbe_widget_BUILDTOOL_DEPENDS "catkin")

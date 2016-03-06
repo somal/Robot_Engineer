@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "mapstitch_data")
-set(mapstitch_data_MAINTAINER "kohlbrecher <kohlbrecher@todo.todo>")
-set(mapstitch_data_DEPRECATED "")
-set(mapstitch_data_VERSION "0.0.0")
-set(mapstitch_data_BUILD_DEPENDS )
-set(mapstitch_data_RUN_DEPENDS )
-set(mapstitch_data_BUILDTOOL_DEPENDS "catkin")

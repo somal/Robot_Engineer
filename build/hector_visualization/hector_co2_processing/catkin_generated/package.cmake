@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "hector_co2_processing")
-set(hector_co2_processing_MAINTAINER "christian <christian@todo.todo>")
-set(hector_co2_processing_DEPRECATED "")
-set(hector_co2_processing_VERSION "0.0.0")
-set(hector_co2_processing_BUILD_DEPENDS "roscpp" "std_msgs")
-set(hector_co2_processing_RUN_DEPENDS "roscpp" "std_msgs")
-set(hector_co2_processing_BUILDTOOL_DEPENDS "catkin")

@@ -1,8 +1,0 @@
-prefix=/home/somal/catkin_ws/install
-
-Name: hector_quadrotor_teleop
-Description: Description of hector_quadrotor_teleop
-Version: 0.3.5
-Cflags: 
-Libs: -L/home/somal/catkin_ws/install/lib 
-Requires: roscpp sensor_msgs geometry_msgs hector_uav_msgs

@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "hector_worldmodel_msgs")
-set(hector_worldmodel_msgs_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
-set(hector_worldmodel_msgs_DEPRECATED "")
-set(hector_worldmodel_msgs_VERSION "0.3.3")
-set(hector_worldmodel_msgs_BUILD_DEPENDS "message_generation" "sensor_msgs" "geometry_msgs")
-set(hector_worldmodel_msgs_RUN_DEPENDS "message_runtime" "sensor_msgs" "geometry_msgs")
-set(hector_worldmodel_msgs_BUILDTOOL_DEPENDS "catkin")

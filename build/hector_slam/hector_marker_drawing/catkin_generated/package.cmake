@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "hector_marker_drawing")
-set(hector_marker_drawing_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
-set(hector_marker_drawing_DEPRECATED "")
-set(hector_marker_drawing_VERSION "0.3.4")
-set(hector_marker_drawing_BUILD_DEPENDS "cmake_modules" "roscpp" "visualization_msgs" "eigen")
-set(hector_marker_drawing_RUN_DEPENDS "roscpp" "visualization_msgs" "eigen")
-set(hector_marker_drawing_BUILDTOOL_DEPENDS "catkin")

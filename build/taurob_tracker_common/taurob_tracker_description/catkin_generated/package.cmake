@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "taurob_tracker_description")
-set(taurob_tracker_description_MAINTAINER "Stefan Kohlbrecher <kohlbrecher@sim.tu-darmstadt.de>")
-set(taurob_tracker_description_DEPRECATED "")
-set(taurob_tracker_description_VERSION "0.0.0")
-set(taurob_tracker_description_BUILD_DEPENDS "hector_components_description" "hector_xacro_tools" "urdf" "xacro")
-set(taurob_tracker_description_RUN_DEPENDS "hector_components_description" "hector_xacro_tools" "urdf" "xacro")
-set(taurob_tracker_description_BUILDTOOL_DEPENDS "catkin")

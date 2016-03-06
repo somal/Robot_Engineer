@@ -458,6 +458,48 @@ hector_servo_plugin/fast:
 .PHONY : hector_servo_plugin/fast
 
 # Convenience name for target.
+hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
+	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+.PHONY : hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_cpp: hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+.PHONY : std_srvs_generate_messages_cpp
+
+# fast build rule for target.
+std_srvs_generate_messages_cpp/fast:
+	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+.PHONY : std_srvs_generate_messages_cpp/fast
+
+# Convenience name for target.
+hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
+	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+.PHONY : hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_lisp: hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+.PHONY : std_srvs_generate_messages_lisp
+
+# fast build rule for target.
+std_srvs_generate_messages_lisp/fast:
+	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+.PHONY : std_srvs_generate_messages_lisp/fast
+
+# Convenience name for target.
+hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
+	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+.PHONY : hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_py: hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+.PHONY : std_srvs_generate_messages_py
+
+# fast build rule for target.
+std_srvs_generate_messages_py/fast:
+	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_py.dir/build.make hector_gazebo/hector_gazebo_plugins/CMakeFiles/std_srvs_generate_messages_py.dir/build
+.PHONY : std_srvs_generate_messages_py/fast
+
+# Convenience name for target.
 hector_gazebo/hector_gazebo_plugins/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
 	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_gazebo/hector_gazebo_plugins/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 .PHONY : hector_gazebo/hector_gazebo_plugins/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
@@ -791,6 +833,9 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... std_srvs_generate_messages_cpp"
+	@echo "... std_srvs_generate_messages_lisp"
+	@echo "... std_srvs_generate_messages_py"
 	@echo "... test"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... tf2_msgs_generate_messages_lisp"

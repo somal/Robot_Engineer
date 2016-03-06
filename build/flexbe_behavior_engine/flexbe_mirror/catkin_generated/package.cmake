@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "flexbe_mirror")
-set(flexbe_mirror_MAINTAINER "Philipp Schillinger <schillinger@sim.tu-darmstadt.de>")
-set(flexbe_mirror_DEPRECATED "")
-set(flexbe_mirror_VERSION "1.0.0")
-set(flexbe_mirror_BUILD_DEPENDS )
-set(flexbe_mirror_RUN_DEPENDS "smach_ros" "rospy" "flexbe_core" "flexbe_widget" "flexbe_msgs")
-set(flexbe_mirror_BUILDTOOL_DEPENDS "catkin")

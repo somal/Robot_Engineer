@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "hector_rviz_plugins")
-set(hector_rviz_plugins_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
-set(hector_rviz_plugins_DEPRECATED "")
-set(hector_rviz_plugins_VERSION "0.0.0")
-set(hector_rviz_plugins_BUILD_DEPENDS "roscpp" "geometry_msgs" "rviz")
-set(hector_rviz_plugins_RUN_DEPENDS "roscpp" "geometry_msgs" "rviz")
-set(hector_rviz_plugins_BUILDTOOL_DEPENDS "catkin")

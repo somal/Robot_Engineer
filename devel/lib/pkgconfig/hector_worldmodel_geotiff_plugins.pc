@@ -1,8 +1,0 @@
-prefix=/home/somal/catkin_ws/devel
-
-Name: hector_worldmodel_geotiff_plugins
-Description: Description of hector_worldmodel_geotiff_plugins
-Version: 0.3.3
-Cflags: 
-Libs: -L/home/somal/catkin_ws/devel/lib 
-Requires: hector_geotiff hector_worldmodel_msgs

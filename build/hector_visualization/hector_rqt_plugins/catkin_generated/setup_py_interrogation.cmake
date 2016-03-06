@@ -1,6 +1,0 @@
-set(hector_rqt_plugins_SETUP_PY_VERSION "0.0.1")
-set(hector_rqt_plugins_SETUP_PY_SCRIPTS "")
-set(hector_rqt_plugins_SETUP_PY_PACKAGES "rqt_image_enhancer")
-set(hector_rqt_plugins_SETUP_PY_PACKAGE_DIRS "src/rqt_image_enhancer")
-set(hector_rqt_plugins_SETUP_PY_MODULES "")
-set(hector_rqt_plugins_SETUP_PY_MODULE_DIRS "")

@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "hector_quadrotor_controller")
-set(hector_quadrotor_controller_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
-set(hector_quadrotor_controller_DEPRECATED "")
-set(hector_quadrotor_controller_VERSION "0.3.5")
-set(hector_quadrotor_controller_BUILD_DEPENDS "roscpp" "geometry_msgs" "sensor_msgs" "nav_msgs" "hector_uav_msgs" "std_srvs" "hardware_interface" "controller_interface")
-set(hector_quadrotor_controller_RUN_DEPENDS "roscpp" "geometry_msgs" "sensor_msgs" "nav_msgs" "hector_uav_msgs" "std_srvs" "hardware_interface" "controller_interface")
-set(hector_quadrotor_controller_BUILDTOOL_DEPENDS "catkin")

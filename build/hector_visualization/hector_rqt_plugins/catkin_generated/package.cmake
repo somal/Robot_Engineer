@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "hector_rqt_plugins")
-set(hector_rqt_plugins_MAINTAINER "Thorsten Graber <graber@fsr.tu-darmstadt.de>")
-set(hector_rqt_plugins_DEPRECATED "")
-set(hector_rqt_plugins_VERSION "0.0.1")
-set(hector_rqt_plugins_BUILD_DEPENDS "roscpp" "cv_bridge" "image_transport" "rqt_gui" "rqt_gui_cpp" "sensor_msgs" "rosconsole" "image_transport" "nav_msgs" "hector_mapstitch")
-set(hector_rqt_plugins_RUN_DEPENDS "roscpp" "cv_bridge" "image_transport" "rqt_gui" "rqt_gui_cpp" "sensor_msgs" "rosconsole" "nav_msgs" "hector_mapstitch")
-set(hector_rqt_plugins_BUILDTOOL_DEPENDS "catkin")

@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "voronoi_planner")
-set(voronoi_planner_MAINTAINER "Roman Fedorenko <frontwise@gmail.com>")
-set(voronoi_planner_DEPRECATED "")
-set(voronoi_planner_VERSION "0.1.0")
-set(voronoi_planner_BUILD_DEPENDS "angles" "costmap_2d" "dynamic_reconfigure" "geometry_msgs" "nav_core" "nav_msgs" "pluginlib" "roscpp" "tf" "dynamicvoronoi")
-set(voronoi_planner_RUN_DEPENDS "costmap_2d" "dynamic_reconfigure" "geometry_msgs" "nav_core" "nav_msgs" "pluginlib" "roscpp" "tf" "dynamicvoronoi")
-set(voronoi_planner_BUILDTOOL_DEPENDS "catkin")

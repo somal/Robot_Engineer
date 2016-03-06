@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "rqt_video_playback")
-set(rqt_video_playback_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
-set(rqt_video_playback_DEPRECATED "")
-set(rqt_video_playback_VERSION "0.0.0")
-set(rqt_video_playback_BUILD_DEPENDS "roscpp" "rosgraph_msgs" "rqt_gui" "rqt_gui_cpp" "libphonon-dev")
-set(rqt_video_playback_RUN_DEPENDS "roscpp" "rosgraph_msgs" "rqt_gui" "rqt_gui_cpp" "libphonon")
-set(rqt_video_playback_BUILDTOOL_DEPENDS "catkin")

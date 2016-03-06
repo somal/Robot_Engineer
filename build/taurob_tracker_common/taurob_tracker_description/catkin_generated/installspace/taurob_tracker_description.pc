@@ -1,8 +1,0 @@
-prefix=/home/somal/catkin_ws/install
-
-Name: taurob_tracker_description
-Description: Description of taurob_tracker_description
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/somal/catkin_ws/install/lib 
-Requires: 

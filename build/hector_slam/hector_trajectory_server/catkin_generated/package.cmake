@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "hector_trajectory_server")
-set(hector_trajectory_server_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
-set(hector_trajectory_server_DEPRECATED "")
-set(hector_trajectory_server_VERSION "0.3.4")
-set(hector_trajectory_server_BUILD_DEPENDS "roscpp" "hector_nav_msgs" "nav_msgs" "hector_map_tools" "tf")
-set(hector_trajectory_server_RUN_DEPENDS "roscpp" "hector_nav_msgs" "nav_msgs" "hector_map_tools" "tf")
-set(hector_trajectory_server_BUILDTOOL_DEPENDS "catkin")

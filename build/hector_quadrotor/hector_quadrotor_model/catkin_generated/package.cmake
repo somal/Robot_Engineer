@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "hector_quadrotor_model")
-set(hector_quadrotor_model_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
-set(hector_quadrotor_model_DEPRECATED "")
-set(hector_quadrotor_model_VERSION "0.3.5")
-set(hector_quadrotor_model_BUILD_DEPENDS "geometry_msgs" "hector_uav_msgs" "eigen" "roscpp" "cmake_modules" "boost")
-set(hector_quadrotor_model_RUN_DEPENDS "geometry_msgs" "hector_uav_msgs" "roscpp" "boost")
-set(hector_quadrotor_model_BUILDTOOL_DEPENDS "catkin")

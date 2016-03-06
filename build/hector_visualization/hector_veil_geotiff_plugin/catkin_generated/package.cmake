@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "hector_veil_geotiff_plugin")
-set(hector_veil_geotiff_plugin_MAINTAINER "doro <doro@todo.todo>")
-set(hector_veil_geotiff_plugin_DEPRECATED "")
-set(hector_veil_geotiff_plugin_VERSION "0.0.0")
-set(hector_veil_geotiff_plugin_BUILD_DEPENDS "hector_geotiff" "hector_nav_msgs" "hector_worldmodel_msgs")
-set(hector_veil_geotiff_plugin_RUN_DEPENDS "hector_geotiff" "hector_nav_msgs" "hector_worldmodel_msgs")
-set(hector_veil_geotiff_plugin_BUILDTOOL_DEPENDS "catkin")

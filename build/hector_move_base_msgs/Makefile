@@ -415,6 +415,48 @@ hector_move_base_msgs_genpy/fast:
 	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_move_base_msgs/CMakeFiles/hector_move_base_msgs_genpy.dir/build.make hector_move_base_msgs/CMakeFiles/hector_move_base_msgs_genpy.dir/build
 .PHONY : hector_move_base_msgs_genpy/fast
 
+# Convenience name for target.
+hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
+	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+.PHONY : hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_cpp: hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+.PHONY : nav_msgs_generate_messages_cpp
+
+# fast build rule for target.
+nav_msgs_generate_messages_cpp/fast:
+	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+.PHONY : nav_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
+	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+.PHONY : hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_lisp: hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+.PHONY : nav_msgs_generate_messages_lisp
+
+# fast build rule for target.
+nav_msgs_generate_messages_lisp/fast:
+	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+.PHONY : nav_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
+	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+.PHONY : hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_py: hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+.PHONY : nav_msgs_generate_messages_py
+
+# fast build rule for target.
+nav_msgs_generate_messages_py/fast:
+	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make hector_move_base_msgs/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+.PHONY : nav_msgs_generate_messages_py/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -445,6 +487,9 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
+	@echo "... nav_msgs_generate_messages_cpp"
+	@echo "... nav_msgs_generate_messages_lisp"
+	@echo "... nav_msgs_generate_messages_py"
 	@echo "... rebuild_cache"
 	@echo "... test"
 .PHONY : help

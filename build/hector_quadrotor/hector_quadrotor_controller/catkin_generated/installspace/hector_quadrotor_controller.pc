@@ -1,8 +1,0 @@
-prefix=/home/somal/catkin_ws/install
-
-Name: hector_quadrotor_controller
-Description: Description of hector_quadrotor_controller
-Version: 0.3.5
-Cflags: -I/home/somal/catkin_ws/install/include
-Libs: -L/home/somal/catkin_ws/install/lib -lhector_quadrotor_controller
-Requires: roscpp geometry_msgs sensor_msgs nav_msgs hector_uav_msgs std_srvs hardware_interface controller_interface

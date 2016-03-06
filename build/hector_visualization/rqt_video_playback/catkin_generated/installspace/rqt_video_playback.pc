@@ -1,8 +1,0 @@
-prefix=/home/somal/catkin_ws/install
-
-Name: rqt_video_playback
-Description: Description of rqt_video_playback
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/somal/catkin_ws/install/lib -lrqt_video_playback
-Requires: rosgraph_msgs rqt_gui rqt_gui_cpp

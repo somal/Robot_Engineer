@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "hector_mapping")
-set(hector_mapping_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
-set(hector_mapping_DEPRECATED "")
-set(hector_mapping_VERSION "0.3.4")
-set(hector_mapping_BUILD_DEPENDS "cmake_modules" "roscpp" "nav_msgs" "visualization_msgs" "tf" "message_filters" "laser_geometry" "tf_conversions" "eigen" "boost" "message_generation")
-set(hector_mapping_RUN_DEPENDS "roscpp" "nav_msgs" "visualization_msgs" "tf" "message_filters" "laser_geometry" "tf_conversions" "eigen" "boost" "message_runtime")
-set(hector_mapping_BUILDTOOL_DEPENDS "catkin")

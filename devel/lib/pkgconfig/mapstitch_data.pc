@@ -1,8 +1,0 @@
-prefix=/home/somal/catkin_ws/devel
-
-Name: mapstitch_data
-Description: Description of mapstitch_data
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/somal/catkin_ws/devel/lib 
-Requires: 

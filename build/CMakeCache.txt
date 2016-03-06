@@ -20,50 +20,14 @@ BOOST_THREAD_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libpthread.so
 //Build shared libraries (DLLs).
 BUILD_SHARED_LIBS:BOOL=ON
 
-//Boost date_time library (debug)
-Boost_DATE_TIME_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_date_time.so
-
-//Boost date_time library (release)
-Boost_DATE_TIME_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_date_time.so
-
 //The directory containing a CMake configuration file for Boost.
 Boost_DIR:PATH=Boost_DIR-NOTFOUND
-
-//Boost filesystem library (debug)
-Boost_FILESYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-
-//Boost filesystem library (release)
-Boost_FILESYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 
 //Path to a file.
 Boost_INCLUDE_DIR:PATH=/usr/include
 
-//Boost iostreams library (debug)
-Boost_IOSTREAMS_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-
-//Boost iostreams library (release)
-Boost_IOSTREAMS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-
 //Boost library directory
 Boost_LIBRARY_DIR:PATH=/usr/lib/x86_64-linux-gnu
-
-//Boost serialization library (debug)
-Boost_SERIALIZATION_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_serialization.so
-
-//Boost serialization library (release)
-Boost_SERIALIZATION_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_serialization.so
-
-//Boost signals library (debug)
-Boost_SIGNALS_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_signals.so
-
-//Boost signals library (release)
-Boost_SIGNALS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_signals.so
-
-//Boost system library (debug)
-Boost_SYSTEM_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
-
-//Boost system library (release)
-Boost_SYSTEM_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_system.so
 
 //Boost thread library (debug)
 Boost_THREAD_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libboost_thread.so
@@ -246,13 +210,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 DOXYGEN_EXECUTABLE:FILEPATH=DOXYGEN_EXECUTABLE-NOTFOUND
 
 //Path to a file.
-EIGEN3_INCLUDE_DIR:PATH=/usr/include/eigen3
-
-//Path to a file.
 EIGEN_INCLUDE_DIR:PATH=/usr/include/eigen3
-
-//Path to a file.
-EIGEN_INCLUDE_DIRS:PATH=/usr/include/eigen3
 
 //LSB Distrib tag
 ELEMENTARY OS:BOOL=TRUE
@@ -265,15 +223,6 @@ EMPY_EXECUTABLE:FILEPATH=/usr/bin/empy
 
 //Empy script
 EMPY_SCRIPT:STRING=/usr/bin/empy
-
-//Path to a file.
-FLANN_INCLUDE_DIRS:PATH=/usr/include
-
-//Path to a library.
-FLANN_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
-
-//Path to a library.
-FLANN_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
 
 //Path to a file.
 GTEST_INCLUDE_DIR:PATH=/usr/include
@@ -290,17 +239,6 @@ GTEST_MAIN_LIBRARY:FILEPATH=GTEST_MAIN_LIBRARY-NOTFOUND
 //Path to a library.
 GTEST_MAIN_LIBRARY_DEBUG:FILEPATH=GTEST_MAIN_LIBRARY_DEBUG-NOTFOUND
 
-//Maximum number of state variables supported by hector_pose_estimation.
-// Used to preallocate memory for matrices and vectors. hector_pose_estimation_core
-// itself uses a maximum of 18 variables.
-HECTOR_POSE_ESTIMATION_MAXIMUM_STATE_VARIABLES:STRING=18
-
-//Path to a file.
-LIBUSB_1_INCLUDE_DIR:PATH=/usr/include
-
-//Path to a library.
-LIBUSB_1_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libusb-1.0.so
-
 //lsb_release executable was found
 LSB_FOUND:BOOL=TRUE
 
@@ -309,197 +247,6 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
-
-//Path to a file.
-OPENNI_INCLUDE_DIRS:PATH=/usr/include/ni
-
-//Path to a library.
-OPENNI_LIBRARY:FILEPATH=/usr/lib/libOpenNI.so
-
-//Path where debug 3rdpaty OpenCV dependencies are located
-OpenCV_3RDPARTY_LIB_DIR_DBG:PATH=
-
-//Path where release 3rdpaty OpenCV dependencies are located
-OpenCV_3RDPARTY_LIB_DIR_OPT:PATH=
-
-OpenCV_CONFIG_PATH:FILEPATH=/usr/share/OpenCV
-
-//The directory containing a CMake configuration file for OpenCV.
-OpenCV_DIR:PATH=/usr/share/OpenCV
-
-//Path where debug OpenCV libraries are located
-OpenCV_LIB_DIR_DBG:PATH=
-
-//Path where release OpenCV libraries are located
-OpenCV_LIB_DIR_OPT:PATH=
-
-//path to apps headers
-PCL_APPS_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_apps library
-PCL_APPS_LIBRARY:FILEPATH=/usr/lib/libpcl_apps.so
-
-//path to pcl_apps library debug
-PCL_APPS_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_apps.so
-
-//path to common headers
-PCL_COMMON_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_common library
-PCL_COMMON_LIBRARY:FILEPATH=/usr/lib/libpcl_common.so
-
-//path to pcl_common library debug
-PCL_COMMON_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_common.so
-
-//The directory containing a CMake configuration file for PCL.
-PCL_DIR:PATH=/usr/share/pcl-1.7
-
-//path to features headers
-PCL_FEATURES_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_features library
-PCL_FEATURES_LIBRARY:FILEPATH=/usr/lib/libpcl_features.so
-
-//path to pcl_features library debug
-PCL_FEATURES_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_features.so
-
-//path to filters headers
-PCL_FILTERS_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_filters library
-PCL_FILTERS_LIBRARY:FILEPATH=/usr/lib/libpcl_filters.so
-
-//path to pcl_filters library debug
-PCL_FILTERS_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_filters.so
-
-//path to geometry headers
-PCL_GEOMETRY_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to io headers
-PCL_IO_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_io library
-PCL_IO_LIBRARY:FILEPATH=/usr/lib/libpcl_io.so
-
-//path to pcl_io library debug
-PCL_IO_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_io.so
-
-//path to kdtree headers
-PCL_KDTREE_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_kdtree library
-PCL_KDTREE_LIBRARY:FILEPATH=/usr/lib/libpcl_kdtree.so
-
-//path to pcl_kdtree library debug
-PCL_KDTREE_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_kdtree.so
-
-//path to keypoints headers
-PCL_KEYPOINTS_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_keypoints library
-PCL_KEYPOINTS_LIBRARY:FILEPATH=/usr/lib/libpcl_keypoints.so
-
-//path to pcl_keypoints library debug
-PCL_KEYPOINTS_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_keypoints.so
-
-//path to octree headers
-PCL_OCTREE_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_octree library
-PCL_OCTREE_LIBRARY:FILEPATH=/usr/lib/libpcl_octree.so
-
-//path to pcl_octree library debug
-PCL_OCTREE_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_octree.so
-
-//path to outofcore headers
-PCL_OUTOFCORE_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_outofcore library
-PCL_OUTOFCORE_LIBRARY:FILEPATH=/usr/lib/libpcl_outofcore.so
-
-//path to pcl_outofcore library debug
-PCL_OUTOFCORE_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_outofcore.so
-
-//path to people headers
-PCL_PEOPLE_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_people library
-PCL_PEOPLE_LIBRARY:FILEPATH=/usr/lib/libpcl_people.so
-
-//path to pcl_people library debug
-PCL_PEOPLE_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_people.so
-
-//path to recognition headers
-PCL_RECOGNITION_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_recognition library
-PCL_RECOGNITION_LIBRARY:FILEPATH=/usr/lib/libpcl_recognition.so
-
-//path to pcl_recognition library debug
-PCL_RECOGNITION_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_recognition.so
-
-//path to registration headers
-PCL_REGISTRATION_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_registration library
-PCL_REGISTRATION_LIBRARY:FILEPATH=/usr/lib/libpcl_registration.so
-
-//path to pcl_registration library debug
-PCL_REGISTRATION_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_registration.so
-
-//path to sample_consensus headers
-PCL_SAMPLE_CONSENSUS_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_sample_consensus library
-PCL_SAMPLE_CONSENSUS_LIBRARY:FILEPATH=/usr/lib/libpcl_sample_consensus.so
-
-//path to pcl_sample_consensus library debug
-PCL_SAMPLE_CONSENSUS_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_sample_consensus.so
-
-//path to search headers
-PCL_SEARCH_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_search library
-PCL_SEARCH_LIBRARY:FILEPATH=/usr/lib/libpcl_search.so
-
-//path to pcl_search library debug
-PCL_SEARCH_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_search.so
-
-//path to segmentation headers
-PCL_SEGMENTATION_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_segmentation library
-PCL_SEGMENTATION_LIBRARY:FILEPATH=/usr/lib/libpcl_segmentation.so
-
-//path to pcl_segmentation library debug
-PCL_SEGMENTATION_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_segmentation.so
-
-//path to surface headers
-PCL_SURFACE_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_surface library
-PCL_SURFACE_LIBRARY:FILEPATH=/usr/lib/libpcl_surface.so
-
-//path to pcl_surface library debug
-PCL_SURFACE_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_surface.so
-
-//path to tracking headers
-PCL_TRACKING_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_tracking library
-PCL_TRACKING_LIBRARY:FILEPATH=/usr/lib/libpcl_tracking.so
-
-//path to pcl_tracking library debug
-PCL_TRACKING_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_tracking.so
-
-//path to visualization headers
-PCL_VISUALIZATION_INCLUDE_DIR:PATH=/usr/include/pcl-1.7
-
-//path to pcl_visualization library
-PCL_VISUALIZATION_LIBRARY:FILEPATH=/usr/lib/libpcl_visualization.so
-
-//path to pcl_visualization library debug
-PCL_VISUALIZATION_LIBRARY_DEBUG:FILEPATH=/usr/lib/libpcl_visualization.so
 
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
@@ -540,615 +287,6 @@ Project_BINARY_DIR:STATIC=/home/somal/catkin_ws/build
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src
 
-//Path to a file.
-QHULL_INCLUDE_DIRS:PATH=/usr/include
-
-//Path to a library.
-QHULL_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libqhull.so
-
-//Path to a library.
-QHULL_LIBRARY_DEBUG:FILEPATH=/usr/lib/x86_64-linux-gnu/libqhull.so
-
-//Path to a library.
-QT_ARTHURPLUGIN_PLUGIN_DEBUG:FILEPATH=QT_ARTHURPLUGIN_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_ARTHURPLUGIN_PLUGIN_RELEASE:FILEPATH=QT_ARTHURPLUGIN_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a library.
-QT_CONTAINEREXTENSION_PLUGIN_DEBUG:FILEPATH=QT_CONTAINEREXTENSION_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_CONTAINEREXTENSION_PLUGIN_RELEASE:FILEPATH=QT_CONTAINEREXTENSION_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a library.
-QT_CUSTOMWIDGETPLUGIN_PLUGIN_DEBUG:FILEPATH=QT_CUSTOMWIDGETPLUGIN_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_CUSTOMWIDGETPLUGIN_PLUGIN_RELEASE:FILEPATH=QT_CUSTOMWIDGETPLUGIN_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a program.
-QT_DBUSCPP2XML_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/qdbuscpp2xml
-
-//Path to a program.
-QT_DBUSXML2CPP_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/qdbusxml2cpp
-
-//Path to a program.
-QT_DESIGNER_EXECUTABLE:FILEPATH=QT_DESIGNER_EXECUTABLE-NOTFOUND
-
-//The location of the Qt docs
-QT_DOC_DIR:PATH=/usr/share/qt4/doc
-
-//The location of the Qt imports
-QT_IMPORTS_DIR:PATH=
-
-//Path to a program.
-QT_LINGUIST_EXECUTABLE:FILEPATH=QT_LINGUIST_EXECUTABLE-NOTFOUND
-
-//Path to a program.
-QT_LRELEASE_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/lrelease
-
-//Path to a program.
-QT_LUPDATE_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/lupdate
-
-//The location of the Qt mkspecs containing qconfig.pri
-QT_MKSPECS_DIR:PATH=/usr/share/qt4/mkspecs
-
-//Path to a program.
-QT_MOC_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/moc
-
-//Path to a library.
-QT_PHONONWIDGETS_PLUGIN_DEBUG:FILEPATH=QT_PHONONWIDGETS_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_PHONONWIDGETS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/designer/libphononwidgets.so
-
-//Path to a file.
-QT_PHONON_INCLUDE_DIR:PATH=/usr/include/qt4/phonon
-
-//The Qt PHONON library
-QT_PHONON_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libphonon.so
-
-//Path to a library.
-QT_PHONON_LIBRARY_DEBUG:FILEPATH=QT_PHONON_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_PHONON_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libphonon.so
-
-//The location of the Qt plugins
-QT_PLUGINS_DIR:PATH=/usr/lib/x86_64-linux-gnu/qt4/plugins
-
-//Path to a library.
-QT_QCNCODECS_PLUGIN_DEBUG:FILEPATH=QT_QCNCODECS_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QCNCODECS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/codecs/libqcncodecs.so
-
-//Path to a program.
-QT_QCOLLECTIONGENERATOR_EXECUTABLE:FILEPATH=QT_QCOLLECTIONGENERATOR_EXECUTABLE-NOTFOUND
-
-//Path to a library.
-QT_QCOREWLANBEARER_PLUGIN_DEBUG:FILEPATH=QT_QCOREWLANBEARER_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QCOREWLANBEARER_PLUGIN_RELEASE:FILEPATH=QT_QCOREWLANBEARER_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a library.
-QT_QDECLARATIVEVIEW_PLUGIN_DEBUG:FILEPATH=QT_QDECLARATIVEVIEW_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QDECLARATIVEVIEW_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/designer/libqdeclarativeview.so
-
-//Path to a library.
-QT_QDECORATIONDEFAULT_PLUGIN_DEBUG:FILEPATH=QT_QDECORATIONDEFAULT_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QDECORATIONDEFAULT_PLUGIN_RELEASE:FILEPATH=QT_QDECORATIONDEFAULT_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a library.
-QT_QDECORATIONWINDOWS_PLUGIN_DEBUG:FILEPATH=QT_QDECORATIONWINDOWS_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QDECORATIONWINDOWS_PLUGIN_RELEASE:FILEPATH=QT_QDECORATIONWINDOWS_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a library.
-QT_QGENERICBEARER_PLUGIN_DEBUG:FILEPATH=QT_QGENERICBEARER_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QGENERICBEARER_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/bearer/libqgenericbearer.so
-
-//Path to a library.
-QT_QGIF_PLUGIN_DEBUG:FILEPATH=QT_QGIF_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QGIF_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqgif.so
-
-//Path to a library.
-QT_QGLGRAPHICSSYSTEM_PLUGIN_DEBUG:FILEPATH=QT_QGLGRAPHICSSYSTEM_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QGLGRAPHICSSYSTEM_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/graphicssystems/libqglgraphicssystem.so
-
-//Path to a library.
-QT_QICO_PLUGIN_DEBUG:FILEPATH=QT_QICO_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QICO_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqico.so
-
-//Path to a library.
-QT_QIMSW_MULTI_PLUGIN_DEBUG:FILEPATH=QT_QIMSW_MULTI_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QIMSW_MULTI_PLUGIN_RELEASE:FILEPATH=QT_QIMSW_MULTI_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a library.
-QT_QJPCODECS_PLUGIN_DEBUG:FILEPATH=QT_QJPCODECS_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QJPCODECS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/codecs/libqjpcodecs.so
-
-//Path to a library.
-QT_QJPEG_PLUGIN_DEBUG:FILEPATH=QT_QJPEG_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QJPEG_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqjpeg.so
-
-//Path to a library.
-QT_QKRCODECS_PLUGIN_DEBUG:FILEPATH=QT_QKRCODECS_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QKRCODECS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/codecs/libqkrcodecs.so
-
-//The qmake executable for the Qt installation to use
-QT_QMAKE_EXECUTABLE:FILEPATH=/usr/bin/qmake
-
-//Path to a library.
-QT_QMNG_PLUGIN_DEBUG:FILEPATH=QT_QMNG_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QMNG_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqmng.so
-
-//Path to a library.
-QT_QSQLDB2_PLUGIN_DEBUG:FILEPATH=QT_QSQLDB2_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QSQLDB2_PLUGIN_RELEASE:FILEPATH=QT_QSQLDB2_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a library.
-QT_QSQLIBASE_PLUGIN_DEBUG:FILEPATH=QT_QSQLIBASE_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QSQLIBASE_PLUGIN_RELEASE:FILEPATH=QT_QSQLIBASE_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a library.
-QT_QSQLITE2_PLUGIN_DEBUG:FILEPATH=QT_QSQLITE2_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QSQLITE2_PLUGIN_RELEASE:FILEPATH=QT_QSQLITE2_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a library.
-QT_QSQLITE_PLUGIN_DEBUG:FILEPATH=QT_QSQLITE_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QSQLITE_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/sqldrivers/libqsqlite.so
-
-//Path to a library.
-QT_QSQLMYSQL_PLUGIN_DEBUG:FILEPATH=QT_QSQLMYSQL_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QSQLMYSQL_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/sqldrivers/libqsqlmysql.so
-
-//Path to a library.
-QT_QSQLOCI_PLUGIN_DEBUG:FILEPATH=QT_QSQLOCI_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QSQLOCI_PLUGIN_RELEASE:FILEPATH=QT_QSQLOCI_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a library.
-QT_QSQLODBC_PLUGIN_DEBUG:FILEPATH=QT_QSQLODBC_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QSQLODBC_PLUGIN_RELEASE:FILEPATH=QT_QSQLODBC_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a library.
-QT_QSQLPSQL_PLUGIN_DEBUG:FILEPATH=QT_QSQLPSQL_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QSQLPSQL_PLUGIN_RELEASE:FILEPATH=QT_QSQLPSQL_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a library.
-QT_QSQLTDS_PLUGIN_DEBUG:FILEPATH=QT_QSQLTDS_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QSQLTDS_PLUGIN_RELEASE:FILEPATH=QT_QSQLTDS_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a library.
-QT_QSVGICON_PLUGIN_DEBUG:FILEPATH=QT_QSVGICON_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QSVGICON_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/iconengines/libqsvgicon.so
-
-//Path to a library.
-QT_QSVG_PLUGIN_DEBUG:FILEPATH=QT_QSVG_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QSVG_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqsvg.so
-
-//Path to a library.
-QT_QT3SUPPORTWIDGETS_PLUGIN_DEBUG:FILEPATH=QT_QT3SUPPORTWIDGETS_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QT3SUPPORTWIDGETS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/designer/libqt3supportwidgets.so
-
-//Path to a file.
-QT_QT3SUPPORT_INCLUDE_DIR:PATH=/usr/include/qt4/Qt3Support
-
-//The Qt QT3SUPPORT library
-QT_QT3SUPPORT_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQt3Support.so
-
-//Path to a library.
-QT_QT3SUPPORT_LIBRARY_DEBUG:FILEPATH=QT_QT3SUPPORT_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QT3SUPPORT_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQt3Support.so
-
-//Path to a library.
-QT_QTACCESSIBLECOMPATWIDGETS_PLUGIN_DEBUG:FILEPATH=QT_QTACCESSIBLECOMPATWIDGETS_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTACCESSIBLECOMPATWIDGETS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/accessible/libqtaccessiblecompatwidgets.so
-
-//Path to a library.
-QT_QTACCESSIBLEWIDGETS_PLUGIN_DEBUG:FILEPATH=QT_QTACCESSIBLEWIDGETS_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTACCESSIBLEWIDGETS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/accessible/libqtaccessiblewidgets.so
-
-//Path to a file.
-QT_QTASSISTANTCLIENT_INCLUDE_DIR:PATH=QT_QTASSISTANTCLIENT_INCLUDE_DIR-NOTFOUND
-
-//The Qt QTASSISTANTCLIENT library
-QT_QTASSISTANTCLIENT_LIBRARY:STRING=
-
-//Path to a library.
-QT_QTASSISTANTCLIENT_LIBRARY_DEBUG:FILEPATH=QT_QTASSISTANTCLIENT_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTASSISTANTCLIENT_LIBRARY_RELEASE:FILEPATH=QT_QTASSISTANTCLIENT_LIBRARY_RELEASE-NOTFOUND
-
-//Path to a file.
-QT_QTASSISTANT_INCLUDE_DIR:PATH=QT_QTASSISTANT_INCLUDE_DIR-NOTFOUND
-
-//The Qt QTASSISTANT library
-QT_QTASSISTANT_LIBRARY:STRING=
-
-//Path to a library.
-QT_QTASSISTANT_LIBRARY_DEBUG:FILEPATH=QT_QTASSISTANT_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTASSISTANT_LIBRARY_RELEASE:FILEPATH=QT_QTASSISTANT_LIBRARY_RELEASE-NOTFOUND
-
-//The Qt QTCLUCENE library
-QT_QTCLUCENE_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtCLucene.so
-
-//Path to a library.
-QT_QTCLUCENE_LIBRARY_DEBUG:FILEPATH=QT_QTCLUCENE_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTCLUCENE_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtCLucene.so
-
-//Path to a file.
-QT_QTCORE_INCLUDE_DIR:PATH=/usr/include/qt4/QtCore
-
-//The Qt QTCORE library
-QT_QTCORE_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtCore.so
-
-//Path to a library.
-QT_QTCORE_LIBRARY_DEBUG:FILEPATH=QT_QTCORE_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTCORE_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtCore.so
-
-//Path to a file.
-QT_QTDBUS_INCLUDE_DIR:PATH=/usr/include/qt4/QtDBus
-
-//The Qt QTDBUS library
-QT_QTDBUS_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtDBus.so
-
-//Path to a library.
-QT_QTDBUS_LIBRARY_DEBUG:FILEPATH=QT_QTDBUS_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTDBUS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtDBus.so
-
-//Path to a file.
-QT_QTDECLARATIVE_INCLUDE_DIR:PATH=/usr/include/qt4/QtDeclarative
-
-//The Qt QTDECLARATIVE library
-QT_QTDECLARATIVE_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtDeclarative.so
-
-//Path to a library.
-QT_QTDECLARATIVE_LIBRARY_DEBUG:FILEPATH=QT_QTDECLARATIVE_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTDECLARATIVE_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtDeclarative.so
-
-//Path to a file.
-QT_QTDESIGNERCOMPONENTS_INCLUDE_DIR:PATH=/usr/include/qt4/QtDesigner
-
-//The Qt QTDESIGNERCOMPONENTS library
-QT_QTDESIGNERCOMPONENTS_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtDesignerComponents.so
-
-//Path to a library.
-QT_QTDESIGNERCOMPONENTS_LIBRARY_DEBUG:FILEPATH=QT_QTDESIGNERCOMPONENTS_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTDESIGNERCOMPONENTS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtDesignerComponents.so
-
-//Path to a file.
-QT_QTDESIGNER_INCLUDE_DIR:PATH=/usr/include/qt4/QtDesigner
-
-//The Qt QTDESIGNER library
-QT_QTDESIGNER_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtDesigner.so
-
-//Path to a library.
-QT_QTDESIGNER_LIBRARY_DEBUG:FILEPATH=QT_QTDESIGNER_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTDESIGNER_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtDesigner.so
-
-//Path to a file.
-QT_QTGUI_INCLUDE_DIR:PATH=/usr/include/qt4/QtGui
-
-//The Qt QTGUI library
-QT_QTGUI_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtGui.so
-
-//Path to a library.
-QT_QTGUI_LIBRARY_DEBUG:FILEPATH=QT_QTGUI_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTGUI_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtGui.so
-
-//Path to a file.
-QT_QTHELP_INCLUDE_DIR:PATH=/usr/include/qt4/QtHelp
-
-//The Qt QTHELP library
-QT_QTHELP_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtHelp.so
-
-//Path to a library.
-QT_QTHELP_LIBRARY_DEBUG:FILEPATH=QT_QTHELP_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTHELP_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtHelp.so
-
-//Path to a library.
-QT_QTIFF_PLUGIN_DEBUG:FILEPATH=QT_QTIFF_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTIFF_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/libqtiff.so
-
-//Path to a file.
-QT_QTMOTIF_INCLUDE_DIR:PATH=QT_QTMOTIF_INCLUDE_DIR-NOTFOUND
-
-//The Qt QTMOTIF library
-QT_QTMOTIF_LIBRARY:STRING=
-
-//Path to a library.
-QT_QTMOTIF_LIBRARY_DEBUG:FILEPATH=QT_QTMOTIF_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTMOTIF_LIBRARY_RELEASE:FILEPATH=QT_QTMOTIF_LIBRARY_RELEASE-NOTFOUND
-
-//Path to a file.
-QT_QTMULTIMEDIA_INCLUDE_DIR:PATH=QT_QTMULTIMEDIA_INCLUDE_DIR-NOTFOUND
-
-//The Qt QTMULTIMEDIA library
-QT_QTMULTIMEDIA_LIBRARY:STRING=
-
-//Path to a library.
-QT_QTMULTIMEDIA_LIBRARY_DEBUG:FILEPATH=QT_QTMULTIMEDIA_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTMULTIMEDIA_LIBRARY_RELEASE:FILEPATH=QT_QTMULTIMEDIA_LIBRARY_RELEASE-NOTFOUND
-
-//Path to a file.
-QT_QTNETWORK_INCLUDE_DIR:PATH=/usr/include/qt4/QtNetwork
-
-//The Qt QTNETWORK library
-QT_QTNETWORK_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtNetwork.so
-
-//Path to a library.
-QT_QTNETWORK_LIBRARY_DEBUG:FILEPATH=QT_QTNETWORK_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTNETWORK_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtNetwork.so
-
-//Path to a file.
-QT_QTNSPLUGIN_INCLUDE_DIR:PATH=QT_QTNSPLUGIN_INCLUDE_DIR-NOTFOUND
-
-//The Qt QTNSPLUGIN library
-QT_QTNSPLUGIN_LIBRARY:STRING=
-
-//Path to a library.
-QT_QTNSPLUGIN_LIBRARY_DEBUG:FILEPATH=QT_QTNSPLUGIN_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTNSPLUGIN_LIBRARY_RELEASE:FILEPATH=QT_QTNSPLUGIN_LIBRARY_RELEASE-NOTFOUND
-
-//Path to a file.
-QT_QTOPENGL_INCLUDE_DIR:PATH=/usr/include/qt4/QtOpenGL
-
-//The Qt QTOPENGL library
-QT_QTOPENGL_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtOpenGL.so
-
-//Path to a library.
-QT_QTOPENGL_LIBRARY_DEBUG:FILEPATH=QT_QTOPENGL_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTOPENGL_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtOpenGL.so
-
-//Path to a library.
-QT_QTRACEGRAPHICSSYSTEM_PLUGIN_DEBUG:FILEPATH=QT_QTRACEGRAPHICSSYSTEM_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTRACEGRAPHICSSYSTEM_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/graphicssystems/libqtracegraphicssystem.so
-
-//Path to a library.
-QT_QTSCRIPTDBUS_PLUGIN_DEBUG:FILEPATH=QT_QTSCRIPTDBUS_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTSCRIPTDBUS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/script/libqtscriptdbus.so
-
-//Path to a file.
-QT_QTSCRIPTTOOLS_INCLUDE_DIR:PATH=/usr/include/qt4/QtScriptTools
-
-//The Qt QTSCRIPTTOOLS library
-QT_QTSCRIPTTOOLS_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtScriptTools.so
-
-//Path to a library.
-QT_QTSCRIPTTOOLS_LIBRARY_DEBUG:FILEPATH=QT_QTSCRIPTTOOLS_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTSCRIPTTOOLS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtScriptTools.so
-
-//Path to a file.
-QT_QTSCRIPT_INCLUDE_DIR:PATH=/usr/include/qt4/QtScript
-
-//The Qt QTSCRIPT library
-QT_QTSCRIPT_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtScript.so
-
-//Path to a library.
-QT_QTSCRIPT_LIBRARY_DEBUG:FILEPATH=QT_QTSCRIPT_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTSCRIPT_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtScript.so
-
-//Path to a file.
-QT_QTSQL_INCLUDE_DIR:PATH=/usr/include/qt4/QtSql
-
-//The Qt QTSQL library
-QT_QTSQL_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtSql.so
-
-//Path to a library.
-QT_QTSQL_LIBRARY_DEBUG:FILEPATH=QT_QTSQL_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTSQL_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtSql.so
-
-//Path to a file.
-QT_QTSVG_INCLUDE_DIR:PATH=/usr/include/qt4/QtSvg
-
-//The Qt QTSVG library
-QT_QTSVG_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtSvg.so
-
-//Path to a library.
-QT_QTSVG_LIBRARY_DEBUG:FILEPATH=QT_QTSVG_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTSVG_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtSvg.so
-
-//Path to a file.
-QT_QTTEST_INCLUDE_DIR:PATH=/usr/include/qt4/QtTest
-
-//The Qt QTTEST library
-QT_QTTEST_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtTest.so
-
-//Path to a library.
-QT_QTTEST_LIBRARY_DEBUG:FILEPATH=QT_QTTEST_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTTEST_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtTest.so
-
-//Path to a file.
-QT_QTUITOOLS_INCLUDE_DIR:PATH=/usr/include/qt4/QtUiTools
-
-//The Qt QTUITOOLS library
-QT_QTUITOOLS_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtUiTools.a
-
-//Path to a library.
-QT_QTUITOOLS_LIBRARY_DEBUG:FILEPATH=QT_QTUITOOLS_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTUITOOLS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtUiTools.a
-
-//Path to a library.
-QT_QTWCODECS_PLUGIN_DEBUG:FILEPATH=QT_QTWCODECS_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTWCODECS_PLUGIN_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/plugins/codecs/libqtwcodecs.so
-
-//Path to a file.
-QT_QTWEBKIT_INCLUDE_DIR:PATH=/usr/include/qt4/QtWebKit
-
-//The Qt QTWEBKIT library
-QT_QTWEBKIT_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtWebKit.so
-
-//Path to a library.
-QT_QTWEBKIT_LIBRARY_DEBUG:FILEPATH=QT_QTWEBKIT_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTWEBKIT_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtWebKit.so
-
-//Path to a file.
-QT_QTXMLPATTERNS_INCLUDE_DIR:PATH=/usr/include/qt4/QtXmlPatterns
-
-//The Qt QTXMLPATTERNS library
-QT_QTXMLPATTERNS_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtXmlPatterns.so
-
-//Path to a library.
-QT_QTXMLPATTERNS_LIBRARY_DEBUG:FILEPATH=QT_QTXMLPATTERNS_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTXMLPATTERNS_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtXmlPatterns.so
-
-//Path to a file.
-QT_QTXML_INCLUDE_DIR:PATH=/usr/include/qt4/QtXml
-
-//The Qt QTXML library
-QT_QTXML_LIBRARY:STRING=/usr/lib/x86_64-linux-gnu/libQtXml.so
-
-//Path to a library.
-QT_QTXML_LIBRARY_DEBUG:FILEPATH=QT_QTXML_LIBRARY_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QTXML_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libQtXml.so
-
-//Path to a library.
-QT_QWEBVIEW_PLUGIN_DEBUG:FILEPATH=QT_QWEBVIEW_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QWEBVIEW_PLUGIN_RELEASE:FILEPATH=QT_QWEBVIEW_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a library.
-QT_QWSTSLIBMOUSEHANDLER_PLUGIN_DEBUG:FILEPATH=QT_QWSTSLIBMOUSEHANDLER_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_QWSTSLIBMOUSEHANDLER_PLUGIN_RELEASE:FILEPATH=QT_QWSTSLIBMOUSEHANDLER_PLUGIN_RELEASE-NOTFOUND
-
-//Path to a program.
-QT_RCC_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/rcc
-
-//Path to a library.
-QT_TASKMENUEXTENSION_PLUGIN_DEBUG:FILEPATH=QT_TASKMENUEXTENSION_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_TASKMENUEXTENSION_PLUGIN_RELEASE:FILEPATH=QT_TASKMENUEXTENSION_PLUGIN_RELEASE-NOTFOUND
-
-//The location of the Qt translations
-QT_TRANSLATIONS_DIR:PATH=/usr/share/qt4/translations
-
-//Path to a program.
-QT_UIC3_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/uic3
-
-//Path to a program.
-QT_UIC_EXECUTABLE:FILEPATH=/usr/lib/x86_64-linux-gnu/qt4/bin/uic
-
-//Path to a library.
-QT_WORLDTIMECLOCKPLUGIN_PLUGIN_DEBUG:FILEPATH=QT_WORLDTIMECLOCKPLUGIN_PLUGIN_DEBUG-NOTFOUND
-
-//Path to a library.
-QT_WORLDTIMECLOCKPLUGIN_PLUGIN_RELEASE:FILEPATH=QT_WORLDTIMECLOCKPLUGIN_PLUGIN_RELEASE-NOTFOUND
-
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
 
@@ -1158,23 +296,11 @@ SDFormat_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/sdformat
 //Enable debian style python package layout
 SETUPTOOLS_DEB_LAYOUT:BOOL=ON
 
-//Use a model of the quadrotor aerodynamics
-USE_AERODYNAMICS_PLUGIN:BOOL=ON
-
-//Do not run the hector_quadrotor_controller_gazebo plugin.
-USE_EXTERNAL_CONTROLLER:BOOL=OFF
-
-//Use a model of the quadrotor propulsion system
-USE_PROPULSION_PLUGIN:BOOL=ON
-
 //Path to a file.
 _CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
 
 //Path to a file.
 _CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
-
-//Path to a file.
-_file_name:FILEPATH=/home/somal/catkin_ws/src/flexbe_behavior_engine/flexbe_testing/test/selftest.test
 
 //The directory containing a CMake configuration file for actionlib.
 actionlib_DIR:PATH=/opt/ros/indigo/share/actionlib/cmake
@@ -1203,26 +329,8 @@ class_loader_DIR:PATH=/opt/ros/indigo/share/class_loader/cmake
 //The directory containing a CMake configuration file for cmake_modules.
 cmake_modules_DIR:PATH=/opt/ros/indigo/share/cmake_modules/cmake
 
-//The directory containing a CMake configuration file for control_toolbox.
-control_toolbox_DIR:PATH=/opt/ros/indigo/share/control_toolbox/cmake
-
-//The directory containing a CMake configuration file for controller_interface.
-controller_interface_DIR:PATH=/opt/ros/indigo/share/controller_interface/cmake
-
-//The directory containing a CMake configuration file for controller_manager.
-controller_manager_DIR:PATH=/opt/ros/indigo/share/controller_manager/cmake
-
-//The directory containing a CMake configuration file for controller_manager_msgs.
-controller_manager_msgs_DIR:PATH=/opt/ros/indigo/share/controller_manager_msgs/cmake
-
-//The directory containing a CMake configuration file for costmap_2d.
-costmap_2d_DIR:PATH=/opt/ros/indigo/share/costmap_2d/cmake
-
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/indigo/share/cpp_common/cmake
-
-//The directory containing a CMake configuration file for cv_bridge.
-cv_bridge_DIR:PATH=/opt/ros/indigo/share/cv_bridge/cmake
 
 //Dependencies for the target
 diffdrive_plugin_6w_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_building.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_viewers.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_selection_buffer.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_skyx.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_player.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering_deferred.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
@@ -1236,66 +344,6 @@ driver_base_DIR:PATH=/opt/ros/indigo/share/driver_base/cmake
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/indigo/share/dynamic_reconfigure/cmake
 
-//Value Computed by CMake
-dynamicvoronoi_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/dynamicvoronoi
-
-//The directory containing a CMake configuration file for dynamicvoronoi.
-dynamicvoronoi_DIR:PATH=/home/somal/catkin_ws/devel/share/dynamicvoronoi/cmake
-
-//Dependencies for target
-dynamicvoronoi_LIB_DEPENDS:STATIC=
-
-//Value Computed by CMake
-dynamicvoronoi_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/dynamicvoronoi
-
-//Value Computed by CMake
-flexbe_core_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/flexbe_behavior_engine/flexbe_core
-
-//Value Computed by CMake
-flexbe_core_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/flexbe_behavior_engine/flexbe_core
-
-//Value Computed by CMake
-flexbe_input_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/flexbe_behavior_engine/flexbe_input
-
-//Value Computed by CMake
-flexbe_input_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/flexbe_behavior_engine/flexbe_input
-
-//Value Computed by CMake
-flexbe_mirror_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/flexbe_behavior_engine/flexbe_mirror
-
-//Value Computed by CMake
-flexbe_mirror_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/flexbe_behavior_engine/flexbe_mirror
-
-//Value Computed by CMake
-flexbe_msgs_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/flexbe_behavior_engine/flexbe_msgs
-
-//Value Computed by CMake
-flexbe_msgs_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/flexbe_behavior_engine/flexbe_msgs
-
-//Value Computed by CMake
-flexbe_onboard_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/flexbe_behavior_engine/flexbe_onboard
-
-//Value Computed by CMake
-flexbe_onboard_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/flexbe_behavior_engine/flexbe_onboard
-
-//Value Computed by CMake
-flexbe_states_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/flexbe_behavior_engine/flexbe_states
-
-//Value Computed by CMake
-flexbe_states_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/flexbe_behavior_engine/flexbe_states
-
-//Value Computed by CMake
-flexbe_testing_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/flexbe_behavior_engine/flexbe_testing
-
-//Value Computed by CMake
-flexbe_testing_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/flexbe_behavior_engine/flexbe_testing
-
-//Value Computed by CMake
-flexbe_widget_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/flexbe_behavior_engine/flexbe_widget
-
-//Value Computed by CMake
-flexbe_widget_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/flexbe_behavior_engine/flexbe_widget
-
 //The directory containing a CMake configuration file for gazebo.
 gazebo_DIR:PATH=/usr/share/gazebo/cmake
 
@@ -1304,9 +352,6 @@ gazebo_msgs_DIR:PATH=/opt/ros/indigo/share/gazebo_msgs/cmake
 
 //The directory containing a CMake configuration file for gazebo_plugins.
 gazebo_plugins_DIR:PATH=/opt/ros/indigo/share/gazebo_plugins/cmake
-
-//The directory containing a CMake configuration file for gazebo_ros_control.
-gazebo_ros_control_DIR:PATH=/opt/ros/indigo/share/gazebo_ros_control/cmake
 
 //Dependencies for the target
 gazebo_ros_force_based_move_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_building.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_viewers.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_selection_buffer.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_skyx.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_player.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering_deferred.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
@@ -1329,14 +374,8 @@ genmsg_DIR:PATH=/opt/ros/indigo/share/genmsg/cmake
 //The directory containing a CMake configuration file for genpy.
 genpy_DIR:PATH=/opt/ros/indigo/share/genpy/cmake
 
-//The directory containing a CMake configuration file for geographic_msgs.
-geographic_msgs_DIR:PATH=/opt/ros/indigo/share/geographic_msgs/cmake
-
 //The directory containing a CMake configuration file for geometry_msgs.
 geometry_msgs_DIR:PATH=/opt/ros/indigo/share/geometry_msgs/cmake
-
-//Dependencies for the target
-geotiff_writer_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;/usr/lib/x86_64-linux-gnu/libQtGui.so;general;/usr/lib/x86_64-linux-gnu/libQtCore.so;
 
 //Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/gtest
@@ -1363,62 +402,11 @@ gtest_force_shared_crt:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
-//The directory containing a CMake configuration file for hardware_interface.
-hardware_interface_DIR:PATH=/opt/ros/indigo/share/hardware_interface/cmake
-
-//Value Computed by CMake
-hector_barrel_detection_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_visualization/hector_barrel_detection
-
-//Dependencies for the target
-hector_barrel_detection_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libpcl_ros_filters.so;general;/opt/ros/indigo/lib/libpcl_ros_io.so;general;/opt/ros/indigo/lib/libpcl_ros_tf.so;optimized;/usr/lib/libpcl_common.so;debug;/usr/lib/libpcl_common.so;optimized;/usr/lib/libpcl_octree.so;debug;/usr/lib/libpcl_octree.so;optimized;/usr/lib/libpcl_io.so;debug;/usr/lib/libpcl_io.so;optimized;/usr/lib/libpcl_kdtree.so;debug;/usr/lib/libpcl_kdtree.so;optimized;/usr/lib/libpcl_search.so;debug;/usr/lib/libpcl_search.so;optimized;/usr/lib/libpcl_sample_consensus.so;debug;/usr/lib/libpcl_sample_consensus.so;optimized;/usr/lib/libpcl_filters.so;debug;/usr/lib/libpcl_filters.so;optimized;/usr/lib/libpcl_features.so;debug;/usr/lib/libpcl_features.so;optimized;/usr/lib/libpcl_keypoints.so;debug;/usr/lib/libpcl_keypoints.so;optimized;/usr/lib/libpcl_segmentation.so;debug;/usr/lib/libpcl_segmentation.so;optimized;/usr/lib/libpcl_visualization.so;debug;/usr/lib/libpcl_visualization.so;optimized;/usr/lib/libpcl_outofcore.so;debug;/usr/lib/libpcl_outofcore.so;optimized;/usr/lib/libpcl_registration.so;debug;/usr/lib/libpcl_registration.so;optimized;/usr/lib/libpcl_recognition.so;debug;/usr/lib/libpcl_recognition.so;optimized;/usr/lib/libpcl_surface.so;debug;/usr/lib/libpcl_surface.so;optimized;/usr/lib/libpcl_people.so;debug;/usr/lib/libpcl_people.so;optimized;/usr/lib/libpcl_tracking.so;debug;/usr/lib/libpcl_tracking.so;optimized;/usr/lib/libpcl_apps.so;debug;/usr/lib/libpcl_apps.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;general;/usr/lib/libOpenNI.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;general;/usr/lib/libvtkCommon.so.5.8.0;general;/usr/lib/libvtkRendering.so.5.8.0;general;/usr/lib/libvtkHybrid.so.5.8.0;general;/usr/lib/libvtkCharts.so.5.8.0;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libnodeletlib.so;general;/opt/ros/indigo/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/opt/ros/indigo/lib/librosbag.so;general;/opt/ros/indigo/lib/librosbag_storage.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/opt/ros/indigo/lib/libroslz4.so;general;/usr/lib/x86_64-linux-gnu/liblz4.so;general;/opt/ros/indigo/lib/libtopic_tools.so;general;/opt/ros/indigo/lib/libcv_bridge.so;general;/opt/ros/indigo/lib/libimage_transport.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libtf_conversions.so;general;/opt/ros/indigo/lib/libkdl_conversions.so;general;/opt/ros/indigo/lib/liborocos-kdl.so.1.3.0;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libimage_geometry.so;general;/usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/libpcl_common.so;debug;/usr/lib/libpcl_common.so;optimized;/usr/lib/libpcl_octree.so;debug;/usr/lib/libpcl_octree.so;general;/usr/lib/libOpenNI.so;general;vtkCommon;general;vtkRendering;general;vtkHybrid;general;vtkCharts;optimized;/usr/lib/libpcl_io.so;debug;/usr/lib/libpcl_io.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;optimized;/usr/lib/libpcl_kdtree.so;debug;/usr/lib/libpcl_kdtree.so;optimized;/usr/lib/libpcl_search.so;debug;/usr/lib/libpcl_search.so;optimized;/usr/lib/libpcl_sample_consensus.so;debug;/usr/lib/libpcl_sample_consensus.so;optimized;/usr/lib/libpcl_filters.so;debug;/usr/lib/libpcl_filters.so;optimized;/usr/lib/libpcl_features.so;debug;/usr/lib/libpcl_features.so;optimized;/usr/lib/libpcl_keypoints.so;debug;/usr/lib/libpcl_keypoints.so;optimized;/usr/lib/libpcl_segmentation.so;debug;/usr/lib/libpcl_segmentation.so;optimized;/usr/lib/libpcl_visualization.so;debug;/usr/lib/libpcl_visualization.so;optimized;/usr/lib/libpcl_outofcore.so;debug;/usr/lib/libpcl_outofcore.so;optimized;/usr/lib/libpcl_registration.so;debug;/usr/lib/libpcl_registration.so;optimized;/usr/lib/libpcl_recognition.so;debug;/usr/lib/libpcl_recognition.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;optimized;/usr/lib/libpcl_surface.so;debug;/usr/lib/libpcl_surface.so;optimized;/usr/lib/libpcl_people.so;debug;/usr/lib/libpcl_people.so;optimized;/usr/lib/libpcl_tracking.so;debug;/usr/lib/libpcl_tracking.so;optimized;/usr/lib/libpcl_apps.so;debug;/usr/lib/libpcl_apps.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;general;/usr/lib/libOpenNI.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;general;vtkCommon;general;vtkRendering;general;vtkHybrid;general;vtkCharts;general;opencv_videostab;general;opencv_video;general;opencv_superres;general;opencv_stitching;general;opencv_photo;general;opencv_ocl;general;opencv_objdetect;general;opencv_ml;general;opencv_legacy;general;opencv_imgproc;general;opencv_highgui;general;opencv_gpu;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_contrib;general;opencv_calib3d;
-
-//Value Computed by CMake
-hector_barrel_detection_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_visualization/hector_barrel_detection
-
-//Value Computed by CMake
-hector_barrel_detection_nodelet_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_visualization/hector_barrel_detection_nodelet
-
-//Dependencies for the target
-hector_barrel_detection_nodelet_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libpcl_ros_filters.so;general;/opt/ros/indigo/lib/libpcl_ros_io.so;general;/opt/ros/indigo/lib/libpcl_ros_tf.so;optimized;/usr/lib/libpcl_common.so;debug;/usr/lib/libpcl_common.so;optimized;/usr/lib/libpcl_octree.so;debug;/usr/lib/libpcl_octree.so;optimized;/usr/lib/libpcl_io.so;debug;/usr/lib/libpcl_io.so;optimized;/usr/lib/libpcl_kdtree.so;debug;/usr/lib/libpcl_kdtree.so;optimized;/usr/lib/libpcl_search.so;debug;/usr/lib/libpcl_search.so;optimized;/usr/lib/libpcl_sample_consensus.so;debug;/usr/lib/libpcl_sample_consensus.so;optimized;/usr/lib/libpcl_filters.so;debug;/usr/lib/libpcl_filters.so;optimized;/usr/lib/libpcl_features.so;debug;/usr/lib/libpcl_features.so;optimized;/usr/lib/libpcl_keypoints.so;debug;/usr/lib/libpcl_keypoints.so;optimized;/usr/lib/libpcl_segmentation.so;debug;/usr/lib/libpcl_segmentation.so;optimized;/usr/lib/libpcl_visualization.so;debug;/usr/lib/libpcl_visualization.so;optimized;/usr/lib/libpcl_outofcore.so;debug;/usr/lib/libpcl_outofcore.so;optimized;/usr/lib/libpcl_registration.so;debug;/usr/lib/libpcl_registration.so;optimized;/usr/lib/libpcl_recognition.so;debug;/usr/lib/libpcl_recognition.so;optimized;/usr/lib/libpcl_surface.so;debug;/usr/lib/libpcl_surface.so;optimized;/usr/lib/libpcl_people.so;debug;/usr/lib/libpcl_people.so;optimized;/usr/lib/libpcl_tracking.so;debug;/usr/lib/libpcl_tracking.so;optimized;/usr/lib/libpcl_apps.so;debug;/usr/lib/libpcl_apps.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;general;/usr/lib/libOpenNI.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;general;/usr/lib/libvtkCommon.so.5.8.0;general;/usr/lib/libvtkRendering.so.5.8.0;general;/usr/lib/libvtkHybrid.so.5.8.0;general;/usr/lib/libvtkCharts.so.5.8.0;general;/opt/ros/indigo/lib/librosbag.so;general;/opt/ros/indigo/lib/librosbag_storage.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/opt/ros/indigo/lib/libroslz4.so;general;/usr/lib/x86_64-linux-gnu/liblz4.so;general;/opt/ros/indigo/lib/libtopic_tools.so;general;/opt/ros/indigo/lib/libcv_bridge.so;general;/opt/ros/indigo/lib/libimage_transport.so;general;/opt/ros/indigo/lib/libtf_conversions.so;general;/opt/ros/indigo/lib/libkdl_conversions.so;general;/opt/ros/indigo/lib/liborocos-kdl.so.1.3.0;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libimage_geometry.so;general;/usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8;general;/opt/ros/indigo/lib/libnodeletlib.so;general;/opt/ros/indigo/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/libpcl_common.so;debug;/usr/lib/libpcl_common.so;optimized;/usr/lib/libpcl_octree.so;debug;/usr/lib/libpcl_octree.so;general;/usr/lib/libOpenNI.so;general;vtkCommon;general;vtkRendering;general;vtkHybrid;general;vtkCharts;optimized;/usr/lib/libpcl_io.so;debug;/usr/lib/libpcl_io.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;optimized;/usr/lib/libpcl_kdtree.so;debug;/usr/lib/libpcl_kdtree.so;optimized;/usr/lib/libpcl_search.so;debug;/usr/lib/libpcl_search.so;optimized;/usr/lib/libpcl_sample_consensus.so;debug;/usr/lib/libpcl_sample_consensus.so;optimized;/usr/lib/libpcl_filters.so;debug;/usr/lib/libpcl_filters.so;optimized;/usr/lib/libpcl_features.so;debug;/usr/lib/libpcl_features.so;optimized;/usr/lib/libpcl_keypoints.so;debug;/usr/lib/libpcl_keypoints.so;optimized;/usr/lib/libpcl_segmentation.so;debug;/usr/lib/libpcl_segmentation.so;optimized;/usr/lib/libpcl_visualization.so;debug;/usr/lib/libpcl_visualization.so;optimized;/usr/lib/libpcl_outofcore.so;debug;/usr/lib/libpcl_outofcore.so;optimized;/usr/lib/libpcl_registration.so;debug;/usr/lib/libpcl_registration.so;optimized;/usr/lib/libpcl_recognition.so;debug;/usr/lib/libpcl_recognition.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;optimized;/usr/lib/libpcl_surface.so;debug;/usr/lib/libpcl_surface.so;optimized;/usr/lib/libpcl_people.so;debug;/usr/lib/libpcl_people.so;optimized;/usr/lib/libpcl_tracking.so;debug;/usr/lib/libpcl_tracking.so;optimized;/usr/lib/libpcl_apps.so;debug;/usr/lib/libpcl_apps.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;general;/usr/lib/libOpenNI.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;general;vtkCommon;general;vtkRendering;general;vtkHybrid;general;vtkCharts;general;opencv_videostab;general;opencv_video;general;opencv_superres;general;opencv_stitching;general;opencv_photo;general;opencv_ocl;general;opencv_objdetect;general;opencv_ml;general;opencv_legacy;general;opencv_imgproc;general;opencv_highgui;general;opencv_gpu;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_contrib;general;opencv_calib3d;
-
-//Value Computed by CMake
-hector_barrel_detection_nodelet_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_visualization/hector_barrel_detection_nodelet
-
-//Value Computed by CMake
-hector_barrel_geotiff_plugin_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_visualization/hector_barrel_geotiff_plugin
-
-//Dependencies for the target
-hector_barrel_geotiff_plugin_LIB_DEPENDS:STATIC=general;geotiff_writer;general;/usr/lib/x86_64-linux-gnu/libQtGui.so;general;/usr/lib/x86_64-linux-gnu/libQtCore.so;general;/opt/ros/indigo/lib/libpcl_ros_filters.so;general;/opt/ros/indigo/lib/libpcl_ros_io.so;general;/opt/ros/indigo/lib/libpcl_ros_tf.so;optimized;/usr/lib/libpcl_common.so;debug;/usr/lib/libpcl_common.so;optimized;/usr/lib/libpcl_octree.so;debug;/usr/lib/libpcl_octree.so;optimized;/usr/lib/libpcl_io.so;debug;/usr/lib/libpcl_io.so;optimized;/usr/lib/libpcl_kdtree.so;debug;/usr/lib/libpcl_kdtree.so;optimized;/usr/lib/libpcl_search.so;debug;/usr/lib/libpcl_search.so;optimized;/usr/lib/libpcl_sample_consensus.so;debug;/usr/lib/libpcl_sample_consensus.so;optimized;/usr/lib/libpcl_filters.so;debug;/usr/lib/libpcl_filters.so;optimized;/usr/lib/libpcl_features.so;debug;/usr/lib/libpcl_features.so;optimized;/usr/lib/libpcl_keypoints.so;debug;/usr/lib/libpcl_keypoints.so;optimized;/usr/lib/libpcl_segmentation.so;debug;/usr/lib/libpcl_segmentation.so;optimized;/usr/lib/libpcl_visualization.so;debug;/usr/lib/libpcl_visualization.so;optimized;/usr/lib/libpcl_outofcore.so;debug;/usr/lib/libpcl_outofcore.so;optimized;/usr/lib/libpcl_registration.so;debug;/usr/lib/libpcl_registration.so;optimized;/usr/lib/libpcl_recognition.so;debug;/usr/lib/libpcl_recognition.so;optimized;/usr/lib/libpcl_surface.so;debug;/usr/lib/libpcl_surface.so;optimized;/usr/lib/libpcl_people.so;debug;/usr/lib/libpcl_people.so;optimized;/usr/lib/libpcl_tracking.so;debug;/usr/lib/libpcl_tracking.so;optimized;/usr/lib/libpcl_apps.so;debug;/usr/lib/libpcl_apps.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;general;/usr/lib/libOpenNI.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;general;/usr/lib/libvtkCommon.so.5.8.0;general;/usr/lib/libvtkRendering.so.5.8.0;general;/usr/lib/libvtkHybrid.so.5.8.0;general;/usr/lib/libvtkCharts.so.5.8.0;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libnodeletlib.so;general;/opt/ros/indigo/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/librosbag.so;general;/opt/ros/indigo/lib/librosbag_storage.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/opt/ros/indigo/lib/libroslz4.so;general;/usr/lib/x86_64-linux-gnu/liblz4.so;general;/opt/ros/indigo/lib/libtopic_tools.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;opencv_videostab;general;opencv_video;general;opencv_superres;general;opencv_stitching;general;opencv_photo;general;opencv_ocl;general;opencv_objdetect;general;opencv_ml;general;opencv_legacy;general;opencv_imgproc;general;opencv_highgui;general;opencv_gpu;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_contrib;general;opencv_calib3d;
-
-//Value Computed by CMake
-hector_barrel_geotiff_plugin_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_visualization/hector_barrel_geotiff_plugin
-
-//Value Computed by CMake
-hector_co2_detection_plugin_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_visualization/hector_co2_detection_plugin
-
-//Value Computed by CMake
-hector_co2_detection_plugin_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_visualization/hector_co2_detection_plugin
-
-//Value Computed by CMake
-hector_co2_processing_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_visualization/hector_co2_processing
-
-//Value Computed by CMake
-hector_co2_processing_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_visualization/hector_co2_processing
-
 //Value Computed by CMake
 hector_components_description_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_models/hector_components_description
 
-//The directory containing a CMake configuration file for hector_components_description.
-hector_components_description_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_components_description/cmake
-
 //Value Computed by CMake
 hector_components_description_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_models/hector_components_description
-
-//Value Computed by CMake
-hector_compressed_map_transport_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_slam/hector_compressed_map_transport
-
-//Value Computed by CMake
-hector_compressed_map_transport_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_slam/hector_compressed_map_transport
 
 //Value Computed by CMake
 hector_flipper_simulator_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_tracked_vehicles_common/hector_flipper_simulator
@@ -1435,26 +423,11 @@ hector_gazebo_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_gazebo/hector_g
 //Value Computed by CMake
 hector_gazebo_plugins_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_gazebo/hector_gazebo_plugins
 
-//The directory containing a CMake configuration file for hector_gazebo_plugins.
-hector_gazebo_plugins_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_gazebo_plugins/cmake
-
 //Value Computed by CMake
 hector_gazebo_plugins_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_gazebo/hector_gazebo_plugins
 
 //Dependencies for the target
-hector_gazebo_quadrotor_aerodynamics_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_building.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_viewers.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_selection_buffer.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_skyx.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_player.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering_deferred.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libtf2.so;general;hector_quadrotor_propulsion;general;hector_quadrotor_aerodynamics;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;hector_quadrotor_aerodynamics;
-
-//Dependencies for the target
-hector_gazebo_quadrotor_propulsion_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_building.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_viewers.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_selection_buffer.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_skyx.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_player.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering_deferred.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libtf2.so;general;hector_quadrotor_propulsion;general;hector_quadrotor_aerodynamics;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;hector_quadrotor_propulsion;
-
-//Dependencies for the target
-hector_gazebo_quadrotor_simple_controller_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_building.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_viewers.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_selection_buffer.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_skyx.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_player.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering_deferred.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libtf2.so;general;hector_quadrotor_propulsion;general;hector_quadrotor_aerodynamics;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
-
-//Dependencies for the target
 hector_gazebo_reset_plugin_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_building.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_viewers.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_selection_buffer.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_skyx.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_player.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering_deferred.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
-
-//Dependencies for the target
-hector_gazebo_ros_baro_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_building.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_viewers.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_selection_buffer.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_skyx.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_player.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering_deferred.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libtf2.so;general;hector_quadrotor_propulsion;general;hector_quadrotor_aerodynamics;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
 
 //Dependencies for the target
 hector_gazebo_ros_gps_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_building.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_viewers.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_selection_buffer.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_skyx.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_player.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering_deferred.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
@@ -1481,97 +454,10 @@ hector_gazebo_worlds_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_gazebo
 hector_gazebo_worlds_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_gazebo/hector_gazebo_worlds
 
 //Value Computed by CMake
-hector_geotiff_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_slam/hector_geotiff
-
-//The directory containing a CMake configuration file for hector_geotiff.
-hector_geotiff_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_geotiff/cmake
-
-//Value Computed by CMake
-hector_geotiff_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_slam/hector_geotiff
-
-//Value Computed by CMake
-hector_geotiff_plugins_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_slam/hector_geotiff_plugins
-
-//Dependencies for the target
-hector_geotiff_plugins_LIB_DEPENDS:STATIC=general;geotiff_writer;general;/usr/lib/x86_64-linux-gnu/libQtGui.so;general;/usr/lib/x86_64-linux-gnu/libQtCore.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
-
-//Value Computed by CMake
-hector_geotiff_plugins_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_slam/hector_geotiff_plugins
-
-//Value Computed by CMake
-hector_imu_attitude_to_tf_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_slam/hector_imu_attitude_to_tf
-
-//Value Computed by CMake
-hector_imu_attitude_to_tf_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_slam/hector_imu_attitude_to_tf
-
-//Value Computed by CMake
-hector_imu_tools_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_slam/hector_imu_tools
-
-//Value Computed by CMake
-hector_imu_tools_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_slam/hector_imu_tools
-
-//Value Computed by CMake
-hector_localization_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_localization/hector_localization
-
-//Value Computed by CMake
-hector_localization_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_localization/hector_localization
-
-//Value Computed by CMake
-hector_map_server_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_slam/hector_map_server
-
-//Value Computed by CMake
-hector_map_server_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_slam/hector_map_server
-
-//Value Computed by CMake
-hector_map_tools_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_slam/hector_map_tools
-
-//The directory containing a CMake configuration file for hector_map_tools.
-hector_map_tools_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_map_tools/cmake
-
-//Value Computed by CMake
-hector_map_tools_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_slam/hector_map_tools
-
-//Value Computed by CMake
-hector_mapping_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_slam/hector_mapping
-
-//Value Computed by CMake
-hector_mapping_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_slam/hector_mapping
-
-//Value Computed by CMake
-hector_mapstitch_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_mapstitch
-
-//The directory containing a CMake configuration file for hector_mapstitch.
-hector_mapstitch_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_mapstitch/cmake
-
-//Dependencies for the target
-hector_mapstitch_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libcv_bridge.so;general;/usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;opencv_videostab;general;opencv_video;general;opencv_superres;general;opencv_stitching;general;opencv_photo;general;opencv_ocl;general;opencv_objdetect;general;opencv_ml;general;opencv_legacy;general;opencv_imgproc;general;opencv_highgui;general;opencv_gpu;general;opencv_flann;general;opencv_features2d;general;opencv_core;general;opencv_contrib;general;opencv_calib3d;
-
-//Value Computed by CMake
-hector_mapstitch_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_mapstitch
-
-//Value Computed by CMake
-hector_marker_drawing_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_slam/hector_marker_drawing
-
-//The directory containing a CMake configuration file for hector_marker_drawing.
-hector_marker_drawing_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_marker_drawing/cmake
-
-//Value Computed by CMake
-hector_marker_drawing_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_slam/hector_marker_drawing
-
-//Value Computed by CMake
 hector_models_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_models/hector_models
 
 //Value Computed by CMake
 hector_models_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_models/hector_models
-
-//Value Computed by CMake
-hector_monstertruck_driver_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_monstertruck_driver
-
-//Dependencies for the target
-hector_monstertruck_driver_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
-
-//Value Computed by CMake
-hector_monstertruck_driver_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_monstertruck_driver
 
 //Value Computed by CMake
 hector_move_base_msgs_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_move_base_msgs
@@ -1583,163 +469,10 @@ hector_move_base_msgs_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_move_bas
 hector_move_base_msgs_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_move_base_msgs
 
 //Value Computed by CMake
-hector_nav_msgs_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_slam/hector_nav_msgs
-
-//The directory containing a CMake configuration file for hector_nav_msgs.
-hector_nav_msgs_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_nav_msgs/cmake
-
-//Value Computed by CMake
-hector_nav_msgs_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_slam/hector_nav_msgs
-
-//Value Computed by CMake
-hector_object_tracker_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_worldmodel/hector_object_tracker
-
-//Value Computed by CMake
-hector_object_tracker_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_worldmodel/hector_object_tracker
-
-//Value Computed by CMake
 hector_onboard_launch_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_vehicle_launch/hector_onboard_launch
 
 //Value Computed by CMake
 hector_onboard_launch_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_vehicle_launch/hector_onboard_launch
-
-//Value Computed by CMake
-hector_pose_estimation_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_localization/hector_pose_estimation
-
-//The directory containing a CMake configuration file for hector_pose_estimation.
-hector_pose_estimation_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_pose_estimation/cmake
-
-//Dependencies for the target
-hector_pose_estimation_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
-
-//Value Computed by CMake
-hector_pose_estimation_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_localization/hector_pose_estimation
-
-//Value Computed by CMake
-hector_pose_estimation_core_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_localization/hector_pose_estimation_core
-
-//The directory containing a CMake configuration file for hector_pose_estimation_core.
-hector_pose_estimation_core_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_pose_estimation_core/cmake
-
-//Value Computed by CMake
-hector_pose_estimation_core_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_localization/hector_pose_estimation_core
-
-//Dependencies for the target
-hector_pose_estimation_node_LIB_DEPENDS:STATIC=general;hector_pose_estimation;general;/opt/ros/indigo/lib/libnodeletlib.so;general;/opt/ros/indigo/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
-
-//Dependencies for the target
-hector_pose_estimation_nodelet_LIB_DEPENDS:STATIC=general;hector_pose_estimation_node;general;hector_pose_estimation;general;/opt/ros/indigo/lib/libnodeletlib.so;general;/opt/ros/indigo/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
-
-//Value Computed by CMake
-hector_quadrotor_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_quadrotor/hector_quadrotor
-
-//Value Computed by CMake
-hector_quadrotor_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_quadrotor/hector_quadrotor
-
-//Dependencies for the target
-hector_quadrotor_aerodynamics_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;
-
-//Value Computed by CMake
-hector_quadrotor_controller_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_quadrotor/hector_quadrotor_controller
-
-//The directory containing a CMake configuration file for hector_quadrotor_controller.
-hector_quadrotor_controller_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_quadrotor_controller/cmake
-
-//Dependencies for the target
-hector_quadrotor_controller_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;/opt/ros/indigo/lib/libroslib.so;
-
-//Value Computed by CMake
-hector_quadrotor_controller_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_quadrotor/hector_quadrotor_controller
-
-//Value Computed by CMake
-hector_quadrotor_controller_gazebo_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_quadrotor/hector_quadrotor_controller_gazebo
-
-//Dependencies for the target
-hector_quadrotor_controller_gazebo_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libgazebo_ros_control.so;general;/opt/ros/indigo/lib/libdefault_robot_hw_sim.so;general;/opt/ros/indigo/lib/libcontroller_manager.so;general;/opt/ros/indigo/lib/libcontrol_toolbox.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/librealtime_tools.so;general;/opt/ros/indigo/lib/libtransmission_interface_parser.so;general;/opt/ros/indigo/lib/libtransmission_interface_loader.so;general;/opt/ros/indigo/lib/libtransmission_interface_loader_plugins.so;general;/opt/ros/indigo/lib/libresource_retriever.so;general;/opt/ros/indigo/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/opt/ros/indigo/lib/librosconsole_bridge.so;general;hector_quadrotor_controller;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;/opt/ros/indigo/lib/libroslib.so;general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_building.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_viewers.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_selection_buffer.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_skyx.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_player.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering_deferred.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;
-
-//Value Computed by CMake
-hector_quadrotor_controller_gazebo_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_quadrotor/hector_quadrotor_controller_gazebo
-
-//Value Computed by CMake
-hector_quadrotor_demo_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_quadrotor/hector_quadrotor_demo
-
-//Value Computed by CMake
-hector_quadrotor_demo_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_quadrotor/hector_quadrotor_demo
-
-//Value Computed by CMake
-hector_quadrotor_description_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_quadrotor/hector_quadrotor_description
-
-//Value Computed by CMake
-hector_quadrotor_description_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_quadrotor/hector_quadrotor_description
-
-//Value Computed by CMake
-hector_quadrotor_gazebo_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_quadrotor/hector_quadrotor_gazebo
-
-//Value Computed by CMake
-hector_quadrotor_gazebo_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_quadrotor/hector_quadrotor_gazebo
-
-//Value Computed by CMake
-hector_quadrotor_gazebo_plugins_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_quadrotor/hector_quadrotor_gazebo_plugins
-
-//Value Computed by CMake
-hector_quadrotor_gazebo_plugins_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_quadrotor/hector_quadrotor_gazebo_plugins
-
-//Value Computed by CMake
-hector_quadrotor_model_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_quadrotor/hector_quadrotor_model
-
-//The directory containing a CMake configuration file for hector_quadrotor_model.
-hector_quadrotor_model_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_quadrotor_model/cmake
-
-//Value Computed by CMake
-hector_quadrotor_model_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_quadrotor/hector_quadrotor_model
-
-//Dependencies for the target
-hector_quadrotor_motor_controller_LIB_DEPENDS:STATIC=general;hector_quadrotor_controller;
-
-//Dependencies for the target
-hector_quadrotor_pose_controller_LIB_DEPENDS:STATIC=general;hector_quadrotor_controller;
-
-//Value Computed by CMake
-hector_quadrotor_pose_estimation_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_quadrotor/hector_quadrotor_pose_estimation
-
-//Value Computed by CMake
-hector_quadrotor_pose_estimation_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_quadrotor/hector_quadrotor_pose_estimation
-
-//Dependencies for the target
-hector_quadrotor_pose_estimation_node_LIB_DEPENDS:STATIC=general;hector_pose_estimation_nodelet;general;hector_pose_estimation_node;general;hector_pose_estimation;general;/opt/ros/indigo/lib/libnodeletlib.so;general;/opt/ros/indigo/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
-
-//Dependencies for the target
-hector_quadrotor_pose_estimation_nodelet_LIB_DEPENDS:STATIC=general;hector_quadrotor_pose_estimation_node;general;hector_pose_estimation_nodelet;general;hector_pose_estimation_node;general;hector_pose_estimation;general;/opt/ros/indigo/lib/libnodeletlib.so;general;/opt/ros/indigo/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
-
-//Dependencies for the target
-hector_quadrotor_propulsion_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;
-
-//Value Computed by CMake
-hector_quadrotor_teleop_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_quadrotor/hector_quadrotor_teleop
-
-//Value Computed by CMake
-hector_quadrotor_teleop_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_quadrotor/hector_quadrotor_teleop
-
-//Dependencies for the target
-hector_quadrotor_twist_controller_LIB_DEPENDS:STATIC=general;hector_quadrotor_controller;
-
-//Value Computed by CMake
-hector_rqt_plugins_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_visualization/hector_rqt_plugins
-
-//Dependencies for the target
-hector_rqt_plugins_LIB_DEPENDS:STATIC=general;hector_mapstitch;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/librqt_gui_cpp.so;general;/opt/ros/indigo/lib/libqt_gui_cpp.so;general;/opt/ros/indigo/lib/libnodeletlib.so;general;/opt/ros/indigo/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/opt/ros/indigo/lib/libimage_transport.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libcv_bridge.so;general;/usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;/usr/lib/x86_64-linux-gnu/libQtCore.so;general;/usr/lib/x86_64-linux-gnu/libQtGui.so;
-
-//Value Computed by CMake
-hector_rqt_plugins_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_visualization/hector_rqt_plugins
-
-//Value Computed by CMake
-hector_rviz_plugins_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_visualization/hector_rviz_plugins
-
-//Dependencies for the target
-hector_rviz_plugins_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/librviz.so;general;/opt/ros/indigo/lib/libdefault_plugin.so;general;/usr/lib/x86_64-linux-gnu/libOgreMain.so;general;/usr/lib/x86_64-linux-gnu/libGLU.so;general;/usr/lib/x86_64-linux-gnu/libGL.so;general;/usr/lib/x86_64-linux-gnu/libSM.so;general;/usr/lib/x86_64-linux-gnu/libICE.so;general;/usr/lib/x86_64-linux-gnu/libX11.so;general;/usr/lib/x86_64-linux-gnu/libXext.so;general;/opt/ros/indigo/lib/libimage_geometry.so;general;/usr/lib/x86_64-linux-gnu/libopencv_videostab.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_video.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_photo.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_objdetect.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_ml.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_legacy.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_highgui.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_features2d.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.8;general;/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.2.4.8;general;/opt/ros/indigo/lib/libimage_transport.so;general;/opt/ros/indigo/lib/libinteractive_markers.so;general;/opt/ros/indigo/lib/liblaser_geometry.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libresource_retriever.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/opt/ros/indigo/lib/librosconsole_bridge.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;/usr/lib/x86_64-linux-gnu/libQtGui.so;general;/usr/lib/x86_64-linux-gnu/libQtCore.so;
-
-//Value Computed by CMake
-hector_rviz_plugins_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_visualization/hector_rviz_plugins
 
 //Value Computed by CMake
 hector_sensor_proc_launch_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_vehicle_launch/hector_sensor_proc_launch
@@ -1761,39 +494,6 @@ hector_sensors_gazebo_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_gazebo/
 
 //Dependencies for the target
 hector_servo_plugin_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_building.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui_viewers.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_selection_buffer.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_skyx.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_player.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering_deferred.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
-
-//Value Computed by CMake
-hector_slam_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_slam/hector_slam
-
-//Value Computed by CMake
-hector_slam_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_slam/hector_slam
-
-//Value Computed by CMake
-hector_slam_launch_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_slam/hector_slam_launch
-
-//Value Computed by CMake
-hector_slam_launch_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_slam/hector_slam_launch
-
-//Value Computed by CMake
-hector_stair_detection_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_visualization/hector_stair_detection
-
-//Dependencies for the target
-hector_stair_detection_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libtf_conversions.so;general;/opt/ros/indigo/lib/libkdl_conversions.so;general;/opt/ros/indigo/lib/liborocos-kdl.so.1.3.0;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/libpcl_common.so;debug;/usr/lib/libpcl_common.so;optimized;/usr/lib/libpcl_octree.so;debug;/usr/lib/libpcl_octree.so;general;/usr/lib/libOpenNI.so;general;vtkCommon;general;vtkRendering;general;vtkHybrid;general;vtkCharts;optimized;/usr/lib/libpcl_io.so;debug;/usr/lib/libpcl_io.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;optimized;/usr/lib/libpcl_kdtree.so;debug;/usr/lib/libpcl_kdtree.so;optimized;/usr/lib/libpcl_search.so;debug;/usr/lib/libpcl_search.so;optimized;/usr/lib/libpcl_sample_consensus.so;debug;/usr/lib/libpcl_sample_consensus.so;optimized;/usr/lib/libpcl_filters.so;debug;/usr/lib/libpcl_filters.so;optimized;/usr/lib/libpcl_features.so;debug;/usr/lib/libpcl_features.so;optimized;/usr/lib/libpcl_keypoints.so;debug;/usr/lib/libpcl_keypoints.so;optimized;/usr/lib/libpcl_segmentation.so;debug;/usr/lib/libpcl_segmentation.so;optimized;/usr/lib/libpcl_visualization.so;debug;/usr/lib/libpcl_visualization.so;optimized;/usr/lib/libpcl_outofcore.so;debug;/usr/lib/libpcl_outofcore.so;optimized;/usr/lib/libpcl_registration.so;debug;/usr/lib/libpcl_registration.so;optimized;/usr/lib/libpcl_recognition.so;debug;/usr/lib/libpcl_recognition.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;optimized;/usr/lib/libpcl_surface.so;debug;/usr/lib/libpcl_surface.so;optimized;/usr/lib/libpcl_people.so;debug;/usr/lib/libpcl_people.so;optimized;/usr/lib/libpcl_tracking.so;debug;/usr/lib/libpcl_tracking.so;optimized;/usr/lib/libpcl_apps.so;debug;/usr/lib/libpcl_apps.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;general;/usr/lib/libOpenNI.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;general;vtkCommon;general;vtkRendering;general;vtkHybrid;general;vtkCharts;general;libvtkCommon.so;general;libvtkFiltering.so;
-
-//Value Computed by CMake
-hector_stair_detection_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_visualization/hector_stair_detection
-
-//Value Computed by CMake
-hector_stair_detection_msgs_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_visualization/hector_stair_detection_msgs
-
-//The directory containing a CMake configuration file for hector_stair_detection_msgs.
-hector_stair_detection_msgs_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_stair_detection_msgs/cmake
-
-//Value Computed by CMake
-hector_stair_detection_msgs_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_visualization/hector_stair_detection_msgs
-
-//The directory containing a CMake configuration file for hector_timing.
-hector_timing_DIR:PATH=hector_timing_DIR-NOTFOUND
 
 //Value Computed by CMake
 hector_tracked_vehicles_description_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_tracked_vehicles_common/hector_tracked_vehicles_description
@@ -1820,91 +520,16 @@ hector_tracked_vehicles_self_filter_BINARY_DIR:STATIC=/home/somal/catkin_ws/buil
 hector_tracked_vehicles_self_filter_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_tracked_vehicles_common/hector_tracked_vehicles_self_filter
 
 //Value Computed by CMake
-hector_trajectory_server_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_slam/hector_trajectory_server
-
-//Value Computed by CMake
-hector_trajectory_server_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_slam/hector_trajectory_server
-
-//Value Computed by CMake
-hector_uav_msgs_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_quadrotor/hector_uav_msgs
-
-//The directory containing a CMake configuration file for hector_uav_msgs.
-hector_uav_msgs_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_uav_msgs/cmake
-
-//Value Computed by CMake
-hector_uav_msgs_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_quadrotor/hector_uav_msgs
-
-//Value Computed by CMake
-hector_veil_geotiff_plugin_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_visualization/hector_veil_geotiff_plugin
-
-//Dependencies for the target
-hector_veil_geotiff_plugin_LIB_DEPENDS:STATIC=general;geotiff_writer;general;/usr/lib/x86_64-linux-gnu/libQtGui.so;general;/usr/lib/x86_64-linux-gnu/libQtCore.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
-
-//Value Computed by CMake
-hector_veil_geotiff_plugin_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_visualization/hector_veil_geotiff_plugin
-
-//Value Computed by CMake
-hector_worldmodel_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_worldmodel/hector_worldmodel
-
-//Value Computed by CMake
-hector_worldmodel_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_worldmodel/hector_worldmodel
-
-//Value Computed by CMake
-hector_worldmodel_geotiff_plugins_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_worldmodel/hector_worldmodel_geotiff_plugins
-
-//Dependencies for the target
-hector_worldmodel_geotiff_plugins_LIB_DEPENDS:STATIC=general;geotiff_writer;general;/usr/lib/x86_64-linux-gnu/libQtGui.so;general;/usr/lib/x86_64-linux-gnu/libQtCore.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
-
-//Value Computed by CMake
-hector_worldmodel_geotiff_plugins_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_worldmodel/hector_worldmodel_geotiff_plugins
-
-//Value Computed by CMake
-hector_worldmodel_msgs_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_worldmodel/hector_worldmodel_msgs
-
-//The directory containing a CMake configuration file for hector_worldmodel_msgs.
-hector_worldmodel_msgs_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_worldmodel_msgs/cmake
-
-//Value Computed by CMake
-hector_worldmodel_msgs_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_worldmodel/hector_worldmodel_msgs
-
-//Value Computed by CMake
 hector_xacro_tools_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_models/hector_xacro_tools
-
-//The directory containing a CMake configuration file for hector_xacro_tools.
-hector_xacro_tools_DIR:PATH=/home/somal/catkin_ws/devel/share/hector_xacro_tools/cmake
 
 //Value Computed by CMake
 hector_xacro_tools_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_models/hector_xacro_tools
 
-//The directory containing a CMake configuration file for image_geometry.
-image_geometry_DIR:PATH=/opt/ros/indigo/share/image_geometry/cmake
-
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/indigo/share/image_transport/cmake
 
-//The directory containing a CMake configuration file for interactive_markers.
-interactive_markers_DIR:PATH=/opt/ros/indigo/share/interactive_markers/cmake
-
-//The directory containing a CMake configuration file for joint_limits_interface.
-joint_limits_interface_DIR:PATH=/opt/ros/indigo/share/joint_limits_interface/cmake
-
-//The directory containing a CMake configuration file for kdl_conversions.
-kdl_conversions_DIR:PATH=/opt/ros/indigo/share/kdl_conversions/cmake
-
-//The directory containing a CMake configuration file for laser_geometry.
-laser_geometry_DIR:PATH=/opt/ros/indigo/share/laser_geometry/cmake
-
 //Path to a library.
-lib:FILEPATH=/opt/ros/indigo/lib/libxmlrpcpp.so
-
-//The directory containing a CMake configuration file for map_msgs.
-map_msgs_DIR:PATH=/opt/ros/indigo/share/map_msgs/cmake
-
-//Value Computed by CMake
-mapstitch_data_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/mapstitch_data
-
-//Value Computed by CMake
-mapstitch_data_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/mapstitch_data
+lib:FILEPATH=/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/indigo/share/message_filters/cmake
@@ -1914,12 +539,6 @@ message_generation_DIR:PATH=/opt/ros/indigo/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/indigo/share/message_runtime/cmake
-
-//Value Computed by CMake
-message_to_tf_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_localization/message_to_tf
-
-//Value Computed by CMake
-message_to_tf_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_localization/message_to_tf
 
 //Value Computed by CMake
 monstertruck_msgs_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/monstertruck_msgs
@@ -1936,9 +555,6 @@ motion_editor_core_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/motion_editor/m
 //Value Computed by CMake
 motion_editor_core_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/motion_editor/motion_editor_core
 
-//The directory containing a CMake configuration file for nav_core.
-nav_core_DIR:PATH=/opt/ros/indigo/share/nav_core/cmake
-
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/indigo/share/nav_msgs/cmake
 
@@ -1948,35 +564,8 @@ nodelet_DIR:PATH=/opt/ros/indigo/share/nodelet/cmake
 //Path to a library.
 onelib:FILEPATH=/usr/lib/x86_64-linux-gnu/libsdformat.so
 
-//The directory containing a CMake configuration file for pcl_conversions.
-pcl_conversions_DIR:PATH=/opt/ros/indigo/share/pcl_conversions/cmake
-
-//The directory containing a CMake configuration file for pcl_msgs.
-pcl_msgs_DIR:PATH=/opt/ros/indigo/share/pcl_msgs/cmake
-
-//The directory containing a CMake configuration file for pcl_ros.
-pcl_ros_DIR:PATH=/opt/ros/indigo/share/pcl_ros/cmake
-
 //The directory containing a CMake configuration file for pluginlib.
 pluginlib_DIR:PATH=/opt/ros/indigo/share/pluginlib/cmake
-
-//The directory containing a CMake configuration file for qt_gui.
-qt_gui_DIR:PATH=/opt/ros/indigo/share/qt_gui/cmake
-
-//The directory containing a CMake configuration file for qt_gui_cpp.
-qt_gui_cpp_DIR:PATH=/opt/ros/indigo/share/qt_gui_cpp/cmake
-
-//The directory containing a CMake configuration file for realtime_tools.
-realtime_tools_DIR:PATH=/opt/ros/indigo/share/realtime_tools/cmake
-
-//The directory containing a CMake configuration file for resource_retriever.
-resource_retriever_DIR:PATH=/opt/ros/indigo/share/resource_retriever/cmake
-
-//The directory containing a CMake configuration file for rosbag.
-rosbag_DIR:PATH=/opt/ros/indigo/share/rosbag/cmake
-
-//The directory containing a CMake configuration file for rosbag_storage.
-rosbag_storage_DIR:PATH=/opt/ros/indigo/share/rosbag_storage/cmake
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/indigo/share/rosconsole/cmake
@@ -2002,44 +591,17 @@ rosgraph_msgs_DIR:PATH=/opt/ros/indigo/share/rosgraph_msgs/cmake
 //The directory containing a CMake configuration file for roslib.
 roslib_DIR:PATH=/opt/ros/indigo/share/roslib/cmake
 
-//The directory containing a CMake configuration file for roslz4.
-roslz4_DIR:PATH=/opt/ros/indigo/share/roslz4/cmake
-
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/indigo/share/rospy/cmake
 
-//The directory containing a CMake configuration file for rostest.
-rostest_DIR:PATH=/opt/ros/indigo/share/rostest/cmake
-
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/indigo/share/rostime/cmake
-
-//The directory containing a CMake configuration file for rqt_gui.
-rqt_gui_DIR:PATH=/opt/ros/indigo/share/rqt_gui/cmake
-
-//The directory containing a CMake configuration file for rqt_gui_cpp.
-rqt_gui_cpp_DIR:PATH=/opt/ros/indigo/share/rqt_gui_cpp/cmake
-
-//The directory containing a CMake configuration file for rqt_gui_py.
-rqt_gui_py_DIR:PATH=/opt/ros/indigo/share/rqt_gui_py/cmake
 
 //Value Computed by CMake
 rqt_motion_editor_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/motion_editor/rqt_motion_editor
 
 //Value Computed by CMake
 rqt_motion_editor_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/motion_editor/rqt_motion_editor
-
-//Value Computed by CMake
-rqt_video_playback_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_visualization/rqt_video_playback
-
-//Dependencies for the target
-rqt_video_playback_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/librqt_gui_cpp.so;general;/opt/ros/indigo/lib/libqt_gui_cpp.so;general;/opt/ros/indigo/lib/libnodeletlib.so;general;/opt/ros/indigo/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;/usr/lib/x86_64-linux-gnu/libQtCore.so;general;/usr/lib/x86_64-linux-gnu/libQtGui.so;general;/usr/lib/x86_64-linux-gnu/libphonon.so;
-
-//Value Computed by CMake
-rqt_video_playback_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_visualization/rqt_video_playback
-
-//The directory containing a CMake configuration file for rviz.
-rviz_DIR:PATH=/opt/ros/indigo/share/rviz/cmake
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/indigo/share/sensor_msgs/cmake
@@ -2052,12 +614,6 @@ std_msgs_DIR:PATH=/opt/ros/indigo/share/std_msgs/cmake
 
 //The directory containing a CMake configuration file for std_srvs.
 std_srvs_DIR:PATH=/opt/ros/indigo/share/std_srvs/cmake
-
-//Value Computed by CMake
-taurob_tracker_description_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/taurob_tracker_common/taurob_tracker_description
-
-//Value Computed by CMake
-taurob_tracker_description_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/taurob_tracker_common/taurob_tracker_description
 
 //The directory containing a CMake configuration file for tf2.
 tf2_DIR:PATH=/opt/ros/indigo/share/tf2/cmake
@@ -2074,53 +630,17 @@ tf2_ros_DIR:PATH=/opt/ros/indigo/share/tf2_ros/cmake
 //The directory containing a CMake configuration file for tf.
 tf_DIR:PATH=/opt/ros/indigo/share/tf/cmake
 
-//The directory containing a CMake configuration file for tf_conversions.
-tf_conversions_DIR:PATH=/opt/ros/indigo/share/tf_conversions/cmake
-
-//The directory containing a CMake configuration file for topic_tools.
-topic_tools_DIR:PATH=/opt/ros/indigo/share/topic_tools/cmake
-
-//Value Computed by CMake
-tracker_base_ui_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/hector_visualization/tracker_base_ui
-
-//Value Computed by CMake
-tracker_base_ui_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/hector_visualization/tracker_base_ui
-
 //The directory containing a CMake configuration file for trajectory_msgs.
 trajectory_msgs_DIR:PATH=/opt/ros/indigo/share/trajectory_msgs/cmake
 
-//The directory containing a CMake configuration file for transmission_interface.
-transmission_interface_DIR:PATH=/opt/ros/indigo/share/transmission_interface/cmake
-
 //The directory containing a CMake configuration file for urdf.
 urdf_DIR:PATH=/opt/ros/indigo/share/urdf/cmake
-
-//The directory containing a CMake configuration file for uuid_msgs.
-uuid_msgs_DIR:PATH=/opt/ros/indigo/share/uuid_msgs/cmake
 
 //Value Computed by CMake
 vehicle_controller_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/vehicle_controller
 
 //Value Computed by CMake
 vehicle_controller_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/vehicle_controller
-
-//The directory containing a CMake configuration file for visualization_msgs.
-visualization_msgs_DIR:PATH=/opt/ros/indigo/share/visualization_msgs/cmake
-
-//Value Computed by CMake
-voronoi_planner_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/voronoi_planner
-
-//Dependencies for the target
-voronoi_planner_LIB_DEPENDS:STATIC=general;/opt/ros/indigo/lib/libcostmap_2d.so;general;/opt/ros/indigo/lib/liblayers.so;general;/opt/ros/indigo/lib/liblaser_geometry.so;general;/opt/ros/indigo/lib/libpcl_ros_filters.so;general;/opt/ros/indigo/lib/libpcl_ros_io.so;general;/opt/ros/indigo/lib/libpcl_ros_tf.so;optimized;/usr/lib/libpcl_common.so;debug;/usr/lib/libpcl_common.so;optimized;/usr/lib/libpcl_octree.so;debug;/usr/lib/libpcl_octree.so;optimized;/usr/lib/libpcl_io.so;debug;/usr/lib/libpcl_io.so;optimized;/usr/lib/libpcl_kdtree.so;debug;/usr/lib/libpcl_kdtree.so;optimized;/usr/lib/libpcl_search.so;debug;/usr/lib/libpcl_search.so;optimized;/usr/lib/libpcl_sample_consensus.so;debug;/usr/lib/libpcl_sample_consensus.so;optimized;/usr/lib/libpcl_filters.so;debug;/usr/lib/libpcl_filters.so;optimized;/usr/lib/libpcl_features.so;debug;/usr/lib/libpcl_features.so;optimized;/usr/lib/libpcl_keypoints.so;debug;/usr/lib/libpcl_keypoints.so;optimized;/usr/lib/libpcl_segmentation.so;debug;/usr/lib/libpcl_segmentation.so;optimized;/usr/lib/libpcl_visualization.so;debug;/usr/lib/libpcl_visualization.so;optimized;/usr/lib/libpcl_outofcore.so;debug;/usr/lib/libpcl_outofcore.so;optimized;/usr/lib/libpcl_registration.so;debug;/usr/lib/libpcl_registration.so;optimized;/usr/lib/libpcl_recognition.so;debug;/usr/lib/libpcl_recognition.so;optimized;/usr/lib/libpcl_surface.so;debug;/usr/lib/libpcl_surface.so;optimized;/usr/lib/libpcl_people.so;debug;/usr/lib/libpcl_people.so;optimized;/usr/lib/libpcl_tracking.so;debug;/usr/lib/libpcl_tracking.so;optimized;/usr/lib/libpcl_apps.so;debug;/usr/lib/libpcl_apps.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;general;/usr/lib/libOpenNI.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;general;/usr/lib/libvtkCommon.so.5.8.0;general;/usr/lib/libvtkRendering.so.5.8.0;general;/usr/lib/libvtkHybrid.so.5.8.0;general;/usr/lib/libvtkCharts.so.5.8.0;general;/opt/ros/indigo/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/indigo/lib/libnodeletlib.so;general;/opt/ros/indigo/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/opt/ros/indigo/lib/librosbag.so;general;/opt/ros/indigo/lib/librosbag_storage.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/opt/ros/indigo/lib/libroslz4.so;general;/usr/lib/x86_64-linux-gnu/liblz4.so;general;/opt/ros/indigo/lib/libtopic_tools.so;general;/opt/ros/indigo/lib/libvoxel_grid.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/indigo/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/indigo/lib/libroslib.so;general;/opt/ros/indigo/lib/libtf.so;general;/opt/ros/indigo/lib/libtf2_ros.so;general;/opt/ros/indigo/lib/libactionlib.so;general;/opt/ros/indigo/lib/libmessage_filters.so;general;/opt/ros/indigo/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/indigo/lib/libxmlrpcpp.so;general;/opt/ros/indigo/lib/libtf2.so;general;/opt/ros/indigo/lib/libroscpp_serialization.so;general;/opt/ros/indigo/lib/librosconsole.so;general;/opt/ros/indigo/lib/librosconsole_log4cxx.so;general;/opt/ros/indigo/lib/librosconsole_backend_interface.so;general;/usr/lib/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/indigo/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/opt/ros/indigo/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;dynamicvoronoi;
-
-//Value Computed by CMake
-voronoi_planner_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/voronoi_planner
-
-//The directory containing a CMake configuration file for voxel_grid.
-voxel_grid_DIR:PATH=/opt/ros/indigo/share/voxel_grid/cmake
-
-//The directory containing a CMake configuration file for xacro.
-xacro_DIR:PATH=/opt/ros/indigo/share/xacro/cmake
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/indigo/share/xmlrpcpp/cmake
@@ -2130,36 +650,12 @@ xmlrpcpp_DIR:PATH=/opt/ros/indigo/share/xmlrpcpp/cmake
 # INTERNAL cache entries
 ########################
 
-//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_DEBUG
-Boost_DATE_TIME_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_DATE_TIME_LIBRARY_RELEASE
-Boost_DATE_TIME_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_DIR
 Boost_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_FILESYSTEM_LIBRARY_DEBUG
-Boost_FILESYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_FILESYSTEM_LIBRARY_RELEASE
-Boost_FILESYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_INCLUDE_DIR
 Boost_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_IOSTREAMS_LIBRARY_DEBUG
-Boost_IOSTREAMS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_IOSTREAMS_LIBRARY_RELEASE
-Boost_IOSTREAMS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_LIBRARY_DIR
 Boost_LIBRARY_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_SERIALIZATION_LIBRARY_DEBUG
-Boost_SERIALIZATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_SERIALIZATION_LIBRARY_RELEASE
-Boost_SERIALIZATION_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_SIGNALS_LIBRARY_DEBUG
-Boost_SIGNALS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_SIGNALS_LIBRARY_RELEASE
-Boost_SIGNALS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_DEBUG
-Boost_SYSTEM_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: Boost_SYSTEM_LIBRARY_RELEASE
-Boost_SYSTEM_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_THREAD_LIBRARY_DEBUG
 Boost_THREAD_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Boost_THREAD_LIBRARY_RELEASE
@@ -2261,7 +757,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=83
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=24
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -2302,74 +798,18 @@ CMAKE_UNAME:INTERNAL=/bin/uname
 CMAKE_USE_RELATIVE_PATHS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: EIGEN3_INCLUDE_DIR
-EIGEN3_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: EIGEN_INCLUDE_DIR
 EIGEN_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //Details about finding Eigen
 FIND_PACKAGE_MESSAGE_DETAILS_Eigen:INTERNAL=[/usr/include/eigen3][v()]
-//Details about finding Eigen3
-FIND_PACKAGE_MESSAGE_DETAILS_Eigen3:INTERNAL=[/usr/include/eigen3][TRUE][v(2.91.0)]
-//Details about finding Flann
-FIND_PACKAGE_MESSAGE_DETAILS_Flann:INTERNAL=[/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a][/usr/include][v()]
-//Details about finding PCL
-FIND_PACKAGE_MESSAGE_DETAILS_PCL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_thread.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/libpcl_common.so;debug;/usr/lib/libpcl_common.so;optimized;/usr/lib/libpcl_octree.so;debug;/usr/lib/libpcl_octree.so;/usr/lib/libOpenNI.so;vtkCommon;vtkRendering;vtkHybrid;vtkCharts;optimized;/usr/lib/libpcl_io.so;debug;/usr/lib/libpcl_io.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;optimized;/usr/lib/libpcl_kdtree.so;debug;/usr/lib/libpcl_kdtree.so;optimized;/usr/lib/libpcl_search.so;debug;/usr/lib/libpcl_search.so;optimized;/usr/lib/libpcl_sample_consensus.so;debug;/usr/lib/libpcl_sample_consensus.so;optimized;/usr/lib/libpcl_filters.so;debug;/usr/lib/libpcl_filters.so;optimized;/usr/lib/libpcl_features.so;debug;/usr/lib/libpcl_features.so;optimized;/usr/lib/libpcl_keypoints.so;debug;/usr/lib/libpcl_keypoints.so;optimized;/usr/lib/libpcl_segmentation.so;debug;/usr/lib/libpcl_segmentation.so;optimized;/usr/lib/libpcl_visualization.so;debug;/usr/lib/libpcl_visualization.so;optimized;/usr/lib/libpcl_outofcore.so;debug;/usr/lib/libpcl_outofcore.so;optimized;/usr/lib/libpcl_registration.so;debug;/usr/lib/libpcl_registration.so;optimized;/usr/lib/libpcl_recognition.so;debug;/usr/lib/libpcl_recognition.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;optimized;/usr/lib/libpcl_surface.so;debug;/usr/lib/libpcl_surface.so;optimized;/usr/lib/libpcl_people.so;debug;/usr/lib/libpcl_people.so;optimized;/usr/lib/libpcl_tracking.so;debug;/usr/lib/libpcl_tracking.so;optimized;/usr/lib/libpcl_apps.so;debug;/usr/lib/libpcl_apps.so;/usr/lib/x86_64-linux-gnu/libboost_system.so;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;/usr/lib/x86_64-linux-gnu/libboost_thread.so;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;/usr/lib/x86_64-linux-gnu/libboost_serialization.so;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/x86_64-linux-gnu/libqhull.so;debug;/usr/lib/x86_64-linux-gnu/libqhull.so;/usr/lib/libOpenNI.so;optimized;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;debug;/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a;vtkCommon;vtkRendering;vtkHybrid;vtkCharts][/usr/include/pcl-1.7;/usr/include/eigen3;/usr/include;/usr/include/ni;/usr/include/vtk-5.8][v()]
-//Details about finding PCL_APPS
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_APPS:INTERNAL=[/usr/lib/libpcl_apps.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_COMMON
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_COMMON:INTERNAL=[/usr/lib/libpcl_common.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_FEATURES
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_FEATURES:INTERNAL=[/usr/lib/libpcl_features.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_FILTERS
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_FILTERS:INTERNAL=[/usr/lib/libpcl_filters.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_GEOMETRY
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_GEOMETRY:INTERNAL=[/usr/include/pcl-1.7][v()]
-//Details about finding PCL_IO
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_IO:INTERNAL=[/usr/lib/libpcl_io.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_KDTREE
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_KDTREE:INTERNAL=[/usr/lib/libpcl_kdtree.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_KEYPOINTS
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_KEYPOINTS:INTERNAL=[/usr/lib/libpcl_keypoints.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_OCTREE
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_OCTREE:INTERNAL=[/usr/lib/libpcl_octree.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_OUTOFCORE
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_OUTOFCORE:INTERNAL=[/usr/lib/libpcl_outofcore.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_PEOPLE
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_PEOPLE:INTERNAL=[/usr/lib/libpcl_people.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_RECOGNITION
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_RECOGNITION:INTERNAL=[/usr/lib/libpcl_recognition.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_REGISTRATION
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_REGISTRATION:INTERNAL=[/usr/lib/libpcl_registration.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_SAMPLE_CONSENSUS
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_SAMPLE_CONSENSUS:INTERNAL=[/usr/lib/libpcl_sample_consensus.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_SEARCH
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_SEARCH:INTERNAL=[/usr/lib/libpcl_search.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_SEGMENTATION
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_SEGMENTATION:INTERNAL=[/usr/lib/libpcl_segmentation.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_SURFACE
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_SURFACE:INTERNAL=[/usr/lib/libpcl_surface.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_TRACKING
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_TRACKING:INTERNAL=[/usr/lib/libpcl_tracking.so][/usr/include/pcl-1.7][v()]
-//Details about finding PCL_VISUALIZATION
-FIND_PACKAGE_MESSAGE_DETAILS_PCL_VISUALIZATION:INTERNAL=[/usr/lib/libpcl_visualization.so][/usr/include/pcl-1.7][v()]
 //Details about finding PROTOBUF
 FIND_PACKAGE_MESSAGE_DETAILS_PROTOBUF:INTERNAL=[/usr/lib/x86_64-linux-gnu/libprotobuf.so][/usr/include][v()]
 //Details about finding PkgConfig
 FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.26()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.6()]
-//Details about finding Qt4
-FIND_PACKAGE_MESSAGE_DETAILS_Qt4:INTERNAL=[/usr/bin/qmake][/usr/lib/x86_64-linux-gnu/qt4/bin/moc][/usr/lib/x86_64-linux-gnu/qt4/bin/rcc][/usr/include/qt4][/usr/lib/x86_64-linux-gnu][/usr/include/qt4/QtCore][/usr/lib/x86_64-linux-gnu/libQtCore.so][/usr/include/qt4/QtGui][/usr/lib/x86_64-linux-gnu/libQtGui.so][/usr/lib/x86_64-linux-gnu/qt4/bin/uic][v4.8.6()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
-//Details about finding eigen
-FIND_PACKAGE_MESSAGE_DETAILS_eigen:INTERNAL=[/usr/include/eigen3][v()]
-//Details about finding libusb-1.0
-FIND_PACKAGE_MESSAGE_DETAILS_libusb-1.0:INTERNAL=[/usr/include][v()]
-//Details about finding openni
-FIND_PACKAGE_MESSAGE_DETAILS_openni:INTERNAL=[/usr/lib/libOpenNI.so][/usr/include/ni][v()]
-//Details about finding qhull
-FIND_PACKAGE_MESSAGE_DETAILS_qhull:INTERNAL=[/usr/lib/x86_64-linux-gnu/libqhull.so][/usr/include][v()]
 GTEST_FROM_SOURCE_FOUND:INTERNAL=TRUE
 GTEST_FROM_SOURCE_INCLUDE_DIRS:INTERNAL=/usr/include
 GTEST_FROM_SOURCE_LIBRARIES:INTERNAL=gtest
@@ -2385,8 +825,6 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//Result of TRY_COMPILE
-LD_ACCEPTS_VERSION_SCRIPT:INTERNAL=TRUE
 OGRE-Paging_CFLAGS:INTERNAL=-pthread;-I/usr/include/OGRE/Paging;-I/usr/include/OGRE
 OGRE-Paging_CFLAGS_I:INTERNAL=
 OGRE-Paging_CFLAGS_OTHER:INTERNAL=-pthread
@@ -2455,88 +893,6 @@ OGRE_STATIC_LIBS_L:INTERNAL=
 OGRE_STATIC_LIBS_OTHER:INTERNAL=
 OGRE_STATIC_LIBS_PATHS:INTERNAL=
 OGRE_VERSION:INTERNAL=1.8.1
-//ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_DBG
-OpenCV_3RDPARTY_LIB_DIR_DBG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_OPT
-OpenCV_3RDPARTY_LIB_DIR_OPT-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OpenCV_CONFIG_PATH
-OpenCV_CONFIG_PATH-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OpenCV_LIB_DIR_DBG
-OpenCV_LIB_DIR_DBG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: OpenCV_LIB_DIR_OPT
-OpenCV_LIB_DIR_OPT-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_APPS_LIBRARY
-PCL_APPS_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_APPS_LIBRARY_DEBUG
-PCL_APPS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_COMMON_LIBRARY
-PCL_COMMON_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_COMMON_LIBRARY_DEBUG
-PCL_COMMON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_FEATURES_LIBRARY
-PCL_FEATURES_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_FEATURES_LIBRARY_DEBUG
-PCL_FEATURES_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_FILTERS_LIBRARY
-PCL_FILTERS_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_FILTERS_LIBRARY_DEBUG
-PCL_FILTERS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_IO_LIBRARY
-PCL_IO_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_IO_LIBRARY_DEBUG
-PCL_IO_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_KDTREE_LIBRARY
-PCL_KDTREE_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_KDTREE_LIBRARY_DEBUG
-PCL_KDTREE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_KEYPOINTS_LIBRARY
-PCL_KEYPOINTS_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_KEYPOINTS_LIBRARY_DEBUG
-PCL_KEYPOINTS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_OCTREE_LIBRARY
-PCL_OCTREE_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_OCTREE_LIBRARY_DEBUG
-PCL_OCTREE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_OUTOFCORE_LIBRARY
-PCL_OUTOFCORE_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_OUTOFCORE_LIBRARY_DEBUG
-PCL_OUTOFCORE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_PEOPLE_LIBRARY
-PCL_PEOPLE_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_PEOPLE_LIBRARY_DEBUG
-PCL_PEOPLE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_RECOGNITION_LIBRARY
-PCL_RECOGNITION_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_RECOGNITION_LIBRARY_DEBUG
-PCL_RECOGNITION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_REGISTRATION_LIBRARY
-PCL_REGISTRATION_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_REGISTRATION_LIBRARY_DEBUG
-PCL_REGISTRATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_SAMPLE_CONSENSUS_LIBRARY
-PCL_SAMPLE_CONSENSUS_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_SAMPLE_CONSENSUS_LIBRARY_DEBUG
-PCL_SAMPLE_CONSENSUS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_SEARCH_LIBRARY
-PCL_SEARCH_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_SEARCH_LIBRARY_DEBUG
-PCL_SEARCH_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_SEGMENTATION_LIBRARY
-PCL_SEGMENTATION_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_SEGMENTATION_LIBRARY_DEBUG
-PCL_SEGMENTATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_SURFACE_LIBRARY
-PCL_SURFACE_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_SURFACE_LIBRARY_DEBUG
-PCL_SURFACE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_TRACKING_LIBRARY
-PCL_TRACKING_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_TRACKING_LIBRARY_DEBUG
-PCL_TRACKING_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_VISUALIZATION_LIBRARY
-PCL_VISUALIZATION_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PCL_VISUALIZATION_LIBRARY_DEBUG
-PCL_VISUALIZATION_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 PC_EIGEN_CFLAGS:INTERNAL=-I/usr/include/eigen3
 PC_EIGEN_CFLAGS_I:INTERNAL=
 PC_EIGEN_CFLAGS_OTHER:INTERNAL=
@@ -2571,64 +927,6 @@ PC_EIGEN_eigen3_INCLUDEDIR:INTERNAL=
 PC_EIGEN_eigen3_LIBDIR:INTERNAL=
 PC_EIGEN_eigen3_PREFIX:INTERNAL=
 PC_EIGEN_eigen3_VERSION:INTERNAL=
-PC_FLANN_CFLAGS:INTERNAL=
-PC_FLANN_CFLAGS_I:INTERNAL=
-PC_FLANN_CFLAGS_OTHER:INTERNAL=
-PC_FLANN_FOUND:INTERNAL=1
-PC_FLANN_INCLUDEDIR:INTERNAL=/usr/include
-PC_FLANN_INCLUDE_DIRS:INTERNAL=
-PC_FLANN_LDFLAGS:INTERNAL=-lflann_cpp
-PC_FLANN_LDFLAGS_OTHER:INTERNAL=
-PC_FLANN_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
-PC_FLANN_LIBRARIES:INTERNAL=flann_cpp
-PC_FLANN_LIBRARY_DIRS:INTERNAL=
-PC_FLANN_LIBS:INTERNAL=
-PC_FLANN_LIBS_L:INTERNAL=
-PC_FLANN_LIBS_OTHER:INTERNAL=
-PC_FLANN_LIBS_PATHS:INTERNAL=
-PC_FLANN_PREFIX:INTERNAL=/usr
-PC_FLANN_STATIC_CFLAGS:INTERNAL=
-PC_FLANN_STATIC_CFLAGS_I:INTERNAL=
-PC_FLANN_STATIC_CFLAGS_OTHER:INTERNAL=
-PC_FLANN_STATIC_INCLUDE_DIRS:INTERNAL=
-PC_FLANN_STATIC_LDFLAGS:INTERNAL=-lflann_cpp
-PC_FLANN_STATIC_LDFLAGS_OTHER:INTERNAL=
-PC_FLANN_STATIC_LIBDIR:INTERNAL=
-PC_FLANN_STATIC_LIBRARIES:INTERNAL=flann_cpp
-PC_FLANN_STATIC_LIBRARY_DIRS:INTERNAL=
-PC_FLANN_STATIC_LIBS:INTERNAL=
-PC_FLANN_STATIC_LIBS_L:INTERNAL=
-PC_FLANN_STATIC_LIBS_OTHER:INTERNAL=
-PC_FLANN_STATIC_LIBS_PATHS:INTERNAL=
-PC_FLANN_VERSION:INTERNAL=1.8.4
-PC_FLANN_flann_INCLUDEDIR:INTERNAL=
-PC_FLANN_flann_LIBDIR:INTERNAL=
-PC_FLANN_flann_PREFIX:INTERNAL=
-PC_FLANN_flann_VERSION:INTERNAL=
-PC_OPENNI_CFLAGS:INTERNAL=
-PC_OPENNI_CFLAGS_I:INTERNAL=
-PC_OPENNI_CFLAGS_OTHER:INTERNAL=
-PC_OPENNI_FOUND:INTERNAL=
-PC_OPENNI_INCLUDEDIR:INTERNAL=
-PC_OPENNI_LIBDIR:INTERNAL=
-PC_OPENNI_LIBS:INTERNAL=
-PC_OPENNI_LIBS_L:INTERNAL=
-PC_OPENNI_LIBS_OTHER:INTERNAL=
-PC_OPENNI_LIBS_PATHS:INTERNAL=
-PC_OPENNI_PREFIX:INTERNAL=
-PC_OPENNI_STATIC_CFLAGS:INTERNAL=
-PC_OPENNI_STATIC_CFLAGS_I:INTERNAL=
-PC_OPENNI_STATIC_CFLAGS_OTHER:INTERNAL=
-PC_OPENNI_STATIC_LIBDIR:INTERNAL=
-PC_OPENNI_STATIC_LIBS:INTERNAL=
-PC_OPENNI_STATIC_LIBS_L:INTERNAL=
-PC_OPENNI_STATIC_LIBS_OTHER:INTERNAL=
-PC_OPENNI_STATIC_LIBS_PATHS:INTERNAL=
-PC_OPENNI_VERSION:INTERNAL=
-PC_OPENNI_openni-dev_INCLUDEDIR:INTERNAL=
-PC_OPENNI_openni-dev_LIBDIR:INTERNAL=
-PC_OPENNI_openni-dev_PREFIX:INTERNAL=
-PC_OPENNI_openni-dev_VERSION:INTERNAL=
 //ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
 PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PROTOBUF_INCLUDE_DIR
@@ -2653,420 +951,8 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //  And it needs to match.  But setuptools won't tell us where
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
-//ADVANCED property for variable: QT_ARTHURPLUGIN_PLUGIN_DEBUG
-QT_ARTHURPLUGIN_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_ARTHURPLUGIN_PLUGIN_RELEASE
-QT_ARTHURPLUGIN_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-QT_BINARY_DIR:INTERNAL=/usr/lib/x86_64-linux-gnu/qt4/bin
-//ADVANCED property for variable: QT_CONTAINEREXTENSION_PLUGIN_DEBUG
-QT_CONTAINEREXTENSION_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_CONTAINEREXTENSION_PLUGIN_RELEASE
-QT_CONTAINEREXTENSION_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_CUSTOMWIDGETPLUGIN_PLUGIN_DEBUG
-QT_CUSTOMWIDGETPLUGIN_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_CUSTOMWIDGETPLUGIN_PLUGIN_RELEASE
-QT_CUSTOMWIDGETPLUGIN_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_DBUSCPP2XML_EXECUTABLE
-QT_DBUSCPP2XML_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_DBUSXML2CPP_EXECUTABLE
-QT_DBUSXML2CPP_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_DESIGNER_EXECUTABLE
-QT_DESIGNER_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_DOC_DIR
-QT_DOC_DIR-ADVANCED:INTERNAL=1
-QT_HEADERS_DIR:INTERNAL=/usr/include/qt4
-//ADVANCED property for variable: QT_IMPORTS_DIR
-QT_IMPORTS_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_LIBRARY_DIR
-QT_LIBRARY_DIR-ADVANCED:INTERNAL=1
-//Qt library dir
-QT_LIBRARY_DIR:INTERNAL=/usr/lib/x86_64-linux-gnu
-//ADVANCED property for variable: QT_LINGUIST_EXECUTABLE
-QT_LINGUIST_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_LRELEASE_EXECUTABLE
-QT_LRELEASE_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_LUPDATE_EXECUTABLE
-QT_LUPDATE_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_MKSPECS_DIR
-QT_MKSPECS_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_MOC_EXECUTABLE
-QT_MOC_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_PHONONWIDGETS_PLUGIN_DEBUG
-QT_PHONONWIDGETS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_PHONONWIDGETS_PLUGIN_RELEASE
-QT_PHONONWIDGETS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_PHONON_INCLUDE_DIR
-QT_PHONON_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_PHONON_LIBRARY
-QT_PHONON_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_PHONON_LIBRARY_DEBUG
-QT_PHONON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_PHONON_LIBRARY_RELEASE
-QT_PHONON_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_PLUGINS_DIR
-QT_PLUGINS_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QCNCODECS_PLUGIN_DEBUG
-QT_QCNCODECS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QCNCODECS_PLUGIN_RELEASE
-QT_QCNCODECS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QCOLLECTIONGENERATOR_EXECUTABLE
-QT_QCOLLECTIONGENERATOR_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QCOREWLANBEARER_PLUGIN_DEBUG
-QT_QCOREWLANBEARER_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QCOREWLANBEARER_PLUGIN_RELEASE
-QT_QCOREWLANBEARER_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QDECLARATIVEVIEW_PLUGIN_DEBUG
-QT_QDECLARATIVEVIEW_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QDECLARATIVEVIEW_PLUGIN_RELEASE
-QT_QDECLARATIVEVIEW_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QDECORATIONDEFAULT_PLUGIN_DEBUG
-QT_QDECORATIONDEFAULT_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QDECORATIONDEFAULT_PLUGIN_RELEASE
-QT_QDECORATIONDEFAULT_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QDECORATIONWINDOWS_PLUGIN_DEBUG
-QT_QDECORATIONWINDOWS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QDECORATIONWINDOWS_PLUGIN_RELEASE
-QT_QDECORATIONWINDOWS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QGENERICBEARER_PLUGIN_DEBUG
-QT_QGENERICBEARER_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QGENERICBEARER_PLUGIN_RELEASE
-QT_QGENERICBEARER_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QGIF_PLUGIN_DEBUG
-QT_QGIF_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QGIF_PLUGIN_RELEASE
-QT_QGIF_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QGLGRAPHICSSYSTEM_PLUGIN_DEBUG
-QT_QGLGRAPHICSSYSTEM_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QGLGRAPHICSSYSTEM_PLUGIN_RELEASE
-QT_QGLGRAPHICSSYSTEM_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QICO_PLUGIN_DEBUG
-QT_QICO_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QICO_PLUGIN_RELEASE
-QT_QICO_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QIMSW_MULTI_PLUGIN_DEBUG
-QT_QIMSW_MULTI_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QIMSW_MULTI_PLUGIN_RELEASE
-QT_QIMSW_MULTI_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QJPCODECS_PLUGIN_DEBUG
-QT_QJPCODECS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QJPCODECS_PLUGIN_RELEASE
-QT_QJPCODECS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QJPEG_PLUGIN_DEBUG
-QT_QJPEG_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QJPEG_PLUGIN_RELEASE
-QT_QJPEG_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QKRCODECS_PLUGIN_DEBUG
-QT_QKRCODECS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QKRCODECS_PLUGIN_RELEASE
-QT_QKRCODECS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QMNG_PLUGIN_DEBUG
-QT_QMNG_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QMNG_PLUGIN_RELEASE
-QT_QMNG_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLDB2_PLUGIN_DEBUG
-QT_QSQLDB2_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLDB2_PLUGIN_RELEASE
-QT_QSQLDB2_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLIBASE_PLUGIN_DEBUG
-QT_QSQLIBASE_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLIBASE_PLUGIN_RELEASE
-QT_QSQLIBASE_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLITE2_PLUGIN_DEBUG
-QT_QSQLITE2_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLITE2_PLUGIN_RELEASE
-QT_QSQLITE2_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLITE_PLUGIN_DEBUG
-QT_QSQLITE_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLITE_PLUGIN_RELEASE
-QT_QSQLITE_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLMYSQL_PLUGIN_DEBUG
-QT_QSQLMYSQL_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLMYSQL_PLUGIN_RELEASE
-QT_QSQLMYSQL_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLOCI_PLUGIN_DEBUG
-QT_QSQLOCI_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLOCI_PLUGIN_RELEASE
-QT_QSQLOCI_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLODBC_PLUGIN_DEBUG
-QT_QSQLODBC_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLODBC_PLUGIN_RELEASE
-QT_QSQLODBC_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLPSQL_PLUGIN_DEBUG
-QT_QSQLPSQL_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLPSQL_PLUGIN_RELEASE
-QT_QSQLPSQL_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLTDS_PLUGIN_DEBUG
-QT_QSQLTDS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSQLTDS_PLUGIN_RELEASE
-QT_QSQLTDS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSVGICON_PLUGIN_DEBUG
-QT_QSVGICON_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSVGICON_PLUGIN_RELEASE
-QT_QSVGICON_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSVG_PLUGIN_DEBUG
-QT_QSVG_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QSVG_PLUGIN_RELEASE
-QT_QSVG_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QT3SUPPORTWIDGETS_PLUGIN_DEBUG
-QT_QT3SUPPORTWIDGETS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QT3SUPPORTWIDGETS_PLUGIN_RELEASE
-QT_QT3SUPPORTWIDGETS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QT3SUPPORT_INCLUDE_DIR
-QT_QT3SUPPORT_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QT3SUPPORT_LIBRARY
-QT_QT3SUPPORT_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QT3SUPPORT_LIBRARY_DEBUG
-QT_QT3SUPPORT_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QT3SUPPORT_LIBRARY_RELEASE
-QT_QT3SUPPORT_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTACCESSIBLECOMPATWIDGETS_PLUGIN_DEBUG
-QT_QTACCESSIBLECOMPATWIDGETS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTACCESSIBLECOMPATWIDGETS_PLUGIN_RELEASE
-QT_QTACCESSIBLECOMPATWIDGETS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTACCESSIBLEWIDGETS_PLUGIN_DEBUG
-QT_QTACCESSIBLEWIDGETS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTACCESSIBLEWIDGETS_PLUGIN_RELEASE
-QT_QTACCESSIBLEWIDGETS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTASSISTANTCLIENT_INCLUDE_DIR
-QT_QTASSISTANTCLIENT_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTASSISTANTCLIENT_LIBRARY
-QT_QTASSISTANTCLIENT_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTASSISTANTCLIENT_LIBRARY_DEBUG
-QT_QTASSISTANTCLIENT_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTASSISTANTCLIENT_LIBRARY_RELEASE
-QT_QTASSISTANTCLIENT_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTASSISTANT_INCLUDE_DIR
-QT_QTASSISTANT_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTASSISTANT_LIBRARY
-QT_QTASSISTANT_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTASSISTANT_LIBRARY_DEBUG
-QT_QTASSISTANT_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTASSISTANT_LIBRARY_RELEASE
-QT_QTASSISTANT_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTCLUCENE_LIBRARY
-QT_QTCLUCENE_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTCLUCENE_LIBRARY_DEBUG
-QT_QTCLUCENE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTCLUCENE_LIBRARY_RELEASE
-QT_QTCLUCENE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTCORE_INCLUDE_DIR
-QT_QTCORE_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTCORE_LIBRARY
-QT_QTCORE_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTCORE_LIBRARY_DEBUG
-QT_QTCORE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTCORE_LIBRARY_RELEASE
-QT_QTCORE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDBUS_INCLUDE_DIR
-QT_QTDBUS_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDBUS_LIBRARY
-QT_QTDBUS_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDBUS_LIBRARY_DEBUG
-QT_QTDBUS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDBUS_LIBRARY_RELEASE
-QT_QTDBUS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDECLARATIVE_INCLUDE_DIR
-QT_QTDECLARATIVE_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDECLARATIVE_LIBRARY
-QT_QTDECLARATIVE_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDECLARATIVE_LIBRARY_DEBUG
-QT_QTDECLARATIVE_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDECLARATIVE_LIBRARY_RELEASE
-QT_QTDECLARATIVE_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDESIGNERCOMPONENTS_INCLUDE_DIR
-QT_QTDESIGNERCOMPONENTS_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDESIGNERCOMPONENTS_LIBRARY
-QT_QTDESIGNERCOMPONENTS_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDESIGNERCOMPONENTS_LIBRARY_DEBUG
-QT_QTDESIGNERCOMPONENTS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDESIGNERCOMPONENTS_LIBRARY_RELEASE
-QT_QTDESIGNERCOMPONENTS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDESIGNER_INCLUDE_DIR
-QT_QTDESIGNER_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDESIGNER_LIBRARY
-QT_QTDESIGNER_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDESIGNER_LIBRARY_DEBUG
-QT_QTDESIGNER_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTDESIGNER_LIBRARY_RELEASE
-QT_QTDESIGNER_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTGUI_INCLUDE_DIR
-QT_QTGUI_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTGUI_LIBRARY
-QT_QTGUI_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTGUI_LIBRARY_DEBUG
-QT_QTGUI_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTGUI_LIBRARY_RELEASE
-QT_QTGUI_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTHELP_INCLUDE_DIR
-QT_QTHELP_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTHELP_LIBRARY
-QT_QTHELP_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTHELP_LIBRARY_DEBUG
-QT_QTHELP_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTHELP_LIBRARY_RELEASE
-QT_QTHELP_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTIFF_PLUGIN_DEBUG
-QT_QTIFF_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTIFF_PLUGIN_RELEASE
-QT_QTIFF_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTMOTIF_INCLUDE_DIR
-QT_QTMOTIF_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTMOTIF_LIBRARY
-QT_QTMOTIF_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTMOTIF_LIBRARY_DEBUG
-QT_QTMOTIF_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTMOTIF_LIBRARY_RELEASE
-QT_QTMOTIF_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTMULTIMEDIA_INCLUDE_DIR
-QT_QTMULTIMEDIA_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTMULTIMEDIA_LIBRARY
-QT_QTMULTIMEDIA_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTMULTIMEDIA_LIBRARY_DEBUG
-QT_QTMULTIMEDIA_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTMULTIMEDIA_LIBRARY_RELEASE
-QT_QTMULTIMEDIA_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTNETWORK_INCLUDE_DIR
-QT_QTNETWORK_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTNETWORK_LIBRARY
-QT_QTNETWORK_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTNETWORK_LIBRARY_DEBUG
-QT_QTNETWORK_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTNETWORK_LIBRARY_RELEASE
-QT_QTNETWORK_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTNSPLUGIN_INCLUDE_DIR
-QT_QTNSPLUGIN_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTNSPLUGIN_LIBRARY
-QT_QTNSPLUGIN_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTNSPLUGIN_LIBRARY_DEBUG
-QT_QTNSPLUGIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTNSPLUGIN_LIBRARY_RELEASE
-QT_QTNSPLUGIN_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTOPENGL_INCLUDE_DIR
-QT_QTOPENGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTOPENGL_LIBRARY
-QT_QTOPENGL_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTOPENGL_LIBRARY_DEBUG
-QT_QTOPENGL_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTOPENGL_LIBRARY_RELEASE
-QT_QTOPENGL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTRACEGRAPHICSSYSTEM_PLUGIN_DEBUG
-QT_QTRACEGRAPHICSSYSTEM_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTRACEGRAPHICSSYSTEM_PLUGIN_RELEASE
-QT_QTRACEGRAPHICSSYSTEM_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSCRIPTDBUS_PLUGIN_DEBUG
-QT_QTSCRIPTDBUS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSCRIPTDBUS_PLUGIN_RELEASE
-QT_QTSCRIPTDBUS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSCRIPTTOOLS_INCLUDE_DIR
-QT_QTSCRIPTTOOLS_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSCRIPTTOOLS_LIBRARY
-QT_QTSCRIPTTOOLS_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSCRIPTTOOLS_LIBRARY_DEBUG
-QT_QTSCRIPTTOOLS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSCRIPTTOOLS_LIBRARY_RELEASE
-QT_QTSCRIPTTOOLS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSCRIPT_INCLUDE_DIR
-QT_QTSCRIPT_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSCRIPT_LIBRARY
-QT_QTSCRIPT_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSCRIPT_LIBRARY_DEBUG
-QT_QTSCRIPT_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSCRIPT_LIBRARY_RELEASE
-QT_QTSCRIPT_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSQL_INCLUDE_DIR
-QT_QTSQL_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSQL_LIBRARY
-QT_QTSQL_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSQL_LIBRARY_DEBUG
-QT_QTSQL_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSQL_LIBRARY_RELEASE
-QT_QTSQL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSVG_INCLUDE_DIR
-QT_QTSVG_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSVG_LIBRARY
-QT_QTSVG_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSVG_LIBRARY_DEBUG
-QT_QTSVG_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTSVG_LIBRARY_RELEASE
-QT_QTSVG_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTTEST_INCLUDE_DIR
-QT_QTTEST_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTTEST_LIBRARY
-QT_QTTEST_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTTEST_LIBRARY_DEBUG
-QT_QTTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTTEST_LIBRARY_RELEASE
-QT_QTTEST_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTUITOOLS_INCLUDE_DIR
-QT_QTUITOOLS_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTUITOOLS_LIBRARY
-QT_QTUITOOLS_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTUITOOLS_LIBRARY_DEBUG
-QT_QTUITOOLS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTUITOOLS_LIBRARY_RELEASE
-QT_QTUITOOLS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTWCODECS_PLUGIN_DEBUG
-QT_QTWCODECS_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTWCODECS_PLUGIN_RELEASE
-QT_QTWCODECS_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTWEBKIT_INCLUDE_DIR
-QT_QTWEBKIT_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTWEBKIT_LIBRARY
-QT_QTWEBKIT_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTWEBKIT_LIBRARY_DEBUG
-QT_QTWEBKIT_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTWEBKIT_LIBRARY_RELEASE
-QT_QTWEBKIT_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTXMLPATTERNS_INCLUDE_DIR
-QT_QTXMLPATTERNS_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTXMLPATTERNS_LIBRARY
-QT_QTXMLPATTERNS_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTXMLPATTERNS_LIBRARY_DEBUG
-QT_QTXMLPATTERNS_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTXMLPATTERNS_LIBRARY_RELEASE
-QT_QTXMLPATTERNS_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTXML_INCLUDE_DIR
-QT_QTXML_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTXML_LIBRARY
-QT_QTXML_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTXML_LIBRARY_DEBUG
-QT_QTXML_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QTXML_LIBRARY_RELEASE
-QT_QTXML_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QWEBVIEW_PLUGIN_DEBUG
-QT_QWEBVIEW_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QWEBVIEW_PLUGIN_RELEASE
-QT_QWEBVIEW_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QWSTSLIBMOUSEHANDLER_PLUGIN_DEBUG
-QT_QWSTSLIBMOUSEHANDLER_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_QWSTSLIBMOUSEHANDLER_PLUGIN_RELEASE
-QT_QWSTSLIBMOUSEHANDLER_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_RCC_EXECUTABLE
-QT_RCC_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_TASKMENUEXTENSION_PLUGIN_DEBUG
-QT_TASKMENUEXTENSION_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_TASKMENUEXTENSION_PLUGIN_RELEASE
-QT_TASKMENUEXTENSION_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_TRANSLATIONS_DIR
-QT_TRANSLATIONS_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_UIC3_EXECUTABLE
-QT_UIC3_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_UIC_EXECUTABLE
-QT_UIC_EXECUTABLE-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_WORLDTIMECLOCKPLUGIN_PLUGIN_DEBUG
-QT_WORLDTIMECLOCKPLUGIN_PLUGIN_DEBUG-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: QT_WORLDTIMECLOCKPLUGIN_PLUGIN_RELEASE
-QT_WORLDTIMECLOCKPLUGIN_PLUGIN_RELEASE-ADVANCED:INTERNAL=1
-//Have symbol Q_WS_MAC
-Q_WS_MAC:INTERNAL=
-//Have symbol Q_WS_QWS
-Q_WS_QWS:INTERNAL=
-//Have symbol Q_WS_WIN
-Q_WS_WIN:INTERNAL=
-//Have symbol Q_WS_X11
-Q_WS_X11:INTERNAL=1
 //Components requested for this build tree.
-_Boost_COMPONENTS_SEARCHED:INTERNAL=date_time;filesystem;iostreams;serialization;signals;system;thread
+_Boost_COMPONENTS_SEARCHED:INTERNAL=thread
 //Last used Boost_INCLUDE_DIR value.
 _Boost_INCLUDE_DIR_LAST:INTERNAL=/usr/include
 //Last used Boost_LIBRARY_DIR value.
@@ -3076,6 +962,4 @@ _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
 __pkg_config_checked_OGRE:INTERNAL=1
 __pkg_config_checked_OGRE-Paging:INTERNAL=1
 __pkg_config_checked_PC_EIGEN:INTERNAL=1
-__pkg_config_checked_PC_FLANN:INTERNAL=1
-__pkg_config_checked_PC_OPENNI:INTERNAL=1
 

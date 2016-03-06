@@ -1,2 +1,0 @@
-set(hector_stair_detection_msgs_MESSAGE_FILES "/home/somal/catkin_ws/src/hector_visualization/hector_stair_detection_msgs/msg/BorderAndOrientationOfStairs.msg;/home/somal/catkin_ws/src/hector_visualization/hector_stair_detection_msgs/msg/PositionAndOrientaion.msg")
-set(hector_stair_detection_msgs_SERVICE_FILES "")

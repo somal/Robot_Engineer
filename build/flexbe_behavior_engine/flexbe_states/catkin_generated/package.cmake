@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "flexbe_states")
-set(flexbe_states_MAINTAINER "Philipp Schillinger <schillinger@sim.tu-darmstadt.de>")
-set(flexbe_states_DEPRECATED "")
-set(flexbe_states_VERSION "1.0.0")
-set(flexbe_states_BUILD_DEPENDS "rostest")
-set(flexbe_states_RUN_DEPENDS "smach_ros" "rospy" "rosbag" "flexbe_msgs" "flexbe_testing")
-set(flexbe_states_BUILDTOOL_DEPENDS "catkin")

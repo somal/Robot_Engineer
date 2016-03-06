@@ -1,8 +1,0 @@
-prefix=/home/somal/catkin_ws/devel
-
-Name: hector_monstertruck_driver
-Description: Description of hector_monstertruck_driver
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/somal/catkin_ws/devel/lib 
-Requires: 

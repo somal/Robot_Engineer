@@ -1,8 +1,0 @@
-prefix=/home/somal/catkin_ws/devel
-
-Name: tracker_base_ui
-Description: Description of tracker_base_ui
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/somal/catkin_ws/devel/lib 
-Requires: 
