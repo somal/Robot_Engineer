@@ -25,6 +25,11 @@
   <xacro:property name="flipper_offset_y"    value="${base_link_size_y*0.5+track_width}" />  <!--old 0.245-->
   <xacro:property name="flipper_offset_wheel_axis_x"    value="0.355" /> <!--old 0.225 --> 
   
+  <!-- I have added it-->
+  <xacro:property name="flipper_offset_wheel_axis_z"    value="${wheel_offset_z}" /> <!--offset for enabled ground_clearance --> 
+  <xacro:property name="small_flipper_wheel_radius"    value="0.02135" /> <!--offset for enabled ground_clearance old 0.0427/2-->
+  <xacro:property name="track_thickness"    value="0.005" /> <!--offset for enabled ground_clearance old 0.0427/2-->   
+  <!---->
   
   <xacro:property name="wheel_length" value="2" /> <!--i dont now how it can be used, old 0.02--> 
   <xacro:property name="wheel_size_y" value="2" /> <!--i dont now how it can be used, old 0.0825--> 
@@ -34,7 +39,7 @@
   <xacro:property name="wheel_offset_y" value="2" /> <!--i dont now how it can be used, old 0.1697--> 
   <xacro:property name="wheel_offset_z_from_base_link" value="2" />   <!--i dont now how it can be used, old -0.0--> 
   
-  <xacro:property name="ground_clearance" value="0" /> <!--old 0.05 0.02517-->
+  <xacro:property name="ground_clearance" value="0.02517" /> <!--old 0.05 0.02517-->
    
   <xacro:property name="top_size_x" value="${2*(base_link_size_x+flipper_offset_wheel_axis_x)}" />  <!--was 0.3937--> <!--i dont now how it can be used-->
   <xacro:property name="top_size_y" value="2" />  <!--was 0.3556--><!--i dont now how it can be used-->

@@ -16,44 +16,56 @@
       <material name="Grey" >
         <color rgba="0.8 0.8 0.8 1"/>
       </material>  
-      <origin xyz="0 0 0" rpy="${M_PI*0.5} 0 0" />
+      <origin xyz="0 0 ${front*flipper_offset_wheel_axis_z}" rpy="${M_PI*0.5} 0 0" />
       <geometry>
         <cylinder radius="${wheel_radius}" length="${flipper_width}" />
       </geometry>
     </visual>
     <visual>
-      <origin xyz="${front*flipper_offset_wheel_axis_x} 0 0" rpy="${M_PI*0.5} 0 0" />
+      <origin xyz="${front*flipper_offset_wheel_axis_x} 0 ${front*flipper_offset_wheel_axis_z}" rpy="${M_PI*0.5} 0 0" />
       <geometry>
-        <cylinder radius="${wheel_radius}" length="${flipper_width}" />
+        <cylinder radius="${small_flipper_wheel_radius}" length="${flipper_width}" />
       </geometry>
-    </visual>
+    </visual> 
     <visual>
-      <origin xyz="${front*flipper_offset_wheel_axis_x*0.5} 0 0" rpy="0 0 0" />
+      <origin xyz="${front*flipper_offset_wheel_axis_x*0.5} 0 ${0.5*(front*flipper_offset_wheel_axis_z+wheel_radius)}" rpy="${M_PI*0.5} ${M_PI*0.5-1.4874686} 0" />
       <geometry>
-        <box size="${flipper_offset_wheel_axis_x} ${flipper_width} ${wheel_radius*2}" />
+        <box size="${flipper_offset_wheel_axis_x} ${track_thickness} ${flipper_width} " />
       </geometry>
-    </visual>    
-  </xacro:macro>
+    </visual>  
+    <visual>
+      <origin xyz="${front*flipper_offset_wheel_axis_x*0.5} 0 ${0.5*(2*front*flipper_offset_wheel_axis_z-wheel_radius)}" rpy="${M_PI*0.5} ${M_PI*0.5+1.4874686} 0" />
+      <geometry>
+        <box size="${flipper_offset_wheel_axis_x} ${track_thickness} ${flipper_width} " />
+      </geometry>
+    </visual>  
+ </xacro:macro>
   
   <xacro:macro name="flipper_geom_macro_collision" params="front">
     <collision>
-      <origin xyz="0 0 0" rpy="${M_PI*0.5} 0 0" />
+      <origin xyz="0 0 ${front*flipper_offset_wheel_axis_z}" rpy="${M_PI*0.5} 0 0" />
       <geometry>
         <cylinder radius="${wheel_radius}" length="${flipper_width}" />
       </geometry>
     </collision>
     <collision>
-      <origin xyz="${front*flipper_offset_wheel_axis_x} 0 0" rpy="${M_PI*0.5} 0 0" />
+      <origin xyz="${front*flipper_offset_wheel_axis_x} 0 ${front*flipper_offset_wheel_axis_z}" rpy="${M_PI*0.5} 0 0" />
       <geometry>
-        <cylinder radius="${wheel_radius}" length="${flipper_width}" />
+        <cylinder radius="${small_flipper_wheel_radius}" length="${flipper_width}" />
       </geometry>
-    </collision>
+    </collision> 
     <collision>
-      <origin xyz="${front*flipper_offset_wheel_axis_x*0.5} 0 0" rpy="0 0 0" />
+       <origin xyz="${front*flipper_offset_wheel_axis_x*0.5} 0 ${0.5*(front*flipper_offset_wheel_axis_z+wheel_radius)}" rpy="${M_PI*0.5} ${M_PI*0.5-1.4874686} 0" />
       <geometry>
-        <box size="${flipper_offset_wheel_axis_x} ${flipper_width} ${wheel_radius*2}" />
+        <box size="${flipper_offset_wheel_axis_x} ${track_thickness} ${flipper_width} " />
       </geometry>
-    </collision>
+    </collision> 
+   <collision>
+      <origin xyz="${front*flipper_offset_wheel_axis_x*0.5} 0 ${0.5*(2*front*flipper_offset_wheel_axis_z-wheel_radius)}" rpy="${M_PI*0.5} ${M_PI*0.5+1.4874686} 0" />
+      <geometry>
+        <box size="${flipper_offset_wheel_axis_x} ${track_thickness} ${flipper_width} " />
+      </geometry>
+    </collision> 
   </xacro:macro>
   
   
