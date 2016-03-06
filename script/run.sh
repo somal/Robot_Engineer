@@ -5,7 +5,7 @@ source stop.sh
 source ../devel/setup.bash 
 echo 'Run clear gazebo'
 roslaunch gazebo_ros empty_world.launch & 
-sleep 5
+sleep 15
 
 echo 'Run obelix model and flipper controller'
 roslaunch hector_tracked_vehicles_description spawn_obelix_ugv_original.launch &
