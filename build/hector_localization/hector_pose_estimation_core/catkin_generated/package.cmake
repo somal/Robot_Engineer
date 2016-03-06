@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_pose_estimation_core")
+set(hector_pose_estimation_core_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
+set(hector_pose_estimation_core_DEPRECATED "")
+set(hector_pose_estimation_core_VERSION "0.2.1")
+set(hector_pose_estimation_core_BUILD_DEPENDS "rostime" "rosconsole" "roscpp" "sensor_msgs" "geometry_msgs" "nav_msgs" "geographic_msgs" "tf" "eigen" "cmake_modules")
+set(hector_pose_estimation_core_RUN_DEPENDS "rostime" "rosconsole" "roscpp" "sensor_msgs" "geometry_msgs" "geographic_msgs" "nav_msgs" "tf" "eigen")
+set(hector_pose_estimation_core_BUILDTOOL_DEPENDS "catkin")

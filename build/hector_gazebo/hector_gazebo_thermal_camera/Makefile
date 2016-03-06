@@ -150,48 +150,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_cpp.dir/rule:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_cpp.dir/rule
-.PHONY : hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_cpp: hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_cpp.dir/rule
-.PHONY : bond_generate_messages_cpp
-
-# fast build rule for target.
-bond_generate_messages_cpp/fast:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_cpp.dir/build.make hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_cpp.dir/build
-.PHONY : bond_generate_messages_cpp/fast
-
-# Convenience name for target.
-hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_lisp.dir/rule:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_lisp.dir/rule
-.PHONY : hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_lisp: hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_lisp.dir/rule
-.PHONY : bond_generate_messages_lisp
-
-# fast build rule for target.
-bond_generate_messages_lisp/fast:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_lisp.dir/build.make hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_lisp.dir/build
-.PHONY : bond_generate_messages_lisp/fast
-
-# Convenience name for target.
-hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_py.dir/rule:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_py.dir/rule
-.PHONY : hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_py.dir/rule
-
-# Convenience name for target.
-bond_generate_messages_py: hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_py.dir/rule
-.PHONY : bond_generate_messages_py
-
-# fast build rule for target.
-bond_generate_messages_py/fast:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_py.dir/build.make hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/bond_generate_messages_py.dir/build
-.PHONY : bond_generate_messages_py/fast
-
-# Convenience name for target.
 hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/driver_base_generate_messages_cpp.dir/rule:
 	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/driver_base_generate_messages_cpp.dir/rule
 .PHONY : hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/driver_base_generate_messages_cpp.dir/rule
@@ -332,48 +290,6 @@ hector_gazebo_thermal_camera_gencfg/fast:
 .PHONY : hector_gazebo_thermal_camera_gencfg/fast
 
 # Convenience name for target.
-hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-.PHONY : hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_cpp: hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
-.PHONY : nodelet_generate_messages_cpp
-
-# fast build rule for target.
-nodelet_generate_messages_cpp/fast:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_cpp.dir/build
-.PHONY : nodelet_generate_messages_cpp/fast
-
-# Convenience name for target.
-hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_lisp.dir/rule:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-.PHONY : hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_lisp: hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
-.PHONY : nodelet_generate_messages_lisp
-
-# fast build rule for target.
-nodelet_generate_messages_lisp/fast:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_lisp.dir/build
-.PHONY : nodelet_generate_messages_lisp/fast
-
-# Convenience name for target.
-hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_py.dir/rule:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_py.dir/rule
-.PHONY : hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nodelet_generate_messages_py: hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_py.dir/rule
-.PHONY : nodelet_generate_messages_py
-
-# fast build rule for target.
-nodelet_generate_messages_py/fast:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_py.dir/build.make hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/nodelet_generate_messages_py.dir/build
-.PHONY : nodelet_generate_messages_py/fast
-
-# Convenience name for target.
 hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule:
 	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
 .PHONY : hector_gazebo/hector_gazebo_thermal_camera/CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/rule
@@ -469,9 +385,6 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... bond_generate_messages_cpp"
-	@echo "... bond_generate_messages_lisp"
-	@echo "... bond_generate_messages_py"
 	@echo "... driver_base_generate_messages_cpp"
 	@echo "... driver_base_generate_messages_lisp"
 	@echo "... driver_base_generate_messages_py"
@@ -487,9 +400,6 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
-	@echo "... nodelet_generate_messages_cpp"
-	@echo "... nodelet_generate_messages_lisp"
-	@echo "... nodelet_generate_messages_py"
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... trajectory_msgs_generate_messages_cpp"

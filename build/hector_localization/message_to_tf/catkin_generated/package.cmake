@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "message_to_tf")
+set(message_to_tf_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
+set(message_to_tf_DEPRECATED "")
+set(message_to_tf_VERSION "0.2.1")
+set(message_to_tf_BUILD_DEPENDS "roscpp" "tf" "nav_msgs" "geometry_msgs" "sensor_msgs" "topic_tools")
+set(message_to_tf_RUN_DEPENDS "roscpp" "tf" "nav_msgs" "geometry_msgs" "sensor_msgs" "topic_tools")
+set(message_to_tf_BUILDTOOL_DEPENDS "catkin")

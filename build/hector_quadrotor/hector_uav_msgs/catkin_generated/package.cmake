@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_uav_msgs")
+set(hector_uav_msgs_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
+set(hector_uav_msgs_DEPRECATED "")
+set(hector_uav_msgs_VERSION "0.3.5")
+set(hector_uav_msgs_BUILD_DEPENDS "message_generation" "std_msgs")
+set(hector_uav_msgs_RUN_DEPENDS "message_runtime" "std_msgs")
+set(hector_uav_msgs_BUILDTOOL_DEPENDS "catkin")

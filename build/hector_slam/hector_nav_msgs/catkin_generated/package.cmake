@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_nav_msgs")
+set(hector_nav_msgs_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
+set(hector_nav_msgs_DEPRECATED "")
+set(hector_nav_msgs_VERSION "0.3.4")
+set(hector_nav_msgs_BUILD_DEPENDS "nav_msgs" "geometry_msgs" "message_generation")
+set(hector_nav_msgs_RUN_DEPENDS "nav_msgs" "geometry_msgs" "message_runtime")
+set(hector_nav_msgs_BUILDTOOL_DEPENDS "catkin")

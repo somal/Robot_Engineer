@@ -1,0 +1,81 @@
+MapStitch - merge multiple 2D maps
+=================================
+
+ This is a ROS component and a command line tool to align a map to a previously
+saved 2D map. The previously saved map is assumed to have been created by the
+map_saver ROS component. The implementation is based on opencvs
+estimateRigidTransform function, ORB feature extraction and matching the
+distance of pairwise feature candidates.
+
+ROS component
+=============
+
+ The ROS component can be run with "rosrun mapstitch ros_mapstitch" and supports
+three parameters:
+ * max_distance, the treshold distance for filtering pairwise distances. Too
+   high does not filter any features and too low filter too much. This is the
+   pixel distance between matches in both maps, so should be set depending on
+   the resolution of your maps.
+ * debug, set to true will save the current_stitch.pgm and current_map.pgm, i.e.
+   the stitchted maps and the current map as seen on /map.
+
+ The component will listen on the /world topic for the OccupancyGrid-Map to
+align the /map topic one to. At the moment no scaling is implemented, so the
+maps need to have the same resolution. The transformation from /map to /world
+will be published on the frame_ids given in the /map and /world topics.
+
+ The node now listen to three topics:
+  /map    - publish the /map->/world (frame_ids) transform on update
+  /world  - receive the world map on this latched topic
+  /align  - receive the map used for alignment
+
+ We have three topics to be able to publish two "complete" maps on /align and 
+/world and calculate a "static" transform and then publish this transform 
+whenever something on /map keeps published (this is needed so the transform 
+does not timeout).
+
+Command Line Tool
+=================
+
+ The command line tool can be run with bin/mapstitch and can be used to align
+two previosuly saved .pgm maps on each other. It is mainly meant for testing and
+debugging. The Usage is
+
+bin/mapstitch  [-o <string>] [-v] [-d <max-distance>] [--] [--version]
+                  [-h] <file1 and file2> ...
+
+
+Where:
+
+   -o <string>,  --outfile <string>
+     output filename
+
+   -v,  --verbose
+     verbose output
+
+   -d <max-distance>,  --maximum-distance <max-distance>
+     maximum distance on matched points pairs for inclusion
+
+   --,  --ignore_rest
+     Ignores the rest of the labeled arguments following this flag.
+
+   --version
+     Displays version information and exits.
+
+   -h,  --help
+     Displays usage information and exits.
+
+   <file1 and file2>  (accepted multiple times)
+     input file names (first one is pivot element)
+
+
+   Aligns multiple scan maps and combines into a single image. All images
+   given on the command line will be aligned to the first supplied image
+   and their respective rotation/translation and transformation matrix will
+   be returned.
+
+
+
+TODO
+----
+ * check that world file and /map have the same resolution

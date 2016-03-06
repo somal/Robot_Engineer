@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "dynamicvoronoi")
+set(dynamicvoronoi_MAINTAINER "op <op@todo.todo>")
+set(dynamicvoronoi_DEPRECATED "")
+set(dynamicvoronoi_VERSION "0.0.0")
+set(dynamicvoronoi_BUILD_DEPENDS "roscpp")
+set(dynamicvoronoi_RUN_DEPENDS "roscpp")
+set(dynamicvoronoi_BUILDTOOL_DEPENDS "catkin")

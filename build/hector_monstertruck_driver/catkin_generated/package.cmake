@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_monstertruck_driver")
+set(hector_monstertruck_driver_MAINTAINER "christian <christian@todo.todo>")
+set(hector_monstertruck_driver_DEPRECATED "")
+set(hector_monstertruck_driver_VERSION "0.0.0")
+set(hector_monstertruck_driver_BUILD_DEPENDS "roscpp" "monstertruck_msgs")
+set(hector_monstertruck_driver_RUN_DEPENDS "roscpp" "monstertruck_msgs")
+set(hector_monstertruck_driver_BUILDTOOL_DEPENDS "catkin")

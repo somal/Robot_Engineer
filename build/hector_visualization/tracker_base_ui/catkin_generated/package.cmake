@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "tracker_base_ui")
+set(tracker_base_ui_MAINTAINER "doro <doro@todo.todo>")
+set(tracker_base_ui_DEPRECATED "")
+set(tracker_base_ui_VERSION "0.0.0")
+set(tracker_base_ui_BUILD_DEPENDS "rospy" "rqt_gui" "rqt_gui_py" "std_msgs")
+set(tracker_base_ui_RUN_DEPENDS "rospy" "rqt_gui" "rqt_gui_py" "std_msgs")
+set(tracker_base_ui_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/devel
+
+Name: hector_worldmodel_msgs
+Description: Description of hector_worldmodel_msgs
+Version: 0.3.3
+Cflags: -I/home/somal/catkin_ws/devel/include -I/home/somal/catkin_ws/src/hector_worldmodel/hector_worldmodel_msgs/include
+Libs: -L/home/somal/catkin_ws/devel/lib 
+Requires: sensor_msgs geometry_msgs

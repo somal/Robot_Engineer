@@ -1,0 +1,12 @@
+-I/usr/include/qt4
+-I/usr/include/qt4/QtGui
+-I/usr/include/qt4/QtCore
+-DROS_BUILD_SHARED_LIBS=1
+-DROS_PACKAGE_NAME="hector_rqt_plugins"
+-DROSCONSOLE_BACKEND_LOG4CXX
+-DQT_NO_DEBUG
+-DQT_GUI_LIB
+-DQT_CORE_LIB
+-o
+/home/somal/catkin_ws/build/hector_visualization/hector_rqt_plugins/include/rqt_image_cropping/moc_image_cropper.cxx
+/home/somal/catkin_ws/src/hector_visualization/hector_rqt_plugins/include/rqt_image_cropping/image_cropper.h

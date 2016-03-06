@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/install
+
+Name: hector_stair_detection
+Description: Description of hector_stair_detection
+Version: 0.0.0
+Cflags: -I/home/somal/catkin_ws/install/include
+Libs: -L/home/somal/catkin_ws/install/lib -lhector_stair_detection
+Requires: roscpp pcl_conversions tf_conversions sensor_msgs geometry_msgs std_msgs visualization_msgs hector_stair_detection_msgs

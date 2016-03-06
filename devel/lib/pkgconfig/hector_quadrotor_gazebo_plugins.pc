@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/devel
+
+Name: hector_quadrotor_gazebo_plugins
+Description: Description of hector_quadrotor_gazebo_plugins
+Version: 0.3.5
+Cflags: -I/home/somal/catkin_ws/src/hector_quadrotor/hector_quadrotor_gazebo_plugins/include
+Libs: -L/home/somal/catkin_ws/devel/lib 
+Requires: roscpp hector_gazebo_plugins hector_quadrotor_model geometry_msgs hector_uav_msgs dynamic_reconfigure

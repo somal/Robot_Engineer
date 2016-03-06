@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_stair_detection")
+set(hector_stair_detection_MAINTAINER "benedikt <benedikt@todo.todo>")
+set(hector_stair_detection_DEPRECATED "")
+set(hector_stair_detection_VERSION "0.0.0")
+set(hector_stair_detection_BUILD_DEPENDS "roscpp" "pcl_conversions" "tf_conversions" "message_generation" "sensor_msgs" "geometry_msgs" "visualization_msgs" "std_msgs" "hector_stair_detection_msgs")
+set(hector_stair_detection_RUN_DEPENDS "roscpp" "pcl_conversions" "tf_conversions" "message_runtime" "sensor_msgs" "geometry_msgs" "visualization_msgs" "std_msgs" "hector_stair_detection_msgs")
+set(hector_stair_detection_BUILDTOOL_DEPENDS "catkin")

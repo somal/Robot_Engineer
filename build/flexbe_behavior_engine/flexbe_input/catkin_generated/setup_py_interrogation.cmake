@@ -1,0 +1,6 @@
+set(flexbe_input_SETUP_PY_VERSION "1.0.0")
+set(flexbe_input_SETUP_PY_SCRIPTS "")
+set(flexbe_input_SETUP_PY_PACKAGES "flexbe_input")
+set(flexbe_input_SETUP_PY_PACKAGE_DIRS "src/flexbe_input")
+set(flexbe_input_SETUP_PY_MODULES "")
+set(flexbe_input_SETUP_PY_MODULE_DIRS "")

@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/install
+
+Name: hector_quadrotor_pose_estimation
+Description: Description of hector_quadrotor_pose_estimation
+Version: 0.3.5
+Cflags: -I/home/somal/catkin_ws/install/include
+Libs: -L/home/somal/catkin_ws/install/lib -lquadrotor_pose_estimation_nodelet -lquadrotor_pose_estimation_node
+Requires: hector_pose_estimation hector_uav_msgs

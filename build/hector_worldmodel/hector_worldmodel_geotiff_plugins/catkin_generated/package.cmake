@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_worldmodel_geotiff_plugins")
+set(hector_worldmodel_geotiff_plugins_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
+set(hector_worldmodel_geotiff_plugins_DEPRECATED "")
+set(hector_worldmodel_geotiff_plugins_VERSION "0.3.3")
+set(hector_worldmodel_geotiff_plugins_BUILD_DEPENDS "hector_geotiff" "hector_worldmodel_msgs")
+set(hector_worldmodel_geotiff_plugins_RUN_DEPENDS "hector_geotiff" "hector_worldmodel_msgs")
+set(hector_worldmodel_geotiff_plugins_BUILDTOOL_DEPENDS "catkin")

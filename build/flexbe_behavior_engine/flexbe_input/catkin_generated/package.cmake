@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "flexbe_input")
+set(flexbe_input_MAINTAINER "Philipp Schillinger <schillinger@sim.tu-darmstadt.de>")
+set(flexbe_input_DEPRECATED "")
+set(flexbe_input_VERSION "1.0.0")
+set(flexbe_input_BUILD_DEPENDS "actionlib")
+set(flexbe_input_RUN_DEPENDS "actionlib" "smach_ros" "rospy" "flexbe_msgs")
+set(flexbe_input_BUILDTOOL_DEPENDS "catkin")

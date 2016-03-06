@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/devel
+
+Name: hector_rqt_plugins
+Description: Description of hector_rqt_plugins
+Version: 0.0.1
+Cflags: -I/home/somal/catkin_ws/src/hector_visualization/hector_rqt_plugins/include
+Libs: -L/home/somal/catkin_ws/devel/lib -lhector_rqt_plugins
+Requires: hector_mapstitch rqt_gui rqt_gui_cpp image_transport sensor_msgs cv_bridge rosconsole nav_msgs

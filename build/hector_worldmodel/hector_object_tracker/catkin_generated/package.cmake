@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_object_tracker")
+set(hector_object_tracker_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
+set(hector_object_tracker_DEPRECATED "")
+set(hector_object_tracker_VERSION "0.3.3")
+set(hector_object_tracker_BUILD_DEPENDS "roscpp" "tf" "image_geometry" "hector_worldmodel_msgs" "hector_nav_msgs" "hector_marker_drawing" "cmake_modules")
+set(hector_object_tracker_RUN_DEPENDS "roscpp" "tf" "image_geometry" "hector_worldmodel_msgs" "hector_nav_msgs" "hector_marker_drawing")
+set(hector_object_tracker_BUILDTOOL_DEPENDS "catkin")

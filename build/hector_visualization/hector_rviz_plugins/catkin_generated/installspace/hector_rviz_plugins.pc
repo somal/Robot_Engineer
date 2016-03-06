@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/install
+
+Name: hector_rviz_plugins
+Description: Description of hector_rviz_plugins
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/somal/catkin_ws/install/lib -lhector_rviz_plugins
+Requires: geometry_msgs rviz

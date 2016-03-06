@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_barrel_detection")
+set(hector_barrel_detection_MAINTAINER "doro <doro@todo.todo>")
+set(hector_barrel_detection_DEPRECATED "")
+set(hector_barrel_detection_VERSION "0.0.0")
+set(hector_barrel_detection_BUILD_DEPENDS "pcl_ros" "roscpp" "sensor_msgs" "pcl_conversions" "geometry_msgs" "visualization_msgs" "cv_bridge" "hector_worldmodel_msgs" "image_transport" "message_filters" "tf_conversions" "image_geometry")
+set(hector_barrel_detection_RUN_DEPENDS "pcl_ros" "roscpp" "sensor_msgs" "pcl_conversions" "geometry_msgs" "visualization_msgs" "cv_bridge" "hector_worldmodel_msgs" "image_transport" "message_filters" "tf_conversions" "image_geometry")
+set(hector_barrel_detection_BUILDTOOL_DEPENDS "catkin")

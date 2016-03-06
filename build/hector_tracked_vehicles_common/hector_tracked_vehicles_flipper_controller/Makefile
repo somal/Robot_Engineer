@@ -163,48 +163,6 @@ hector_tracked_vehicles_flipper_controller_node/fast:
 	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/hector_tracked_vehicles_flipper_controller_node.dir/build.make hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/hector_tracked_vehicles_flipper_controller_node.dir/build
 .PHONY : hector_tracked_vehicles_flipper_controller_node/fast
 
-# Convenience name for target.
-hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make hector_tracked_vehicles_common/hector_tracked_vehicles_flipper_controller/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
 src/flippercontroller.o: src/flippercontroller.cpp.o
 .PHONY : src/flippercontroller.o
 
@@ -266,9 +224,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... test"
 	@echo "... src/flippercontroller.o"
 	@echo "... src/flippercontroller.i"

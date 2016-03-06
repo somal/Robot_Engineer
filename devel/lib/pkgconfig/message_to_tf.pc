@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/devel
+
+Name: message_to_tf
+Description: Description of message_to_tf
+Version: 0.2.1
+Cflags: 
+Libs: -L/home/somal/catkin_ws/devel/lib 
+Requires: tf nav_msgs geometry_msgs sensor_msgs topic_tools

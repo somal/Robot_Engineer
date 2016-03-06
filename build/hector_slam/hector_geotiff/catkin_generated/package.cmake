@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_geotiff")
+set(hector_geotiff_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
+set(hector_geotiff_DEPRECATED "")
+set(hector_geotiff_VERSION "0.3.4")
+set(hector_geotiff_BUILD_DEPENDS "cmake_modules" "hector_map_tools" "hector_nav_msgs" "nav_msgs" "pluginlib" "roscpp" "std_msgs" "libqt4-dev")
+set(hector_geotiff_RUN_DEPENDS "hector_map_tools" "hector_nav_msgs" "nav_msgs" "pluginlib" "roscpp" "std_msgs" "libqt4-dev")
+set(hector_geotiff_BUILDTOOL_DEPENDS "catkin")

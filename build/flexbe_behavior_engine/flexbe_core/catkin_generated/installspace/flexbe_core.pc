@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/install
+
+Name: flexbe_core
+Description: Description of flexbe_core
+Version: 1.0.0
+Cflags: -I/home/somal/catkin_ws/install/include
+Libs: -L/home/somal/catkin_ws/install/lib -lflexbe_core
+Requires: 

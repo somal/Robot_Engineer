@@ -555,48 +555,6 @@ monstertruck_msgs_genpy/fast:
 	cd /home/somal/catkin_ws/build && $(MAKE) -f monstertruck_msgs/CMakeFiles/monstertruck_msgs_genpy.dir/build.make monstertruck_msgs/CMakeFiles/monstertruck_msgs_genpy.dir/build
 .PHONY : monstertruck_msgs_genpy/fast
 
-# Convenience name for target.
-monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : std_msgs_generate_messages_cpp
-
-# fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f CMakeFiles/Makefile2 monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/somal/catkin_ws/build && $(MAKE) -f monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make monstertruck_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -638,9 +596,6 @@ help:
 	@echo "... monstertruck_msgs_genlisp"
 	@echo "... monstertruck_msgs_genpy"
 	@echo "... rebuild_cache"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_py"
 	@echo "... test"
 .PHONY : help
 

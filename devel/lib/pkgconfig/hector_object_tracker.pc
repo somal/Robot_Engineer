@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/devel
+
+Name: hector_object_tracker
+Description: Description of hector_object_tracker
+Version: 0.3.3
+Cflags: -I/usr/include/eigen3
+Libs: -L/home/somal/catkin_ws/devel/lib 
+Requires: roscpp tf image_geometry hector_worldmodel_msgs hector_nav_msgs hector_marker_drawing

@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/devel
+
+Name: flexbe_widget
+Description: Description of flexbe_widget
+Version: 1.0.0
+Cflags: -I/home/somal/catkin_ws/src/flexbe_behavior_engine/flexbe_widget/src
+Libs: -L/home/somal/catkin_ws/devel/lib -lflexbe_widget
+Requires: 

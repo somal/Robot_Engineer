@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "hector_quadrotor")
+set(hector_quadrotor_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
+set(hector_quadrotor_DEPRECATED "")
+set(hector_quadrotor_VERSION "0.3.5")
+set(hector_quadrotor_BUILD_DEPENDS )
+set(hector_quadrotor_RUN_DEPENDS "hector_quadrotor_controller" "hector_quadrotor_description" "hector_quadrotor_model" "hector_quadrotor_teleop" "hector_uav_msgs")
+set(hector_quadrotor_BUILDTOOL_DEPENDS "catkin")
