@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<robot name="obelix_ugv" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+  <!-- Included URDF Files -->
+  <xacro:include filename="$(find hector_tracked_vehicles_description)/urdf/obelix_ugv_base.urdf.xacro" />
+  <xacro:obelix_ugv_macro />
+  
+  
+  <xacro:include filename="$(find hector_tracked_vehicles_description)/urdf/obelix_2flipper_box.urdf.xacro" />
+  <!-- use for 2*2 flippers --> 
+  <xacro:obelix_flipper_macro parent="base_link" name="front" front="1">
+    <origin xyz="${wheel_offset_x}  ${flipper_offset_y}  0 " rpy="0 0 0"/>
+  </xacro:obelix_flipper_macro >   
+  
+  <xacro:obelix_flipper_macro parent="base_link" name="rear" front="1">
+    <origin xyz="${-wheel_offset_x+base_link_size_x}  ${flipper_offset_y}  0  " rpy="0 0 0"/>
+  </xacro:obelix_flipper_macro >
+  
+  
+  
+  <gazebo reference="base_link">
+    <!--<material>Gazebo/White</material>-->
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
+    <kp>1000000.0</kp>
+    <kd>100.0</kd>
+    <minDepth>0.001</minDepth>
+    <maxVel>1.0</maxVel>
+  </gazebo>    
+  
+  <gazebo>
+    <plugin name="force_based_move_controller" filename="libgazebo_ros_force_based_move.so">
+      <commandTopic>/cmd_vel_raw</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometryRate>20.0</odometryRate>
+      <robotBaseFrame>base_link</robotBaseFrame>
+      <publishOdometryTf>0</publishOdometryTf>
+      <yaw_velocity_p_gain>4000.0</yaw_velocity_p_gain>
+      <x_velocity_p_gain>10000.0</x_velocity_p_gain>
+      <y_velocity_p_gain>10000.0</y_velocity_p_gain>
+    </plugin>
+    
+    <!-- ros_control plugin -->  
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>obelix_robot</robotNamespace>
+    </plugin>
+    
+    
+    <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>50.0</updateRate>
+      <bodyName>base_link</bodyName>
+      <topicName>ground_truth/state</topicName>
+      <gaussianNoise>0.01</gaussianNoise>
+      <frameName>world</frameName>
+      <xyzOffsets>0 0 0</xyzOffsets>
+      <rpyOffsets>0 0 0</rpyOffsets>
+    </plugin>
+    
+    <plugin name="imu_controller" filename="libhector_gazebo_ros_imu.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>50.0</updateRate>
+      <bodyName>base_link</bodyName>
+      <topicName>imu_quat</topicName>
+      <accelDrift>0.0 0.0 0.0</accelDrift>
+      <accelGaussianNoise>0.1 0.1 0.1</accelGaussianNoise>
+      <rateDrift>0.0 0.0 0.0</rateDrift>
+      <rateGaussianNoise>0.05 0.05 0.05</rateGaussianNoise>
+      <headingDrift>0.0</headingDrift>
+      <headingGaussianNoise>0.05</headingGaussianNoise>
+    </plugin>
+  </gazebo> 
+  
+</robot>
