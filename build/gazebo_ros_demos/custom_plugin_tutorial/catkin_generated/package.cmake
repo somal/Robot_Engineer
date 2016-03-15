@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "gazebo_tutorials")
+set(gazebo_tutorials_MAINTAINER "dave <dave@todo.todo>")
+set(gazebo_tutorials_DEPRECATED "")
+set(gazebo_tutorials_VERSION "0.0.0")
+set(gazebo_tutorials_BUILD_DEPENDS "gazebo_ros" "roscpp")
+set(gazebo_tutorials_RUN_DEPENDS "gazebo_ros" "roscpp")
+set(gazebo_tutorials_BUILDTOOL_DEPENDS "catkin")

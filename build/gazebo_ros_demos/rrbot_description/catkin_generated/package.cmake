@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "rrbot_description")
+set(rrbot_description_MAINTAINER "Dave Coleman <davetcoleman@gmail.com>")
+set(rrbot_description_DEPRECATED "")
+set(rrbot_description_VERSION "0.0.0")
+set(rrbot_description_BUILD_DEPENDS )
+set(rrbot_description_RUN_DEPENDS "joint_state_publisher" "robot_state_publisher" "rviz")
+set(rrbot_description_BUILDTOOL_DEPENDS "catkin")

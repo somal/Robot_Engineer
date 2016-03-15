@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "rrbot_control")
+set(rrbot_control_MAINTAINER "Dave Coleman <davetcoleman@gmail.com>")
+set(rrbot_control_DEPRECATED "")
+set(rrbot_control_VERSION "0.0.0")
+set(rrbot_control_BUILD_DEPENDS )
+set(rrbot_control_RUN_DEPENDS "controller_manager" "joint_state_controller" "robot_state_publisher" "rqt_gui" "effort_controllers")
+set(rrbot_control_BUILDTOOL_DEPENDS "catkin")
