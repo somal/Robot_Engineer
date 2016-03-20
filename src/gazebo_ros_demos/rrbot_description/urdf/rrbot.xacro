@@ -3,7 +3,7 @@
 <robot name="rrbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <!-- Constants for robot dimensions -->
-  <xacro:property name="PI" value="3.1415926535897931"/>
+  <xacro:property name="PI" value="3.1415"/>
   <xacro:property name="mass" value="1" /> <!-- arbitrary value for mass -->
   <xacro:property name="width" value="0" /> <!-- Square dimensions (widthxwidth) of beams  0.1-->
   <xacro:property name="height1" value="0" /> <!-- Link 1 2  -->
@@ -25,60 +25,54 @@
   <xacro:include filename="$(find rrbot_description)/urdf/materials.xacro" />
 
   <!-- Used for fixing robot to Gazebo 'base_link' -->
-  <link name="world"/>
-
-  <joint name="fixed" type="fixed">
-    <parent link="world"/>
-    <child link="link1"/>
-  </joint>
 
   <!-- Base Link -->
   <link name="link1">
     <collision>
-      <origin xyz="0 0 ${base_link_size_z/2}" rpy="${PI*0.5} 0 ${PI*0.5} "/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <!--box size="${width} ${width} ${height1}"/-->
-        <mesh filename="package://rrbot_description/meshes/base_link.stl"/>
+        <mesh filename="package://rrbot_description/meshes/base_link_3.stl"/>
       </geometry>
     </collision>
 
     <visual>
-      <origin xyz="0 0 ${base_link_size_z/2}" rpy="${PI*0.5} 0 ${PI*0.5} "/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <mesh filename="package://rrbot_description/meshes/base_link.stl"/>
+        <mesh filename="package://rrbot_description/meshes/base_link_3.stl"/>
       </geometry>
       <material name="orange"/>
     </visual>
 
     <inertial>
-      <origin xyz="0 0 ${base_link_size_z/2}" rpy="${PI*0.5} 0 ${PI*0.5}"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="${mass}"/>
       <inertia
-	  ixx="${mass / 12.0 * (width*width + height1*height1)}" ixy="0.0" ixz="0.0"
-	  iyy="${mass / 12.0 * (height1*height1 + width*width)}" iyz="0.0"
-	  izz="${mass / 12.0 * (width*width + width*width)}"/>
+	  ixx="1" ixy="0.0" ixz="0.0"
+	  iyy="1" iyz="0.0"
+	  izz="1"/>
     </inertial>
   </link>
 
-  <joint name="joint1" type="continuous">
+  <joint name="joint1" type="revolute">
     <parent link="link1"/>
     <child link="link2"/>
     <origin xyz="${base_link_size_x*0.0} 0 ${base_link_size_z*0.5}" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <dynamics damping="0.7"/>
+    <!--dynamics damping="0.7"/-->
+    <limit lower="${-PI*0.5}" upper="${PI*0.5}" effort="100" velocity="1"/>
   </joint>
 
   <!-- Middle Link -->
   <link name="link2">
     <collision>
-      <origin xyz="0 0 0" rpy="${PI*0.5} 0 ${PI*0.5}"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://rrbot_description/meshes/left_flipper.stl"/>
       </geometry>
     </collision>
 
     <visual>
-      <origin xyz="0 0 0" rpy="${PI*0.5} 0 ${PI*0.5}"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://rrbot_description/meshes/left_flipper.stl"/>
       </geometry>
@@ -86,34 +80,35 @@
     </visual>
 
     <inertial>
-      <origin xyz="0 0 0" rpy="${PI*0.5} 0 ${PI*0.5}"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="${mass}"/>
       <inertia
-	  ixx="${mass / 12.0 * (width*width + height2*height2)}" ixy="0.0" ixz="0.0"
-	  iyy="${mass / 12.0 * (height2*height2 + width*width)}" iyz="0.0"
-	  izz="${mass / 12.0 * (width*width + width*width)}"/>
+	  ixx="1" ixy="0.0" ixz="0.0"
+	  iyy="1" iyz="0.0"
+	  izz="1"/>
     </inertial>
   </link>
 
-  <joint name="joint2" type="continuous">
+  <!--joint name="joint2" type="revolute">
     <parent link="link1"/>
     <child link="link3"/>
     <origin xyz="0 0 ${base_link_size_z*0.5}" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
     <dynamics damping="0.7"/>
-  </joint>
+    <limit lower="${-PI*0.5}" upper="${PI*0.5}" effort="100" velocity="1"/>
+  </joint-->
 
   <!-- Top Link -->
-  <link name="link3">
+  <!--link name="link3">
     <collision>
-      <origin xyz="0 0 0" rpy="${-PI*0.5} 0 ${-PI*0.5}"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://rrbot_description/meshes/right_flipper.stl"/>
       </geometry>
     </collision>
 
     <visual>
-      <origin xyz="0 0 0" rpy="${-PI*0.5} 0 ${-PI*0.5}"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="package://rrbot_description/meshes/right_flipper.stl"/>
       </geometry>
@@ -121,24 +116,24 @@
     </visual>
 
     <inertial>
-      <origin xyz="0 0 0" rpy="${-PI*0.5} 0 ${-PI*0.5}"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="${mass}"/>
       <inertia
-	  ixx="${mass / 12.0 * (width*width + height3*height3)}" ixy="0.0" ixz="0.0"
-	  iyy="${mass / 12.0 * (height3*height3 + width*width)}" iyz="0.0"
-	  izz="${mass / 12.0 * (width*width + width*width)}"/>
+	  ixx="1" ixy="0.0" ixz="0.0"
+	  iyy="1" iyz="0.0"
+	  izz="1"/>
     </inertial>
-  </link>
+  </link-->
 
-  <joint name="hokuyo_joint" type="fixed">
+  <!--joint name="hokuyo_joint" type="fixed">
     <axis xyz="0 1 0" />
     <origin xyz="0 0 ${height3 - axel_offset/2}" rpy="0 0 0"/>
     <parent link="world"/>
     <child link="hokuyo_link"/>
-  </joint>
+  </joint-->
 
   <!-- Hokuyo Laser -->
-  <link name="hokuyo_link">
+  <!--link name="hokuyo_link">
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -158,17 +153,17 @@
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
     </inertial>
-  </link>
+  </link-->
 
-  <joint name="camera_joint" type="fixed">
+  <!--joint name="camera_joint" type="fixed">
     <axis xyz="0 1 0" />
     <origin xyz="${camera_link} 0 ${height3 - axel_offset*2}" rpy="0 0 0"/>
     <parent link="world"/>
     <child link="camera_link"/>
-  </joint>
+  </joint-->
 
   <!-- Camera -->
-  <link name="camera_link">
+  <!--link name="camera_link">
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -189,9 +184,9 @@
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
     </inertial>
-  </link>
+  </link-->
 
-  <transmission name="tran1">
+  <!--transmission name="tran1">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint1">
       <hardwareInterface>EffortJointInterface</hardwareInterface>
@@ -200,15 +195,15 @@
       <hardwareInterface>EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
-  </transmission>
+  </transmission-->
 
   <transmission name="tran2">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="joint2">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
     </joint>
     <actuator name="motor2">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
