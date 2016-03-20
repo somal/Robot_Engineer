@@ -25,18 +25,18 @@
   <gazebo reference="link3">
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
-    <material>Gazebo/Orange</material>
+    <material>Gazebo/Black</material>
   </gazebo>
 
   <!-- camera_link -->
-  <gazebo reference="camera_link">
+  <!--gazebo reference="camera_link">
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
     <material>Gazebo/Red</material>
-  </gazebo>
+  </gazebo-->
 
   <!-- hokuyo -->
-  <gazebo reference="hokuyo_link">
+  <!--gazebo reference="hokuyo_link">
     <sensor type="gpu_ray" name="head_hokuyo_sensor">
       <pose>0 0 0 0 0 0</pose>
       <visualize>false</visualize>
@@ -57,10 +57,7 @@
         </range>
         <noise>
           <type>gaussian</type>
-          <!-- Noise parameters based on published spec for Hokuyo laser
-               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
-               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
-               reading. -->
+
           <mean>0.0</mean>
           <stddev>0.01</stddev>
         </noise>
@@ -70,10 +67,10 @@
         <frameName>hokuyo_link</frameName>
       </plugin>
     </sensor>
-  </gazebo>
+  </gazebo-->
 
   <!-- camera -->
-  <gazebo reference="camera_link">
+  <!--gazebo reference="camera_link">
     <sensor type="camera" name="camera1">
       <update_rate>30.0</update_rate>
       <camera name="head">
@@ -89,9 +86,7 @@
         </clip>
         <noise>
           <type>gaussian</type>
-          <!-- Noise is sampled independently per pixel on each frame.  
-               That pixel's noise value is added to each of its color
-               channels, which at that point lie in the range [0,1]. -->
+ 
           <mean>0.0</mean>
           <stddev>0.007</stddev>
         </noise>
@@ -111,6 +106,6 @@
         <distortionT2>0.0</distortionT2>
       </plugin>
     </sensor>
-  </gazebo>  
+  </gazebo-->  
 
 </robot>

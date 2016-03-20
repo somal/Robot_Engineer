@@ -6,6 +6,10 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /RobotModel1
+        - /RobotModel1/Status1
+        - /RobotModel1/Links1
+        - /RobotModel1/Links1/link11
         - /LaserScan1
       Splitter Ratio: 0.5
     Tree Height: 331
@@ -59,19 +63,9 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        camera_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        hokuyo_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         link1:
           Alpha: 1
-          Show Axes: false
+          Show Axes: true
           Show Trail: false
           Value: true
         link2:
@@ -79,15 +73,6 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        link3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        world:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -162,22 +147,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.97439
+      Distance: 1.24207
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.0427755
-        Y: -0.273732
-        Z: 0.589642
+        X: 0.186054
+        Y: 0.0138656
+        Z: -0.141364
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.0353994
+      Pitch: 1.0848
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.36038
+      Yaw: 4.63357
     Saved: ~
 Window Geometry:
   Camera:

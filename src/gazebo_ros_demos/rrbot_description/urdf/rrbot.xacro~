@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<!-- Revolute-Revolute Manipulator -->
+<robot name="rrbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Constants for robot dimensions -->
+  <xacro:property name="PI" value="3.1415"/>
+  <xacro:property name="mass" value="1" /> <!-- arbitrary value for mass -->
+  <xacro:property name="width" value="0" /> <!-- Square dimensions (widthxwidth) of beams  0.1-->
+  <xacro:property name="height1" value="0" /> <!-- Link 1 2  -->
+  <xacro:property name="height2" value="0" /> <!-- Link 2 1  -->
+  <xacro:property name="height3" value="0" /> <!-- Link 3 1 -->
+  <xacro:property name="camera_link" value="0.05" /> <!-- Size of square 'camera' box -->
+  <xacro:property name="axel_offset" value="0.05" /> <!-- Space btw top of beam and the each joint -->
+
+  <xacro:property name="base_link_size_x" value="0.397" />
+  <xacro:property name="base_link_size_y" value="0.1789" /> <!--was 0.18-->
+  <xacro:property name="base_link_size_z" value="${2*wheel_radius-ground_clearance}" /> <!-- old 0.102 is double radius without ground_clearance 0.07683 -->
+  <xacro:property name="wheel_radius"   value="0.051" /> <!--was 0.09-->
+    <xacro:property name="ground_clearance" value="0.02517" /> <!--old 0.05 0.02517-->
+  
+  
+  <!-- Import all Gazebo-customization elements, including Gazebo colors -->
+  <xacro:include filename="$(find rrbot_description)/urdf/rrbot.gazebo" />
+  <!-- Import Rviz colors -->
+  <xacro:include filename="$(find rrbot_description)/urdf/materials.xacro" />
+
+  <!-- Used for fixing robot to Gazebo 'base_link' -->
+
+  <!-- Base Link -->
+  <link name="link1">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rrbot_description/meshes/base_link_3.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rrbot_description/meshes/base_link_3.stl"/>
+      </geometry>
+      <material name="orange"/>
+    </visual>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="${mass}"/>
+      <inertia
+	  ixx="1" ixy="0.0" ixz="0.0"
+	  iyy="1" iyz="0.0"
+	  izz="1"/>
+    </inertial>
+  </link>
+
+  <joint name="joint1" type="revolute">
+    <parent link="link1"/>
+    <child link="link2"/>
+    <origin xyz="${base_link_size_x*0.0} 0 ${base_link_size_z*0.5}" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <!--dynamics damping="0.7"/-->
+    <limit lower="${-PI*0.5}" upper="${PI*0.5}" effort="100" velocity="1"/>
+  </joint>
+
+  <!-- Middle Link -->
+  <link name="link2">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rrbot_description/meshes/left_flipper.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rrbot_description/meshes/left_flipper.stl"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="${mass}"/>
+      <inertia
+	  ixx="1" ixy="0.0" ixz="0.0"
+	  iyy="1" iyz="0.0"
+	  izz="1"/>
+    </inertial>
+  </link>
+
+  <!--joint name="joint2" type="revolute">
+    <parent link="link1"/>
+    <child link="link3"/>
+    <origin xyz="0 0 ${base_link_size_z*0.5}" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="0.7"/>
+    <limit lower="${-PI*0.5}" upper="${PI*0.5}" effort="100" velocity="1"/>
+  </joint-->
+
+  <!-- Top Link -->
+  <!--link name="link3">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rrbot_description/meshes/right_flipper.stl"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rrbot_description/meshes/right_flipper.stl"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="${mass}"/>
+      <inertia
+	  ixx="1" ixy="0.0" ixz="0.0"
+	  iyy="1" iyz="0.0"
+	  izz="1"/>
+    </inertial>
+  </link-->
+
+  <!--joint name="hokuyo_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="0 0 ${height3 - axel_offset/2}" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="hokuyo_link"/>
+  </joint-->
+
+  <!-- Hokuyo Laser -->
+  <!--link name="hokuyo_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+	<box size="0.1 0.1 0.1"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://rrbot_description/meshes/hokuyo.dae"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link-->
+
+  <!--joint name="camera_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="${camera_link} 0 ${height3 - axel_offset*2}" rpy="0 0 0"/>
+    <parent link="world"/>
+    <child link="camera_link"/>
+  </joint-->
+
+  <!-- Camera -->
+  <!--link name="camera_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+	<box size="${camera_link} ${camera_link} ${camera_link}"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+	<box size="${camera_link} ${camera_link} ${camera_link}"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+
+    <inertial>
+      <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link-->
+
+  <!--transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission-->
+
+  <transmission name="tran2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint2">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+      <hardwareInterface>PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+</robot>
