@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package>
+  <name>golfcart_description</name>
+  <version>0.1.0</version>
+  <description>
+    Golfcart.
+    The model has been enhanced with sensors.
+  </description>
+  <maintainer email="a.sagitov@innopolis.ru">
+    Artur
+  </maintainer>
+  <license>Apache 2.0</license>
+
+  <author email="a.sagitov@innopolis.ru">Artur</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>joint_state_publisher</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>rviz</run_depend>
+  <run_depend>xacro</run_depend>
+
+  <export>
+    <architecture_independent/>
+  </export>
+</package>

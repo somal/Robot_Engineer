@@ -1,0 +1,8 @@
+prefix=/home/somal/catkin_ws/devel
+
+Name: golfcart_description
+Description: Description of golfcart_description
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/somal/catkin_ws/devel/lib 
+Requires: 

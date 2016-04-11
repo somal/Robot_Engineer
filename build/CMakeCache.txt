@@ -333,6 +333,18 @@ genpy_DIR:PATH=/opt/ros/indigo/share/genpy/cmake
 geometry_msgs_DIR:PATH=/opt/ros/indigo/share/geometry_msgs/cmake
 
 //Value Computed by CMake
+golfcart_description_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/golfcart_description
+
+//Value Computed by CMake
+golfcart_description_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/golfcart_description
+
+//Value Computed by CMake
+golfcart_gazebo_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/golfcart_gazebo
+
+//Value Computed by CMake
+golfcart_gazebo_SOURCE_DIR:STATIC=/home/somal/catkin_ws/src/golfcart_gazebo
+
+//Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/home/somal/catkin_ws/build/gtest
 
 //Dependencies for the target
@@ -553,7 +565,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=6
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
