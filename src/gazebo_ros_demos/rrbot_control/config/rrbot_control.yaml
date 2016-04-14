@@ -23,3 +23,21 @@ rrbot:
     type: effort_controllers/JointEffortController
     joint: joint4
     pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  joint5_controller:
+    type: effort_controllers/JointEffortController
+    joint: joint5
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint6_controller:
+    type: effort_controllers/JointEffortController
+    joint: joint6
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  joint7_controller:
+    type: effort_controllers/JointEffortController
+    joint: joint7
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  joint8_controller:
+    type: effort_controllers/JointPositionController
+    joint: joint8
+    pid: {p: 100.0, i: 0.01, d: 10.0}

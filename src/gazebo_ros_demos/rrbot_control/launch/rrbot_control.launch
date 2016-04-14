@@ -10,6 +10,10 @@
             joint2_position_controller
             joint3_controller
             joint4_controller
+            joint5_controller
+            joint6_controller
+            joint7_controller
+            joint8_controller
 					  "/>
 
   <!-- convert joint states to TF transforms for rviz, etc -->
