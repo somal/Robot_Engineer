@@ -6,22 +6,25 @@
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
 	output="screen" ns="/rrbot" args="joint_state_controller
-					  joint1_position_controller
-            joint2_position_controller
-            joint3_controller
-            joint4_controller
-            joint5_controller
-            joint6_controller
-            joint7_controller
-            joint8_controller
-					  "/>
+	                                    joint_left_flipper_controller
+	                                    joint_right_flipper_controller
+                                        joint_right_front_base_link_wheel_controller"/>
 
-  <!-- convert joint states to TF transforms for rviz, etc -->
+  <!-- convert joint states to TF transforms for rviz, etc joint_left_flipper_controller
+            joint_right_flipper_controller
+            joint_right_front_wheel_controller
+            joint_left_front_wheel_controller
+            joint_left_rear_wheel_controller
+            joint_right_rear_wheel_controller
+            joint_left_flipper_wheel_controller
+            joint_right_flipper_wheel_controller-->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
 	respawn="false" output="screen">
-    <remap from="/joint_states" to="/rrbot/joint_states" />
+  <remap from="/joint_states" to="/rrbot/joint_states" />
   </node>
 
   <node name="sync" pkg="rrbot_control" type="sync.py" output="screen"> </node>
 
 </launch>
+
+

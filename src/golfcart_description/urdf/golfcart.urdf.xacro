@@ -218,7 +218,7 @@ axle_vel_limit = (2 * pi) * (max_speed / (pi * tire_dia)) =
       <child link="${lr_prefix}_${fr_prefix}_wheel"/>
       <origin rpy="${degrees_90} 0 0"/>
       <axis xyz="0 0 -1"/>
-      <limit effort="${axle_eff_limit}" velocity="${axle_vel_limit}"/>
+
     </joint>
     <transmission name="${lr_prefix}_${fr_prefix}_axle_trans">
       <type>transmission_interface/SimpleTransmission</type>
@@ -233,8 +233,8 @@ axle_vel_limit = (2 * pi) * (max_speed / (pi * tire_dia)) =
       </actuator>
     </transmission>
 
-    <link name="${lr_prefix}_${fr_prefix}_wheel">
-      <visual>
+    <link name="${lr_prefix}_${fr_prefix}_wheel">w
+      <visual>t.p
         <origin xyz="0
                      ${lr_reflect * (axle_length - (tire_width /
                      2 - hex_hub_depth))}
