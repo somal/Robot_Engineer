@@ -1,0 +1,43 @@
+rrbot:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 100
+  #
+  # # Position Controllers ---------------------------------------
+  # joint_left_flipper_controller:
+  #   type: effort_controllers/JointPositionController
+  #   joint: joint_left_flipper
+  #   pid: {p: 100.0, i: 0.01, d: 10.0}
+  # joint_right_flipper_controller:
+  #   type: effort_controllers/JointPositionController
+  #   joint: joint_right_flipper
+  #   pid: {p: 100.0, i: 0.01, d: 10.0}
+  #
+  #
+  # joint_right_front_wheel_controller:
+  #   type: effort_controllers/JointEffortController
+  #   joint: joint_right_front_wheel
+  #   pid: {p: 100.0, i: 0.01, d: 10.0}
+  # joint_left_front_wheel_controller:
+  #   type: effort_controllers/JointEffortController
+  #   joint: joint_left_front_wheel
+  #   pid: {p: 100.0, i: 0.01, d: 10.0}
+  #
+  # joint_left_rear_wheel_controller:
+  #   type: effort_controllers/JointVelocityController
+  #   joint: joint_left_rear_wheel
+  #   pid: {p: 100.0, i: 0.01, d: 10.0, i_clamp: 10.0}
+  # joint_right_rear_wheel_controller:
+  #   type: effort_controllers/JointVelocityController
+  #   joint: joint_right_rear_wheel
+  #   pid: {p: 100.0, i: 0.01, d: 10.0, i_clamp: 10.0}
+  #
+  # joint_left_flipper_wheel_controller:
+  #   type: effort_controllers/JointPositionController
+  #   joint: joint_left_flipper_wheel
+  #   pid: {p: 1.0, i: 0.01, d: 1.0}
+  # joint_right_flipper_wheel_controller:
+  #   type: effort_controllers/JointPositionController
+  #   joint: joint_right_flipper_wheel
+  #   pid: {p: 1.0, i: 0.01, d: 1.0}
