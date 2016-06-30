@@ -8,18 +8,44 @@ rrbot:
   joint_left_flipper_controller:
     type: effort_controllers/JointPositionController
     joint: joint_left_flipper
-    pid: {p: 10000.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
     
   joint_right_flipper_controller:
     type: effort_controllers/JointPositionController
     joint: joint_right_flipper
-    pid: {p: 10000.0, i: 0.01, d: 10.0}
+    pid: {p: 100.0, i: 0.01, d: 10.0}
   #
   #
-  joint_right_front_base_link_wheel_controller:
-     type: effort_controllers/JointEffortController
+  right:
+     type: velocity_controllers/JointVelocityController
      joint: joint_right_front_base_link_wheel
-     pid: {p: 100.0, i: 0.01, d: 10.0}
+     pid: {p: 100.0, i: 0.01, d: 10.0, i_clamp: 10.0}
+     
+  left:
+     type: velocity_controllers/JointVelocityController
+     joint: joint_left_front_base_link_wheel
+     pid: {p: 100.0, i: 0.01, d: 10.0, i_clamp: 10.0}
+     
+  joint_right_rear_base_link_wheel_controller:
+     type: velocity_controllers/JointVelocityController
+     joint: joint_right_rear_base_link_wheel
+     pid: {p: 100.0, i: 0.01, d: 10.0, i_clamp: 10.0}
+     
+  joint_left_rear_base_link_wheel_controller:
+     type: velocity_controllers/JointVelocityController
+     joint: joint_left_rear_base_link_wheel
+     pid: {p: 100.0, i: 0.01, d: 10.0, i_clamp: 10.0}
+     
+  joint_right_flipper_wheel_controller:
+     type: velocity_controllers/JointVelocityController
+     joint: joint_right_flipper_wheel
+     pid: {p: 100.0, i: 0.01, d: 10.0, i_clamp: 10.0}
+     
+  joint_left_flipper_wheel_controller:
+     type: velocity_controllers/JointVelocityController
+     joint: joint_left_flipper_wheel
+     pid: {p: 100.0, i: 0.01, d: 10.0, i_clamp: 10.0}
+     
   # joint_left_front_wheel_controller:
   #   type: effort_controllers/JointEffortController
   #   joint: joint_left_front_wheel

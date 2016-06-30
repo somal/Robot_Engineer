@@ -25,10 +25,41 @@
     <material>Gazebo/Grey</material>
   </gazebo>
 
-  <gazebo reference="right_front_base_link_wheel">
-    <mu1>1</mu1>
-    <mu2>1</mu2>
-    <material>brown</material>
+  <gazebo reference="right_front_base_link">
+    <mu1>10000</mu1>
+    <mu2>10000</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  
+  <gazebo reference="left_front_base_link_wheel">
+    <mu1>10000</mu1>
+    <mu2>10000</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  
+   <gazebo reference="right_rear_base_link_wheel">
+    <mu1>10000</mu1>
+    <mu2>10000</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  
+  <gazebo reference="left_rear_base_link_wheel">
+    <mu1>10000</mu1>
+    <mu2>10000</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  
+  
+   <gazebo reference="right_flipper_wheel">
+    <mu1>10000</mu1>
+    <mu2>10000</mu2>
+    <material>Gazebo/Grey</material>
+  </gazebo>
+  
+  <gazebo reference="left_flipper_wheel">
+    <mu1>10000</mu1>
+    <mu2>10000</mu2>
+    <material>Gazebo/Grey</material>
   </gazebo>
 <!--
   <gazebo reference="left_front_wheel">
