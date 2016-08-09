@@ -1,400 +1,408 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Revolute-Revolute Manipulator -->
 <robot name="rrbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
-  <!-- Constants for robot dimensions -->
-  <xacro:property name="PI" value="3.1415"/>
-  <xacro:property name="width" value="0" />
-  <!-- Square dimensions (widthxwidth) of beams  0.1-->
-  <xacro:property name="camera_link" value="0.05" />
-  <xacro:property name="axel_offset" value="0.05" />
-  <xacro:property name="base_link_size_x" value="2.56" /> <!--was 0.397-->
-  <xacro:property name="base_link_size_y" value="3.85" />  <!--was 0.1789-->
-  <xacro:property name="base_link_size_z" value="${2*wheel_radius-ground_clearance}" />   <!-- old 0.102 is double radius without ground_clearance 0.07683 -->
-  <xacro:property name="wheel_radius"   value="0.051" />   <!--was 0.09-->
-  <xacro:property name="ground_clearance" value="0.02517" />   <!--old 0.05 0.02517-->
-  <xacro:property name="wheel_length" value="0.29" />
+    <!-- Constants for robot dimensions -->
+    <xacro:property name="PI" value="3.1415"/>
+    <xacro:property name="width" value="0"/>
+    <!-- Square dimensions (width x width) of beams  0.1-->
+    <xacro:property name="camera_link" value="0.05"/>
+    <xacro:property name="axel_offset" value="0.05"/>
+    <xacro:property name="base_link_size_x" value="2.56"/> <!--was 0.397-->
+    <xacro:property name="base_link_size_y" value="3.85"/>  <!--was 0.1789-->
+    <xacro:property name="base_link_size_z"
+                    value="${2*wheel_radius-ground_clearance}"/>   <!-- old 0.102 is double radius without ground_clearance 0.07683 -->
+    <xacro:property name="wheel_radius" value="0.051"/>   <!--was 0.09-->
+    <xacro:property name="ground_clearance" value="0.02517"/>   <!--old 0.05 0.02517-->
+    <xacro:property name="wheel_length" value="0.29"/>
+    <xacro:include filename="$(find rrbot_description)/urdf/rrbot.gazebo"/>
+    <xacro:include filename="$(find rrbot_description)/urdf/materials.xacro"/>
 
-  <xacro:include filename="$(find rrbot_description)/urdf/rrbot.gazebo" />
-  <xacro:include filename="$(find rrbot_description)/urdf/materials.xacro" />
+    <xacro:macro name="collision_macro"
+                 params="mesh_name x y z roll pitch yaw ">
+        <collision>
+            <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
+            <geometry>
+                <mesh filename="package://rrbot_description/meshes/${mesh_name}"/>
+            </geometry>
+        </collision>
+    </xacro:macro>
 
-<xacro:macro name="collision_macro"
-             params="mesh_name x y z roll pitch yaw ">
-    <collision>
-      <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
-      <geometry>
-        <mesh filename="package://rrbot_description/meshes/${mesh_name}" />
-      </geometry>
-    </collision>
-</xacro:macro>
+    <xacro:macro name="inertial_macro"
+                 params="x y z roll pitch yaw mass ixx ixy ixz iyy iyz izz">
+        <inertial>
+            <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
+            <mass value="${mass}"/>
+            <inertia ixx="${ixx}" ixy="${ixy}" ixz="${ixz}" iyy="${iyy}" iyz="${iyz}" izz="${izz}"/>
+        </inertial>
+    </xacro:macro>
 
-<xacro:macro name="inertial_macro"
-             params="x y z roll pitch yaw mass ixx ixy ixz iyy iyz izz">
-    <inertial>
-      <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
-      <mass value="${mass}"/>
-      <inertia	  ixx="${ixx}" ixy="${ixy}" ixz="${ixz}" iyy="${iyy}" iyz="${iyz}" izz="${izz}"/>
-    </inertial>
-</xacro:macro>
+    <xacro:macro name="visual_macro" params="x y z roll pitch yaw material scale mesh_name">
+        <visual>
+            <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
+            <geometry>
+                <mesh filename="package://rrbot_description/meshes/${mesh_name}" scale="${scale} ${scale} ${scale}"/>
+            </geometry>
+            <material name="${material}"/>-->
+        </visual>
+    </xacro:macro>
 
-<xacro:macro name="visual_macro" params="x y z roll pitch yaw material scale mesh_name">
-    <visual>
-        <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
-           <geometry> 
-               <mesh filename="package://rrbot_description/meshes/${mesh_name}" scale="${scale} ${scale} ${scale}"/>
-           </geometry>
-           <material name="${material}"/>-->
-    </visual>
-</xacro:macro>
+    <xacro:macro name="link_macro"
+                 params="x y z name_link  mesh_name  mass material scale">
+        <link name="${name_link}">
+            <xacro:visual_macro mesh_name="${mesh_name}" x="${x}" y="${y}" z="${z}" roll="0" pitch="0" yaw="0"
+                                material="${material}" scale="${scale}"/>
+            <xacro:collision_macro mesh_name="${mesh_name}" x="${x}" y="${y}" z="${z}" roll="0" pitch="0" yaw="0"/>
+            <xacro:inertial_macro x="${x}" y="${y}" z="${z}"
+                                  roll="0" pitch="0" yaw="0" mass="${mass}"
+                                  ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.0" izz="1"/>
+        </link>
+    </xacro:macro>
 
-<xacro:macro name="link_macro"
-             params="x y z name_link  mesh_name  mass material scale">
-  <link name="${name_link}">
-    <xacro:visual_macro  mesh_name="${mesh_name}" x="${x}" y="${y}" z="${z}" roll="0" pitch="0" yaw="0" material="${material}" scale="${scale}"/>
-    <xacro:collision_macro mesh_name="${mesh_name}" x="${x}" y="${y}" z="${z}" roll="0" pitch="0" yaw="0" /> 
-    <xacro:inertial_macro x="${x}" y="${y}" z="${z}"
-                    roll="0" pitch="0" yaw="0" mass="${mass}"
-                    ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.0" izz="1" />
-  </link>
-</xacro:macro>
+    <xacro:macro name="joint_macro"
+                 params="joint_name type parent child x y z roll pitch yaw">
+        <joint name="${joint_name}" type="${type}">
+            <parent link="${parent}"/>
+            <child link="${child}"/>
+            <origin xyz="${x} ${zy} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
+            <axis xyz="1 0 0"/>
+            <limit lower="${-2*PI}" upper="${2*PI}" effort="100" velocity="100"/>
+        </joint>
 
-<xacro:macro name="joint_macro"
-             params="joint_name type parent child x y z roll pitch yaw">
-  <joint name="${joint_name}" type="${type}">
-    <parent link="${parent}"/>
-    <child link="${child}"/>
-    <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
-    <axis xyz="1 0 0"/>
-    <limit lower="${-PI*0.5}" upper="${PI*0.5}" effort="100" velocity="100"/>
-  </joint>
-  
-  <transmission name="tran_${joint_name}">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="${joint_name}">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="motor_${joint_name}">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
-</xacro:macro>
+        <transmission name="tran_${joint_name}">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${joint_name}">
+                <hardwareInterface>EffortJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="motor_${joint_name}">
+                <hardwareInterface>EffortJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+    </xacro:macro>
 
-<xacro:macro name="wheel"
-             params="name_link x y z roll pitch yaw radius wheel_length mass parent">
-  <link name="${name_link}">
-    <visual>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry> 
-        <cylinder radius='${radius}' length="${wheel_length}"/>
-      </geometry>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <cylinder radius='${radius}' length="${wheel_length}"/>
-      </geometry>
-    </collision>
-    <xacro:inertial_macro x="0" y="0" z="0"
-                    roll="0" pitch="0" yaw="0" mass="${mass}"
-                    ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.0" izz="1" />
-  </link>
-  <joint name="joint_${name_link}" type="continuous">
-    <parent link="${parent}"/>
-    <child link="${name_link}"/>
-    <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
-    <axis xyz="0 0 1"/>
-  </joint>
-  
-  <transmission name="tran_joint_${name_link}">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="joint_${name_link}">
-    <hardwareInterface>VelocityJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="motor_joint_${name_link}">
-    <hardwareInterface>VelocityJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
-</xacro:macro>
+    <xacro:macro name="wheel"
+                 params="name_link x y z roll pitch yaw radius wheel_length mass parent">
+        <link name="${name_link}">
+            <!--<visual>-->
+              <!--<origin xyz="0 0 0" rpy="0 0 0"/>-->
+              <!--<geometry>-->
+                <!--<cylinder radius='${radius}' length="${wheel_length}"/>-->
+              <!--</geometry>-->
+            <!--</visual>-->
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <cylinder radius='${radius}' length="${wheel_length}"/>
+                </geometry>
+            </collision>
+            <xacro:inertial_macro x="0" y="0" z="0"
+                                  roll="0" pitch="0" yaw="0" mass="${mass}"
+                                  ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.0" izz="1"/>
+        </link>
+        <joint name="joint_${name_link}" type="continuous">
+            <parent link="${parent}"/>
+            <child link="${name_link}"/>
+            <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
+            <axis xyz="0 0 1"/>
+            <limit velocity="10" effort="100"/>
+        </joint>
 
-<xacro:link_macro name_link="base_link" x="0" y="0" z="0" mesh_name="Base.dae" mass="10" material="orange" scale="1"/>
+        <transmission name="tran_joint_${name_link}">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="joint_${name_link}">
+                <hardwareInterface>VelocityJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="motor_joint_${name_link}">
+                <hardwareInterface>VelocityJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+    </xacro:macro>
 
-<xacro:link_macro name_link="right_flipper" x="0" y="0" z="0" mesh_name="Flipper.dae" mass="0.775" material="black" scale="1"/>
-<!--<xacro:link_macro name_link="right_flipper" mesh_name="left_flipper2.dae" mass="1" material="grey"/>-->
-<xacro:joint_macro joint_name="joint_right_flipper"  type="revolute"  parent="base_link"  child="right_flipper" 
-x="2.2" y="1.86" z="-0.25" roll="0" pitch="0" yaw="0" />
+    <xacro:link_macro name_link="base_link" x="0" y="0" z="0" mesh_name="Base.dae" mass="10" material="orange"
+                      scale="1"/>
 
-<xacro:link_macro name_link="left_flipper" x="0" y="0" z="0" mesh_name="Flipper.dae" mass="0.775" material="black" scale="1"/>
-<xacro:joint_macro joint_name="joint_left_flipper"  type="revolute"  parent="base_link"  child="left_flipper" 
-x="-2.2" y="1.86" z="-0.25" roll="0" pitch="${PI}" yaw="0" />
+    <xacro:link_macro name_link="right_flipper" x="0" y="0" z="0" mesh_name="Flipper.dae" mass="0.775" material="black"
+                      scale="1"/>
+    <!--<xacro:link_macro name_link="right_flipper" mesh_name="left_flipper2.dae" mass="1" material="grey"/>-->
+    <xacro:joint_macro joint_name="joint_right_flipper" type="revolute" parent="base_link" child="right_flipper"
+                       x="2.2" y="1.86" z="-0.25" roll="0" pitch="0" yaw="0"/>
 
-<xacro:wheel name_link="right_front_base_link_wheel" x="3" y="1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}" radius="1" wheel_length="0.2" mass="0.0001" parent="base_link"/>
-<xacro:wheel name_link="left_front_base_link_wheel" x="-3" y="1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}" radius="1" wheel_length="0.2" mass="0.0001" parent="base_link"/>
+    <xacro:link_macro name_link="left_flipper" x="0" y="0" z="0" mesh_name="Flipper.dae" mass="0.775" material="black"
+                      scale="1"/>
+    <xacro:joint_macro joint_name="joint_left_flipper" type="revolute" parent="base_link" child="left_flipper"
+                       x="-2.2" y="1.86" z="-0.25" roll="0" pitch="${PI}" yaw="0"/>
 
-<xacro:wheel name_link="right_rear_base_link_wheel" x="3" y="-1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}" radius="1" wheel_length="0.2" mass="0.0001" parent="base_link"/>
-<xacro:wheel name_link="left_rear_base_link_wheel" x="-3" y="-1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}" radius="1" wheel_length="0.2" mass="0.0001" parent="base_link"/>
+    <xacro:wheel name_link="right_front_base_link_wheel" x="3" y="1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                 radius="1" wheel_length="0.2" mass="0.0001" parent="base_link"/>
+    <xacro:wheel name_link="left_front_base_link_wheel" x="-3" y="1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                 radius="1" wheel_length="0.2" mass="0.0001" parent="base_link"/>
 
-<xacro:wheel name_link="right_flipper_wheel" x="0.3" y="3.4" z="0" roll="0" pitch="${PI*0.5}" yaw="${PI}" radius="0.5" wheel_length="0.2" mass="0.0001" parent="right_flipper"/>
-<xacro:wheel name_link="left_flipper_wheel" x="0.3" y="3.4" z="0" roll="0" pitch="${PI*0.5}" yaw="${PI}" radius="0.5" wheel_length="0.2" mass="0.0001" parent="left_flipper"/>
+    <xacro:wheel name_link="right_rear_base_link_wheel" x="3" y="-1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                 radius="1" wheel_length="0.2" mass="0.0001" parent="base_link"/>
+    <xacro:wheel name_link="left_rear_base_link_wheel" x="-3" y="-1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                 radius="1" wheel_length="0.2" mass="0.0001" parent="base_link"/>
 
-
-
+    <xacro:wheel name_link="right_flipper_wheel" x="0.3" y="3.4" z="0" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                 radius="0.5" wheel_length="0.2" mass="0.0001" parent="right_flipper"/>
+    <xacro:wheel name_link="left_flipper_wheel" x="0.3" y="3.4" z="0" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                 radius="0.5" wheel_length="0.2" mass="0.0001" parent="left_flipper"/>
 
 
-<!--
-  <link name="right_front_wheel">
-    <collision>
-      <origin xyz="0.00 0 0.0" rpy="0 ${PI*0.0} 0"/>
-      <geometry>
-        <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
-      </geometry>
-    </collision>
-    <visual>
-      <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
-      <geometry>
-        <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
-      </geometry>
-      <material name="red"/>
-    </visual>
-    <inertial>
-      <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
-      <mass value="${0.001*mass}"/>
-      <inertia	  ixx="0.1" ixy="0.0" ixz="0.0"	  iyy="0.1" iyz="0.0"	  izz="0.1"/>
-    </inertial>
-  </link>
+    <!--
+      <link name="right_front_wheel">
+        <collision>
+          <origin xyz="0.00 0 0.0" rpy="0 ${PI*0.0} 0"/>
+          <geometry>
+            <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
+          </geometry>
+        </collision>
+        <visual>
+          <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
+          <geometry>
+            <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
+          </geometry>
+          <material name="red"/>
+        </visual>
+        <inertial>
+          <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
+          <mass value="${0.001*mass}"/>
+          <inertia	  ixx="0.1" ixy="0.0" ixz="0.0"	  iyy="0.1" iyz="0.0"	  izz="0.1"/>
+        </inertial>
+      </link>
 
-  <joint name="joint_right_front_wheel" type="continuous">
-    <parent link="left_flipper"/>
-    <child link="right_front_wheel"/>
-    <origin xyz="${base_link_size_x*1.25} 0 0 " rpy="${PI*0.0} ${PI*0.5} ${PI*0.0}"/>
-    <axis xyz="0 0 1"/>
-    <limit lower="${-PI}" upper="${PI}" effort="100" velocity="1"/>
-  </joint>
+      <joint name="joint_right_front_wheel" type="continuous">
+        <parent link="left_flipper"/>
+        <child link="right_front_wheel"/>
+        <origin xyz="${base_link_size_x*1.25} 0 0 " rpy="${PI*0.0} ${PI*0.5} ${PI*0.0}"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="${-PI}" upper="${PI}" effort="100" velocity="1"/>
+      </joint>
 
-  <link name="left_front_wheel">
-    <inertial>
-      <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
-      <mass value="${0.001*mass}"/>
-      <inertia	  ixx="0.1" ixy="0.0" ixz="0.0"	  iyy="0.1" iyz="0.0"	  izz="0.1"/>
-    </inertial>
-    <collision>
-      <origin xyz="0.00 0 0.0" rpy="0 ${PI*0.0} 0"/>
-      <geometry>
-        <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
-      </geometry>
-    </collision>
-    <visual>
-      <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
-      <geometry>
-        <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
-      </geometry>
-      <material name="red"/>
-    </visual>
-  </link>
+      <link name="left_front_wheel">
+        <inertial>
+          <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
+          <mass value="${0.001*mass}"/>
+          <inertia	  ixx="0.1" ixy="0.0" ixz="0.0"	  iyy="0.1" iyz="0.0"	  izz="0.1"/>
+        </inertial>
+        <collision>
+          <origin xyz="0.00 0 0.0" rpy="0 ${PI*0.0} 0"/>
+          <geometry>
+            <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
+          </geometry>
+        </collision>
+        <visual>
+          <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
+          <geometry>
+            <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
+          </geometry>
+          <material name="red"/>
+        </visual>
+      </link>
 
-  <joint name="joint_left_front_wheel" type="continuous">
-    <parent link="right_flipper"/>
-    <child link="left_front_wheel"/>
-    <origin xyz="${-base_link_size_x*1.25} 0 0 " rpy="${PI*0.0} ${PI*0.5} ${PI*0.0}"/>
-    <axis xyz="0 0 1"/>
-  </joint>
+      <joint name="joint_left_front_wheel" type="continuous">
+        <parent link="right_flipper"/>
+        <child link="left_front_wheel"/>
+        <origin xyz="${-base_link_size_x*1.25} 0 0 " rpy="${PI*0.0} ${PI*0.5} ${PI*0.0}"/>
+        <axis xyz="0 0 1"/>
+      </joint>
 
-  <link name="left_rear_wheel">
-    <inertial>
-      <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
-      <mass value="${0.001*mass}"/>
-      <inertia	  ixx="0.1" ixy="0.0" ixz="0.0"	  iyy="0.1" iyz="0.0"	  izz="0.1"/>
-    </inertial>
-    <collision>
-      <origin xyz="0.00 0 0.0" rpy="0 ${PI*0.0} 0"/>
-      <geometry>
-        <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
-      </geometry>
-    </collision>
-    <visual>
-      <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
-      <geometry>
-        <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
-      </geometry>
-    </visual>
-  </link>
+      <link name="left_rear_wheel">
+        <inertial>
+          <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
+          <mass value="${0.001*mass}"/>
+          <inertia	  ixx="0.1" ixy="0.0" ixz="0.0"	  iyy="0.1" iyz="0.0"	  izz="0.1"/>
+        </inertial>
+        <collision>
+          <origin xyz="0.00 0 0.0" rpy="0 ${PI*0.0} 0"/>
+          <geometry>
+            <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
+          </geometry>
+        </collision>
+        <visual>
+          <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
+          <geometry>
+            <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
+          </geometry>
+        </visual>
+      </link>
 
-  <joint name="joint_left_rear_wheel" type="continuous">
-    <parent link="base_link"/>
-    <child link="left_rear_wheel"/>
-    <origin xyz="${-base_link_size_x*1.25} ${-base_link_size_y} 0 " rpy="${PI*0.0} ${PI*0.5} ${PI*0.0}"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="100" velocity="100"/>
-  </joint>
+      <joint name="joint_left_rear_wheel" type="continuous">
+        <parent link="base_link"/>
+        <child link="left_rear_wheel"/>
+        <origin xyz="${-base_link_size_x*1.25} ${-base_link_size_y} 0 " rpy="${PI*0.0} ${PI*0.5} ${PI*0.0}"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="100" velocity="100"/>
+      </joint>
 
-  <link name="right_rear_wheel">
-    <inertial>
-      <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
-      <mass value="${0.001*mass}"/>
-      <inertia	  ixx="0.1" ixy="0.0" ixz="0.0"	  iyy="0.1" iyz="0.0"	  izz="0.1"/>
-    </inertial>
-    <collision>
-      <origin xyz="0.00 0 0.0" rpy="0 ${PI*0.0} 0"/>
-      <geometry>
-        <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
-      </geometry>
-    </collision>
-    <visual>
-      <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
-      <geometry>
-        <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
-      </geometry>
-    </visual>
-  </link>
+      <link name="right_rear_wheel">
+        <inertial>
+          <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
+          <mass value="${0.001*mass}"/>
+          <inertia	  ixx="0.1" ixy="0.0" ixz="0.0"	  iyy="0.1" iyz="0.0"	  izz="0.1"/>
+        </inertial>
+        <collision>
+          <origin xyz="0.00 0 0.0" rpy="0 ${PI*0.0} 0"/>
+          <geometry>
+            <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
+          </geometry>
+        </collision>
+        <visual>
+          <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
+          <geometry>
+            <cylinder radius='${wheel_radius*1.5}' length="0.02"/>
+          </geometry>
+        </visual>
+      </link>
 
-  <joint name="joint_right_rear_wheel" type="continuous">
-    <parent link="base_link"/>
-    <child link="right_rear_wheel"/>
-    <origin xyz="${base_link_size_x*1.25} ${-base_link_size_y} 0 " rpy="${PI*0.0} ${PI*0.5} ${PI*0.0}"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="100" velocity="100"/>
-  </joint>
+      <joint name="joint_right_rear_wheel" type="continuous">
+        <parent link="base_link"/>
+        <child link="right_rear_wheel"/>
+        <origin xyz="${base_link_size_x*1.25} ${-base_link_size_y} 0 " rpy="${PI*0.0} ${PI*0.5} ${PI*0.0}"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="100" velocity="100"/>
+      </joint>
 
-  <link name="left_flipper_wheel">
-    <inertial>
-      <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
-      <mass value="${0.001*mass}"/>
-      <inertia	  ixx="0.1" ixy="0.0" ixz="0.0"	  iyy="0.1" iyz="0.0"	  izz="0.1"/>
-    </inertial>
-    <collision>
-      <origin xyz="0.00 0 0.0" rpy="0 ${PI*0.0} 0"/>
-      <geometry>
-        <cylinder radius='${wheel_radius*0.9}' length="0.02"/>
-      </geometry>
-    </collision>
-    <visual>
-      <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
-      <geometry>
-        <cylinder radius='${wheel_radius*0.9}' length="0.02"/>
-      </geometry>
-    </visual>
-  </link>
+      <link name="left_flipper_wheel">
+        <inertial>
+          <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
+          <mass value="${0.001*mass}"/>
+          <inertia	  ixx="0.1" ixy="0.0" ixz="0.0"	  iyy="0.1" iyz="0.0"	  izz="0.1"/>
+        </inertial>
+        <collision>
+          <origin xyz="0.00 0 0.0" rpy="0 ${PI*0.0} 0"/>
+          <geometry>
+            <cylinder radius='${wheel_radius*0.9}' length="0.02"/>
+          </geometry>
+        </collision>
+        <visual>
+          <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
+          <geometry>
+            <cylinder radius='${wheel_radius*0.9}' length="0.02"/>
+          </geometry>
+        </visual>
+      </link>
 
-  <joint name="joint_left_flipper_wheel" type="continuous">
-    <parent link="left_flipper"/>
-    <child link="left_flipper_wheel"/>
-    <origin xyz="-0.25 0.35 0 " rpy="${PI*0.0} ${PI*0.5} ${PI*0.0}"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="100" velocity="100"/>
-  </joint>
+      <joint name="joint_left_flipper_wheel" type="continuous">
+        <parent link="left_flipper"/>
+        <child link="left_flipper_wheel"/>
+        <origin xyz="-0.25 0.35 0 " rpy="${PI*0.0} ${PI*0.5} ${PI*0.0}"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="100" velocity="100"/>
+      </joint>
 
-  <link name="right_flipper_wheel">
-    <inertial>
-      <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
-      <mass value="${0.001*mass}"/>
-      <inertia	  ixx="0.1" ixy="0.0" ixz="0.0"	  iyy="0.1" iyz="0.0"	  izz="0.1"/>
-    </inertial>
-    <collision>
-      <origin xyz="0.00 0 0.0" rpy="0 ${PI*0.0} 0"/>
-      <geometry>
-        <cylinder radius='${wheel_radius*0.9}' length="0.02"/>
-      </geometry>
-    </collision>
-    <visual>
-      <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
-      <geometry>
-        <cylinder radius='${wheel_radius*0.9}' length="0.02"/>
-      </geometry>
-    </visual>
-  </link>
+      <link name="right_flipper_wheel">
+        <inertial>
+          <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
+          <mass value="${0.001*mass}"/>
+          <inertia	  ixx="0.1" ixy="0.0" ixz="0.0"	  iyy="0.1" iyz="0.0"	  izz="0.1"/>
+        </inertial>
+        <collision>
+          <origin xyz="0.00 0 0.0" rpy="0 ${PI*0.0} 0"/>
+          <geometry>
+            <cylinder radius='${wheel_radius*0.9}' length="0.02"/>
+          </geometry>
+        </collision>
+        <visual>
+          <origin xyz="0.00 0 0.00" rpy="0 ${PI*0.0} 0"/>
+          <geometry>
+            <cylinder radius='${wheel_radius*0.9}' length="0.02"/>
+          </geometry>
+        </visual>
+      </link>
 
-  <joint name="joint_right_flipper_wheel" type="continuous">
-    <parent link="right_flipper"/>
-    <child link="right_flipper_wheel"/>
-    <origin xyz="0.25 0.35 0 " rpy="${PI*0.0} ${PI*0.5} ${PI*0.0}"/>
-    <axis xyz="0 0 1"/>
-  </joint>
+      <joint name="joint_right_flipper_wheel" type="continuous">
+        <parent link="right_flipper"/>
+        <child link="right_flipper_wheel"/>
+        <origin xyz="0.25 0.35 0 " rpy="${PI*0.0} ${PI*0.5} ${PI*0.0}"/>
+        <axis xyz="0 0 1"/>
+      </joint>
 
-<transmission name="tran1">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="joint_left_flipper">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="motor1">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
+    <transmission name="tran1">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="joint_left_flipper">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="motor1">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
 
-<transmission name="tran2">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="joint_right_flipper">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="motor2">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
+    <transmission name="tran2">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="joint_right_flipper">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="motor2">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
 
-<transmission name="tran3">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="joint_right_front_wheel">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="motor3">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
+    <transmission name="tran3">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="joint_right_front_wheel">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="motor3">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
 
-<transmission name="tran4">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="joint_left_front_wheel">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="motor4">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
+    <transmission name="tran4">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="joint_left_front_wheel">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="motor4">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
 
-<transmission name="tran5">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="joint_left_rear_wheel">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="motor5">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
+    <transmission name="tran5">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="joint_left_rear_wheel">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="motor5">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
 
-<transmission name="tran6">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="joint_right_rear_wheel">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="motor6">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
+    <transmission name="tran6">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="joint_right_rear_wheel">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="motor6">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
 
-<transmission name="tran7">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="joint_left_flipper_wheel">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="motor7">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
+    <transmission name="tran7">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="joint_left_flipper_wheel">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="motor7">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
 
-<transmission name="tran8">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="joint_right_flipper_wheel">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="motor8">
-    <hardwareInterface>EffortJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>-->
+    <transmission name="tran8">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="joint_right_flipper_wheel">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="motor8">
+        <hardwareInterface>EffortJointInterface</hardwareInterface>
+        <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>-->
 </robot>
