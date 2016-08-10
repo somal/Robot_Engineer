@@ -14,6 +14,16 @@ rrbot:
     type: effort_controllers/JointPositionController
     joint: joint_right_flipper
     pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  joint_cronstein:
+      type: effort_controllers/JointPositionController
+      joint: joint_cronstein
+      pid: {p: 100.0, i: 0.01, d: 10.0}
+
+  joint_first_part:
+    type: effort_controllers/JointPositionController
+    joint: joint_first_part
+    pid: {p: 100.0, i: 0.01, d: 10.0}
   #
   #
   right:
