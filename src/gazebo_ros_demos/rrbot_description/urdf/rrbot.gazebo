@@ -63,7 +63,7 @@
         <material>Gazebo/Grey</material>
     </gazebo>
 
-    <gazebo reference="cronstein">
+    <!--<gazebo reference="cronstein">
         <material>Gazebo/Grey</material>
         <selfCollide>true</selfCollide>
     </gazebo>
@@ -81,6 +81,6 @@
     <gazebo reference="head">
         <material>Gazebo/Grey</material>
         <selfCollide>true</selfCollide>
-    </gazebo>
+    </gazebo> -->
 
 </robot>

@@ -85,12 +85,12 @@
     <xacro:macro name="wheel"
                  params="name_link x y z roll pitch yaw radius wheel_length mass parent">
         <link name="${name_link}">
-            <visual>
-                <origin xyz="0 0 0" rpy="0 0 0"/>
-                <geometry>
-                    <cylinder radius='${radius}' length="${wheel_length}"/>
-                </geometry>
-            </visual>
+            <!--<visual>-->
+                <!--<origin xyz="0 0 0" rpy="0 0 0"/>-->
+                <!--<geometry>-->
+                    <!--<cylinder radius='${radius}' length="${wheel_length}"/>-->
+                <!--</geometry>-->
+            <!--</visual>-->
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
