@@ -13,7 +13,8 @@ RobotPreview::RobotPreview(QWidget* parent) :
 	// construct and lay out render panel
 	render_panel_ = new rviz::RenderPanel();
 	//render_panel_->setMinimumWidth(parent->width());
-	//render_panel_->setMinimumHeight(520);
+	render_panel_->setMinimumHeight(1000);
+	render_panel_->setMinimumWidth(1000);
 	QHBoxLayout* main_layout = new QHBoxLayout;
 	main_layout->addWidget(render_panel_);
 

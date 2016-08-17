@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "golfcart_description")
-set(golfcart_description_MAINTAINER "Artur <a.sagitov@innopolis.ru>")
-set(golfcart_description_DEPRECATED "")
-set(golfcart_description_VERSION "0.1.0")
-set(golfcart_description_BUILD_DEPENDS )
-set(golfcart_description_RUN_DEPENDS "joint_state_publisher" "robot_state_publisher" "rviz" "xacro")
-set(golfcart_description_BUILDTOOL_DEPENDS "catkin")

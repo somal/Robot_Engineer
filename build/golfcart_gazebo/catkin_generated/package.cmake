@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "golfcart_gazebo")
-set(golfcart_gazebo_MAINTAINER "Artur <a.sagitov@innopolis.ru>")
-set(golfcart_gazebo_DEPRECATED "")
-set(golfcart_gazebo_VERSION "0.1.0")
-set(golfcart_gazebo_BUILD_DEPENDS )
-set(golfcart_gazebo_RUN_DEPENDS "ackermann_msgs" "ackermann_vehicle_description" "controller_manager" "gazebo_ros" "gazebo_ros_control" "rospy" "std_msgs" "tf" "xacro")
-set(golfcart_gazebo_BUILDTOOL_DEPENDS "catkin")

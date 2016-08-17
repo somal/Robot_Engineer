@@ -1,0 +1,6 @@
+<?xml version='1.0'?>
+<sdf version='1.4'>
+  <model name='building_template_model'>
+    <static>1</static>
+  </model>
+</sdf>

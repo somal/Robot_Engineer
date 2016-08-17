@@ -1,8 +1,0 @@
-prefix=/home/somal/catkin_ws/install
-
-Name: gazebo_tutorials
-Description: Description of gazebo_tutorials
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/somal/catkin_ws/install/lib -lgazebo_tutorials
-Requires: roscpp gazebo_ros
