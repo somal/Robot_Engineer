@@ -8,16 +8,16 @@
           output="screen" ns="/rrbot" args="joint_state_controller
 	                                    joint_left_flipper_controller
 	                                    joint_right_flipper_controller
-                                        right
-                                        left
-                                        joint_right_rear_base_link_wheel_controller
-                                        joint_left_rear_base_link_wheel_controller
-                                        joint_left_flipper_wheel_controller
-                                        joint_right_flipper_wheel_controller
-                                        joint_first_part
-                                        joint_cronstein
-                                        joint_second_part
-                                        joint_head
+                                      right
+                                      left
+                                      joint_right_rear_base_link_wheel_controller
+                                      joint_left_rear_base_link_wheel_controller
+                                      joint_left_flipper_wheel_controller
+                                      joint_right_flipper_wheel_controller
+                                      joint_first_part
+                                      joint_cronstein
+                                      joint_second_part
+                                      joint_head
                                         "/>
 
     <!-- convert joint states to TF transforms for rviz, etc joint_left_flipper_controller
@@ -39,6 +39,3 @@
     <!--  <node name="empty_talker" pkg="rrbot_control" type="empty_talker.py" output="screen"> </node> -->
 
 </launch>
-
-
-

@@ -13,7 +13,7 @@
   <arg name="z" default="3"/>
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
-  <arg name="yaw" default="0"/>
+  <arg name="yaw" default="3.14"/>
 
 
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
@@ -36,6 +36,6 @@
               -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)"/>
 
   <!-- ros_control rrbot launch file -->
-<!--  <include file="$(find rrbot_control)/launch/rrbot_control.launch" />-->
+ <!-- <include file="$(find rrbot_control)/launch/rrbot_control.launch" /> -->
 
 </launch>
