@@ -8,8 +8,8 @@
   <arg name="debug" default="true"/>
 
   <!--initial pose -->
-  <arg name="x" default="15"/>
-  <arg name="y" default="15"/>
+  <arg name="x" default="0"/>
+  <arg name="y" default="20"/>
   <arg name="z" default="10"/>
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>

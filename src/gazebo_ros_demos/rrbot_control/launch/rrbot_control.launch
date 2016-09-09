@@ -18,6 +18,8 @@
                                       joint_cronstein
                                       joint_second_part
                                       joint_head
+                                      joint_right_middle_base_link_wheel_controller
+                                      joint_left_middle_base_link_wheel_controller
                                         "/>
 
     <!-- convert joint states to TF transforms for rviz, etc joint_left_flipper_controller

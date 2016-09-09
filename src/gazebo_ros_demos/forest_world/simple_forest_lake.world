@@ -125,18 +125,16 @@
        <pose>-0 0 0 0 0 0</pose>
        <collision name="environment_model_collision">
          <geometry>
-           <mesh>
-             <uri>file:///home/somal/Robot_Engineer/src/gazebo_ros_demos/forest_world/forest2.dae</uri>
-             <!-- <scale>2 2 2</scale> -->
-           </mesh>
+           <box>
+             <size>10 10 5</size>
+           </box>
          </geometry>
        </collision>
        <visual name="environment_model_visual" cast_shadows="true">
          <geometry>
-           <mesh>
-             <uri>file:///home/somal/Robot_Engineer/src/gazebo_ros_demos/forest_world/forest2.dae</uri>
-             <!-- <scale>2 2 2</scale> -->
-           </mesh>
+           <box>
+             <size>10 10 5</size>
+           </box>
          </geometry>
        </visual>
      </link>

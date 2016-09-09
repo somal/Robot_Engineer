@@ -146,6 +146,11 @@
     <xacro:wheel name_link="left_rear_base_link_wheel" x="-2.75" y="-1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
                  radius="${big_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="base_link"/>
 
+   <xacro:wheel name_link="right_middle_base_link_wheel" x="2.75" y="0" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                radius="${big_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="base_link"/>
+   <xacro:wheel name_link="left_middle_base_link_wheel" x="-2.75" y="0" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                radius="${big_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="base_link"/>
+
 <!-- y=3.4 x=0.3-->
     <xacro:wheel name_link="right_flipper_wheel" x="0.5" y="0" z="3.4" roll="0" pitch="${PI*0.5}" yaw="${PI}"
                  radius="${small_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="right_flipper"/>
