@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<!-- <?xml version="1.0"?>
 <sdf version="1.4">
 <world name="default">
     <scene>
@@ -45,26 +45,45 @@
               <uri>file:///home/somal/Robot_Engineer/src/gazebo_ros_demos/forest_world/simple_woods_water.dae</uri>
               <scale>2 2 2 </scale>
             </mesh>
-            <!-- <mesh filename="package://forest_world/simple_woods_water.dae" scale="1 1 1"/> -->
-            <!-- scale="0.254 0.254 0.254" -->
           </geometry>
         </collision>
-        <visual name="environment_model_visual" cast_shadows="false">
+        <visual name="environment_model_visual" cast_shadows="true">
           <geometry>
             <mesh>
               <uri>file:///home/somal/Robot_Engineer/src/gazebo_ros_demos/forest_world/simple_woods_water.dae</uri>
               <scale>2 2 2</scale>
             </mesh>
-            <!-- <mesh filename="package://forest_world/simple_woods_water.dae" scale="1 1 1"/> -->
+
           </geometry>
-	  <cast_shadows>false</cast_shadows>
         </visual>
       </link>
       <static>true</static>
     </model>
 
-    <!-- Ground Plane -->
-      <!-- <model name="plane1_model" static="true">
+
+ <model name="environment_model">
+  <link name="environment_model_link">
+    <pose>-0 0 0 0 0 0</pose>
+    <collision name="environment_model_collision">
+      <geometry>
+        <box>
+          <size>10 10 5</size>
+        </box>
+      </geometry>
+    </collision>
+    <visual name="environment_model_visual" cast_shadows="true">
+      <geometry>
+        <box>
+          <size>10 10 5</size>
+        </box>
+      </geometry>
+    </visual>
+  </link>
+  <static>true</static>
+</model>
+
+
+     <model name="plane1_model" static="true">
       <link name="body">
         <collision name="geom_1">
           <geometry>
@@ -82,7 +101,55 @@
         </collision>
 
       </link>
-    </model> -->
+    </model>
+
+  </world>
+</sdf> -->
+
+<?xml version="1.0" ?>
+<sdf version="1.4">
+
+
+  <world name="default">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <model name="environment_model">
+     <link name="environment_model_link">
+       <pose>-0 0 0 0 0 0</pose>
+       <collision name="environment_model_collision">
+         <geometry>
+           <box>
+             <size>10 10 5</size>
+           </box>
+         </geometry>
+       </collision>
+       <visual name="environment_model_visual" cast_shadows="true">
+         <geometry>
+           <box>
+             <size>10 10 5</size>
+           </box>
+         </geometry>
+       </visual>
+     </link>
+     <static>true</static>
+   </model>
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>4.927360 -4.376610 3.740080 0.000000 0.275643 2.356190</pose>
+        <view_controller>orbit</view_controller>
+      </camera>
+    </gui>
+
+
+
 
   </world>
 </sdf>

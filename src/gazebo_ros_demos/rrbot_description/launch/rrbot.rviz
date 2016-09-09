@@ -6,10 +6,8 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /Grid1
         - /RobotModel1
-        - /RobotModel1/Links1
-        - /RobotModel1/Links1/head1
-        - /RobotModel1/Links1/left_flipper_wheel1
       Splitter Ratio: 0.5
     Tree Height: 678
   - Class: rviz/Selection
@@ -35,13 +33,13 @@ Visualization Manager:
   Class: ""
   Displays:
     - Alpha: 0.5
-      Cell Size: 0.5
+      Cell Size: 1
       Class: rviz/Grid
       Color: 160; 160; 164
       Enabled: true
       Line Style:
         Line Width: 0.03
-        Value: Lines
+        Value: Billboards
       Name: Grid
       Normal Cell Count: 0
       Offset:
@@ -69,17 +67,17 @@ Visualization Manager:
           Value: true
         cronstein:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         first_part:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         head:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         left_flipper:
@@ -89,7 +87,7 @@ Visualization Manager:
           Value: true
         left_flipper_wheel:
           Alpha: 1
-          Show Axes: true
+          Show Axes: false
           Show Trail: false
           Value: true
         left_front_base_link_wheel:
@@ -203,22 +201,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 5.10389
+      Distance: 21.5779
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.74263
-        Y: -1.97966
-        Z: 1.45156
+        X: 2.70394
+        Y: 2.10799
+        Z: 0.252328
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.499799
+      Pitch: 0.949798
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.24079
+      Yaw: 1.87761
     Saved: ~
 Window Geometry:
   Camera:

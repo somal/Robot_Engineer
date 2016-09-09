@@ -8,12 +8,12 @@ rrbot:
   joint_left_flipper_controller:
     type: effort_controllers/JointPositionController
     joint: joint_left_flipper
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 400.0, i: 0.01, d: 10.0}
 
   joint_right_flipper_controller:
     type: effort_controllers/JointPositionController
     joint: joint_right_flipper
-    pid: {p: 100.0, i: 0.01, d: 10.0}
+    pid: {p: 400.0, i: 0.01, d: 10.0}
 
   joint_cronstein:
       type: effort_controllers/JointPositionController
@@ -23,12 +23,12 @@ rrbot:
   joint_first_part:
     type: effort_controllers/JointPositionController
     joint: joint_first_part
-    pid: {p: 1000.0, i: 0.01, d: 10.0}
+    pid: {p: 300.0, i: 0.01, d: 10.0}
 
   joint_second_part:
       type: effort_controllers/JointPositionController
       joint: joint_second_part
-      pid: {p: 1000.0, i: 0.01, d: 10.0}
+      pid: {p: 600.0, i: 0.01, d: 10.0}
 
   joint_head:
         type: effort_controllers/JointPositionController
