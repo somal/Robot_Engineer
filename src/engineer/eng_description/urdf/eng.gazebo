@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<robot>
+
+    <!-- ros_control plugin -->
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/eng</robotNamespace>
+            <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+        </plugin>
+    </gazebo>
+
+    <gazebo reference="base_link">
+        <material>Gazebo/Orange</material>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="left_flipper">
+        <mu1>0.01</mu1>
+        <mu2>0.01</mu2>
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="right_flipper">
+        <mu1>0.01</mu1>
+        <mu2>0.01</mu2>
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="right_front_base_link_wheel">
+        <mu1>100</mu1>
+        <mu2>100</mu2>
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="left_front_base_link_wheel">
+        <mu1>100</mu1>
+        <mu2>100</mu2>
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="right_rear_base_link_wheel">
+        <mu1>100</mu1>
+        <mu2>100</mu2>
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="left_rear_base_link_wheel">
+        <mu1>100</mu1>
+        <mu2>100</mu2>
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+
+    <gazebo reference="right_flipper_wheel">
+        <mu1>100</mu1>
+        <mu2>100</mu2>
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="left_flipper_wheel">
+        <mu1>100</mu1>
+        <mu2>100</mu2>
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="right_middle_base_link_wheel">
+        <mu1>100</mu1>
+        <mu2>100</mu2>
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="left_middle_base_link_wheel">
+        <mu1>100</mu1>
+        <mu2>100</mu2>
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <!-- <gazebo reference="cronstein">
+        <material>Gazebo/Grey</material>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="first_part">
+        <material>Gazebo/Grey</material>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="second_part">
+        <material>Gazebo/Grey</material>
+        <selfCollide>true</selfCollide>
+    </gazebo>
+
+    <gazebo reference="head">
+        <material>Gazebo/Grey</material>
+        <selfCollide>true</selfCollide>
+    </gazebo> -->
+
+</robot>

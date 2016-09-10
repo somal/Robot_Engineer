@@ -1,0 +1,44 @@
+<launch>
+
+    <!-- Load joint controller configurations from YAML file to parameter server -->
+    <rosparam file="$(find eng_control)/config/eng_control.yaml" command="load"/>
+
+    <!-- load the controllers -->
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+          output="screen" ns="/eng" args="joint_state_controller
+	                                    joint_left_flipper_controller
+	                                    joint_right_flipper_controller
+                                      right
+                                      left
+                                      joint_right_rear_base_link_wheel_controller
+                                      joint_left_rear_base_link_wheel_controller
+                                      joint_left_flipper_wheel_controller
+                                      joint_right_flipper_wheel_controller
+                                      joint_first_part
+                                      joint_cronstein
+                                      joint_second_part
+                                      joint_head
+                                      joint_right_middle_base_link_wheel_controller
+                                      joint_left_middle_base_link_wheel_controller
+                                        "/>
+
+    <!-- convert joint states to TF transforms for rviz, etc joint_left_flipper_controller
+              joint_right_flipper_controller
+              joint_right_front_wheel_controller
+              joint_left_front_wheel_controller
+              joint_left_rear_wheel_controller
+              joint_right_rear_wheel_controller
+              joint_left_flipper_wheel_controller
+              joint_right_flipper_wheel_controller-->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+          respawn="false" output="screen">
+        <remap from="/joint_states" to="/eng/joint_states"/>
+    </node>
+
+    <node name="flipper_sync" pkg="eng_control" type="flipper_sync.py" output="screen"></node>
+    <node name="right_sync" pkg="eng_control" type="right_sync.py" output="screen"></node>
+    <node name="left_sync" pkg="eng_control" type="left_sync.py" output="screen"></node>
+    <node name="myjoy" pkg="eng_control" type="myjoy.py" output="screen"></node>
+    <!--  <node name="empty_talker" pkg="eng_control" type="empty_talker.py" output="screen"> </node> -->
+
+</launch>

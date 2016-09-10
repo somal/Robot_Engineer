@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- continuous-continuous Manipulator -->
+<robot name="eng" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- Constants for robot dimensions -->
+    <xacro:property name="PI" value="3.1415"/>
+    <xacro:property name="width" value="0"/>
+    <!-- Square dimensions (width x width) of beams  0.1-->
+    <xacro:property name="camera_link" value="0.05"/>
+    <xacro:property name="axel_offset" value="0.05"/>
+    <xacro:property name="base_link_size_x" value="2.56"/> <!--was 0.397-->
+    <xacro:property name="base_link_size_y" value="3.85"/>  <!--was 0.1789-->
+    <xacro:property name="base_link_size_z"
+                    value="${2*wheel_radius-ground_clearance}"/>   <!-- old 0.102 is double radius without ground_clearance 0.07683 -->
+    <xacro:property name="big_wheel_radius" value="0.8"/>   <!--was 0.09-->
+    <xacro:property name="small_wheel_radius" value="${big_wheel_radius*0.7}"/>   <!--was 0.09-->
+    <xacro:property name="ground_clearance" value="0.02517"/>   <!--old 0.05 0.02517-->
+    <xacro:property name="wheel_length" value="0.29"/>
+    <xacro:property name="wheel_mass" value="0.1"/>
+    <xacro:include filename="$(find eng_description)/urdf/eng.gazebo"/>
+    <xacro:include filename="$(find eng_description)/urdf/materials.xacro"/>
+
+    <xacro:macro name="collision_macro"
+                 params="mesh_name x y z roll pitch yaw scale">
+        <collision>
+            <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
+            <geometry>
+                <mesh filename="package://eng_description/meshes/${mesh_name}" scale="${scale} ${scale} ${scale}"/>
+            </geometry>
+        </collision>
+    </xacro:macro>
+
+    <xacro:macro name="inertial_macro"
+                 params="x y z roll pitch yaw mass ixx ixy ixz iyy iyz izz">
+        <inertial>
+            <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
+            <mass value="${mass}"/>
+            <inertia ixx="${mass}" ixy="0" ixz="0" iyy="${mass}" iyz="0" izz="${mass}"/>
+        </inertial>
+    </xacro:macro>
+
+    <xacro:macro name="visual_macro" params="x y z roll pitch yaw material scale mesh_name">
+        <visual>
+            <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
+            <geometry>
+                <mesh filename="package://eng_description/meshes/${mesh_name}" scale="${scale} ${scale} ${scale}"/>
+            </geometry>
+            <material name="${material}"/>-->
+        </visual>
+    </xacro:macro>
+
+    <xacro:macro name="link_macro"
+                 params="x y z name_link  mesh_name  mass material scale ixx ixy ixz iyy iyz izz ">
+        <link name="${name_link}">
+            <xacro:visual_macro mesh_name="${mesh_name}" x="${x}" y="${y}" z="${z}" roll="0" pitch="0" yaw="0"
+                                material="${material}" scale="${scale}"/>
+            <xacro:collision_macro mesh_name="${mesh_name}" x="${x}" y="${y}" z="${z}" roll="0" pitch="0" yaw="0"
+                                   scale="${scale}"/>
+            <xacro:inertial_macro x="${x}" y="${y}" z="${z}"
+                                  roll="0" pitch="0" yaw="0" mass="${mass}"
+                                  ixx="${ixx}" ixy="${ixy}" ixz="${ixz}" iyy="${iyy}" iyz="${iyz}" izz="${izz}"/>
+        </link>
+    </xacro:macro>
+
+    <xacro:macro name="joint_macro"
+                 params="joint_name type parent child x y z roll pitch yaw axis">
+        <joint name="${joint_name}" type="${type}">
+            <parent link="${parent}"/>
+            <child link="${child}"/>
+            <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
+            <axis xyz="${axis}"/>
+            <limit lower="${-2*PI}" upper="${2*PI}" effort="1000" velocity="1000"/>
+        </joint>
+
+        <transmission name="tran_${joint_name}">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${joint_name}">
+                <hardwareInterface>EffortJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="motor_${joint_name}">
+                <hardwareInterface>EffortJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+    </xacro:macro>
+
+    <xacro:macro name="wheel"
+                 params="name_link x y z roll pitch yaw radius wheel_length mass parent">
+        <link name="${name_link}">
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <cylinder radius='${radius}' length="${wheel_length}"/>
+                 </geometry>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0"/>
+                <geometry>
+                    <cylinder radius='${radius}' length="${wheel_length}"/>
+                </geometry>
+            </collision>
+            <xacro:inertial_macro x="0" y="0" z="0"
+                                  roll="0" pitch="0" yaw="0" mass="${mass}"
+                                  ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.0" izz="1"/>
+        </link>
+        <joint name="joint_${name_link}" type="continuous">
+            <parent link="${parent}"/>
+            <child link="${name_link}"/>
+            <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
+            <axis xyz="0 0 1"/>
+            <limit velocity="20" effort="100"/>
+        </joint>
+
+        <transmission name="tran_joint_${name_link}">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="joint_${name_link}">
+                <hardwareInterface>VelocityJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="motor_joint_${name_link}">
+                <hardwareInterface>VelocityJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+    </xacro:macro>
+
+    <xacro:link_macro name_link="base_link" x="0" y="0" z="0" mesh_name="Base.dae" mass="10" material="orange"
+                      scale="1" ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.000" izz="1"/>
+
+    <xacro:link_macro name_link="right_flipper" x="0" y="0" z="0" mesh_name="RightFlipper.dae" mass="0.775" material="grey"
+                      scale="1" ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.000" izz="1"/>
+
+    <xacro:joint_macro joint_name="joint_right_flipper" type="continuous" parent="base_link" child="right_flipper"
+                       x="2.2" y="1.86" z="-0.25" roll="${-PI*0.5}" pitch="0" yaw="0" axis="1 0 0" />
+
+    <xacro:link_macro name_link="left_flipper" x="0" y="0" z="0" mesh_name="LeftFlipper.dae" mass="0.775" material="grey"
+                      scale="1" ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.000" izz="1"/>
+    <xacro:joint_macro joint_name="joint_left_flipper" type="continuous" parent="base_link" child="left_flipper"
+                       x="-2.2" y="1.86" z="-0.25" roll="${-PI*0.5}" pitch="0" yaw="0" axis="1 0 0"/>
+
+    <xacro:wheel name_link="right_front_base_link_wheel" x="2.75" y="1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                 radius="${big_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="base_link"/>
+    <xacro:wheel name_link="left_front_base_link_wheel" x="-2.75" y="1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                 radius="${big_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="base_link"/>
+
+    <xacro:wheel name_link="right_rear_base_link_wheel" x="2.75" y="-1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                 radius="${big_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="base_link"/>
+    <xacro:wheel name_link="left_rear_base_link_wheel" x="-2.75" y="-1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                 radius="${big_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="base_link"/>
+
+   <xacro:wheel name_link="right_middle_base_link_wheel" x="2.75" y="0" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                radius="${big_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="base_link"/>
+   <xacro:wheel name_link="left_middle_base_link_wheel" x="-2.75" y="0" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                radius="${big_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="base_link"/>
+
+<!-- y=3.4 x=0.3-->
+    <xacro:wheel name_link="right_flipper_wheel" x="0.5" y="0" z="3.4" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                 radius="${small_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="right_flipper"/>
+    <xacro:wheel name_link="left_flipper_wheel" x="-0.5" y="0" z="3.4" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                 radius="${small_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="left_flipper"/>
+
+    <!-- <xacro:link_macro name_link="cronstein" x="0" y="0" z="0" mesh_name="cronstain3.dae" mass="0.477" material="red"
+                      scale="1" ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.000" izz="1"/>
+    <xacro:joint_macro joint_name="joint_cronstein" type="continuous" parent="base_link" child="cronstein"
+      x="0" y="-1.75" z="0.4" roll="0" pitch="${PI*0.0}" yaw="${PI*0.0}" axis="0 0 1"/>
+
+    <xacro:link_macro name_link="first_part" x="0" y="0" z="0" mesh_name="first_part_of_arm.dae" mass="2.231"
+                      material="red"
+                      scale="0.01" ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.000" izz="1"/>
+    <xacro:joint_macro joint_name="joint_first_part" type="continuous" parent="cronstein" child="first_part"
+                       x="0.3" y="0.7" z="0.5" roll="${PI*0.5}" pitch="${PI}" yaw="${PI}" axis="1 0 0"/>
+
+    <xacro:link_macro name_link="second_part" x="0" y="0" z="0" mesh_name="second_part_of_arm.dae" mass="1.407"
+                      material="red"
+                      scale="0.01" ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.000" izz="1"/>
+    <xacro:joint_macro joint_name="joint_second_part" type="continuous" parent="first_part" child="second_part"
+                       x="-0.7" y="0" z="3" roll="0" pitch="0" yaw="0" axis="1 0 0"/>
+
+    <xacro:link_macro name_link="head" x="0" y="0" z="0" mesh_name="head.dae" mass="4.738" material="red"
+                      scale="0.01" ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.000" izz="1"/>
+    <xacro:joint_macro joint_name="joint_head" type="continuous" parent="second_part" child="head"
+                       x="0.2" y="0" z="-4.2" roll="${PI}" pitch="${PI*0}" yaw="0" axis="1 0 0"/> -->
+</robot>
