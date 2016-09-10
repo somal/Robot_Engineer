@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "rrbot_gazebo")
-set(rrbot_gazebo_MAINTAINER "Dave Coleman <davetcoleman@gmail.com>")
-set(rrbot_gazebo_DEPRECATED "")
-set(rrbot_gazebo_VERSION "0.1.0")
-set(rrbot_gazebo_BUILD_DEPENDS )
-set(rrbot_gazebo_RUN_DEPENDS "gazebo_plugins" "gazebo_ros" "gazebo_ros_control" "rrbot_control" "rrbot_description" "xacro")
-set(rrbot_gazebo_BUILDTOOL_DEPENDS "catkin")
