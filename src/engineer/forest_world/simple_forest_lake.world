@@ -120,7 +120,7 @@
       <uri>model://sun</uri>
     </include>
 
-    <model name="environment_model">
+    <!-- <model name="environment_model">
      <link name="environment_model_link">
        <pose>-0 0 0 0 0 0</pose>
        <collision name="environment_model_collision">
@@ -160,7 +160,31 @@
       </visual>
     </link>
     <static>true</static>
-  </model>
+  </model> -->
+  <model name="environment_model">
+   <link name="environment_model_link">
+     <pose>-0 0 0 0 0 0</pose>
+     <collision name="environment_model_collision">
+       <geometry>
+         <mesh>
+           <uri>file:///home/somal/Robot_Engineer/src/engineer/forest_world/simple_woods_water.stl</uri>
+           <scale>2 2 2 </scale>
+         </mesh>
+       </geometry>
+     </collision>
+     <visual name="environment_model_visual" cast_shadows="true">
+       <geometry>
+         <mesh>
+           <uri>file:///home/somal/Robot_Engineer/src/engineer/forest_world/simple_woods_water.stl</uri>
+           <scale>2 2 2</scale>
+         </mesh>
+
+       </geometry>
+     </visual>
+   </link>
+   <static>true</static>
+ </model>
+
 
     <gui fullscreen='0'>
       <camera name='user_camera'>
