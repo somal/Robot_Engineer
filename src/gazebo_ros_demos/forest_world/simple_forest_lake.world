@@ -126,20 +126,41 @@
        <collision name="environment_model_collision">
          <geometry>
            <box>
-             <size>10 10 5</size>
+             <size>100 100 3</size>
            </box>
          </geometry>
        </collision>
        <visual name="environment_model_visual" cast_shadows="true">
          <geometry>
            <box>
-             <size>10 10 5</size>
+             <size>100 100 3</size>
            </box>
          </geometry>
        </visual>
      </link>
      <static>true</static>
    </model>
+
+   <model name="environment_model2">
+    <link name="environment_model_link2">
+      <pose>-0 0 0 0 0 0</pose>
+      <collision name="environment_model_collision2">
+        <geometry>
+          <box>
+            <size>10 10 7</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="environment_model_visual2" cast_shadows="true">
+        <geometry>
+          <box>
+            <size>10 10 7</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <static>true</static>
+  </model>
 
     <gui fullscreen='0'>
       <camera name='user_camera'>

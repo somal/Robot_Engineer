@@ -72,7 +72,7 @@ rrbot:
      joint: joint_right_middle_base_link_wheel
      pid: {p: 100.0, i: 0.01, d: 10.0, i_clamp: 10.0}
 
-  joint_left_rear_base_link_wheel_controller:
+  joint_left_middle_base_link_wheel_controller:
      type: velocity_controllers/JointVelocityController
      joint: joint_left_middle_base_link_wheel
      pid: {p: 100.0, i: 0.01, d: 10.0, i_clamp: 10.0}

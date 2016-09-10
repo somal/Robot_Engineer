@@ -34,7 +34,7 @@
         <inertial>
             <origin xyz="${x} ${y} ${z}" rpy="${roll} ${pitch} ${yaw}"/>
             <mass value="${mass}"/>
-            <inertia ixx="${ixx}" ixy="${ixy}" ixz="${ixz}" iyy="${iyy}" iyz="${iyz}" izz="${izz}"/>
+            <inertia ixx="${mass}" ixy="0" ixz="0" iyy="${mass}" iyz="0" izz="${mass}"/>
         </inertial>
     </xacro:macro>
 

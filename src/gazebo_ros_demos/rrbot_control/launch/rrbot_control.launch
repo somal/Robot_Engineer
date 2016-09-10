@@ -38,6 +38,7 @@
     <node name="flipper_sync" pkg="rrbot_control" type="flipper_sync.py" output="screen"></node>
     <node name="right_sync" pkg="rrbot_control" type="right_sync.py" output="screen"></node>
     <node name="left_sync" pkg="rrbot_control" type="left_sync.py" output="screen"></node>
+    <node name="myjoy" pkg="rrbot_control" type="myjoy.py" output="screen"></node>
     <!--  <node name="empty_talker" pkg="rrbot_control" type="empty_talker.py" output="screen"> </node> -->
 
 </launch>

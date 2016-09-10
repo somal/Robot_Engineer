@@ -63,6 +63,18 @@
         <material>Gazebo/Grey</material>
     </gazebo>
 
+    <gazebo reference="right_middle_base_link_wheel">
+        <mu1>100</mu1>
+        <mu2>100</mu2>
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
+    <gazebo reference="left_middle_base_link_wheel">
+        <mu1>100</mu1>
+        <mu2>100</mu2>
+        <material>Gazebo/Grey</material>
+    </gazebo>
+
     <!-- <gazebo reference="cronstein">
         <material>Gazebo/Grey</material>
         <selfCollide>true</selfCollide>

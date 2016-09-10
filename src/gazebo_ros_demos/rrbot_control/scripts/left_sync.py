@@ -15,10 +15,10 @@ def callback(data):
     pub.publish(res)
 
     pub = rospy.Publisher('/rrbot/joint_left_rear_base_link_wheel_controller/command', Float64, queue_size=10)
-    pub.publish(res)
+    pub.publish(data)
 
     pub = rospy.Publisher('/rrbot/joint_left_middle_base_link_wheel_controller/command', Float64, queue_size=10)
-    pub.publish(res)
+    pub.publish(data)
 
 
 def listener():
