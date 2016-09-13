@@ -7,9 +7,10 @@
   <arg name="headless" default="false"/>
   <arg name="debug" default="true"/>
 
+
   <!--initial pose -->
-  <arg name="x" default="0"/>
-  <arg name="y" default="20"/>
+  <arg name="x" default="30"/>
+  <arg name="y" default="30"/>
   <arg name="z" default="10"/>
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
@@ -37,6 +38,7 @@
   <!-- Load the URDF into the ROS Parameter Server -->
   <param name="robot_description"
 	 command="$(find xacro)/xacro.py '$(find eng_description)/urdf/eng.xacro'" />
+   <param name="imu_used" value="true"/>
 
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"

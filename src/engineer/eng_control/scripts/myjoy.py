@@ -17,7 +17,7 @@ def callback(data):
     # #    rospy.loginfo(data)
     #
     axes=data.axes
-    # print(axes)
+    print(axes)
 
     avg_speed=MAX_SPEED*axes[4]
     delta_speed=MAX_DELTA_SPEED*axes[3]
@@ -25,13 +25,13 @@ def callback(data):
     left=avg_speed-delta_speed
     flipper=FLIPPER_LIMIT*axes[1]
 
-    pub = rospy.Publisher('/rrbot/right/command', Float64, queue_size=10)
+    pub = rospy.Publisher('/eng/right/command', Float64, queue_size=10)
     pub.publish(right)
 
-    pub = rospy.Publisher('/rrbot/left/command', Float64, queue_size=10)
+    pub = rospy.Publisher('/eng/left/command', Float64, queue_size=10)
     pub.publish(left)
 
-    pub = rospy.Publisher('/rrbot/joint_right_flipper_controller/command', Float64, queue_size=10)
+    pub = rospy.Publisher('/eng/joint_right_flipper_controller/command', Float64, queue_size=10)
     pub.publish(flipper)
     # print(data.axes)
 

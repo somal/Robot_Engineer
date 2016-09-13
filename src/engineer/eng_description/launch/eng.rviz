@@ -65,17 +65,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        cronstein:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        first_part:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        head:
+        imu_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -91,6 +81,11 @@ Visualization Manager:
           Show Trail: false
           Value: true
         left_front_base_link_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_middle_base_link_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -115,12 +110,12 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        right_rear_base_link_wheel:
+        right_middle_base_link_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        second_part:
+        right_rear_base_link_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -201,22 +196,22 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 21.5779
+      Distance: 23.8177
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 2.70394
-        Y: 2.10799
-        Z: 0.252328
+        X: 0.623988
+        Y: 0.567876
+        Z: 0.383853
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.949798
+      Pitch: 0.089797
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.87761
+      Yaw: 1.68717
     Saved: ~
 Window Geometry:
   Camera:
