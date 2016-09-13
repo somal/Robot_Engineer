@@ -39,8 +39,8 @@
     <node name="right_sync" pkg="eng_control" type="right_sync.py" output="screen"></node>
     <node name="left_sync" pkg="eng_control" type="left_sync.py" output="screen"></node>
     <node name="myjoy" pkg="eng_control" type="myjoy.py" output="screen"></node>
-    <node name="go" pkg="eng_control" type="go.py" output="screen"></node>
-    <node name="move_base" pkg="eng_control" type="move_base.py" output="screen"></node>
+    <!-- <node name="go" pkg="eng_control" type="go.py" output="screen"></node> -->
+    <node name="move" pkg="eng_control" type="move_base.py" output="screen"></node>
 
 
 </launch>

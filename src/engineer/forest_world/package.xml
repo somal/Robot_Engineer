@@ -2,7 +2,7 @@
 <package>
   <name>forest_world</name>
   <version>0.0.0</version>
-  <description>The rrbot_control package</description>
+  <description>The eng_control package</description>
 
   <maintainer email="davetcoleman@gmail.com">Dave Coleman</maintainer>
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import roslib; roslib.load_manifest('rrbot_control')
+import roslib; roslib.load_manifest('eng_control')
 import rospy
 from std_msgs.msg import Float64
 def talker():

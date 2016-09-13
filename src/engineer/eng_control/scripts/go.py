@@ -11,13 +11,13 @@ def callback(data):
     right = rospy.Publisher('/eng/right/command', Float64, queue_size=10)
     model_info_prox = rospy.ServiceProxy('/gazebo/get_link_state', GetLinkState)
     rospy.wait_for_service('/gazebo/get_link_state')
-    start_y=model_info_prox( "rrbot::base_link" , "world" ).link_state.pose.position.y
+    start_y=model_info_prox( "eng::base_link" , "world" ).link_state.pose.position.y
     print("start_y")
     print(start_y)
     print(data)
 
-    while start_y-model_info_prox( "rrbot::base_link" , "world" ).link_state.pose.position.y<data.data:
-        # print(model_info_prox( "rrbot::base_link" , "world" ).link_state.pose.position.y)
+    while start_y-model_info_prox( "eng::base_link" , "world" ).link_state.pose.position.y<data.data:
+        # print(model_info_prox( "eng::base_link" , "world" ).link_state.pose.position.y)
         left.publish(10)
         right.publish(10)
 

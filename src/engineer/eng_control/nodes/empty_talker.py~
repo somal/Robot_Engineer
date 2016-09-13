@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import roslib; roslib.load_manifest('rrbot')
+import roslib; roslib.load_manifest('eng')
 import rospy
 from std_msgs.msg import String
 def talker():

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>rrbot_control</name>
+  <name>eng_control</name>
   <version>0.0.0</version>
-  <description>The rrbot_control package</description>
+  <description>The eng_control package</description>
 
   <maintainer email="davetcoleman@gmail.com">Dave Coleman</maintainer>
 

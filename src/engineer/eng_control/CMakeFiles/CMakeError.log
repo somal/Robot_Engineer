@@ -1,23 +1,23 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/somal/catkin_ws/src/gazebo_ros_demos/rrbot_control/CMakeFiles/CMakeTmp
+Change Dir: /home/somal/catkin_ws/src/gazebo_ros_demos/eng_control/CMakeFiles/CMakeTmp
 
 Run Build Command:/usr/bin/make "cmTryCompileExec2841829393/fast"
 /usr/bin/make -f CMakeFiles/cmTryCompileExec2841829393.dir/build.make CMakeFiles/cmTryCompileExec2841829393.dir/build
-make[1]: Вход в каталог `/home/somal/catkin_ws/src/gazebo_ros_demos/rrbot_control/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/somal/catkin_ws/src/gazebo_ros_demos/rrbot_control/CMakeFiles/CMakeTmp/CMakeFiles 1
+make[1]: Вход в каталог `/home/somal/catkin_ws/src/gazebo_ros_demos/eng_control/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/somal/catkin_ws/src/gazebo_ros_demos/eng_control/CMakeFiles/CMakeTmp/CMakeFiles 1
 Building C object CMakeFiles/cmTryCompileExec2841829393.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2841829393.dir/CheckSymbolExists.c.o   -c /home/somal/catkin_ws/src/gazebo_ros_demos/rrbot_control/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2841829393.dir/CheckSymbolExists.c.o   -c /home/somal/catkin_ws/src/gazebo_ros_demos/eng_control/CMakeFiles/CMakeTmp/CheckSymbolExists.c
 Linking C executable cmTryCompileExec2841829393
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2841829393.dir/link.txt --verbose=1
 /usr/bin/cc       CMakeFiles/cmTryCompileExec2841829393.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2841829393 -rdynamic 
 CMakeFiles/cmTryCompileExec2841829393.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-make[1]: Выход из каталога `/home/somal/catkin_ws/src/gazebo_ros_demos/rrbot_control/CMakeFiles/CMakeTmp'
+make[1]: Выход из каталога `/home/somal/catkin_ws/src/gazebo_ros_demos/eng_control/CMakeFiles/CMakeTmp'
 make[1]: *** [cmTryCompileExec2841829393] Ошибка 1
 make: *** [cmTryCompileExec2841829393/fast] Ошибка 2
 
-File /home/somal/catkin_ws/src/gazebo_ros_demos/rrbot_control/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/somal/catkin_ws/src/gazebo_ros_demos/eng_control/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -33,12 +33,12 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/somal/catkin_ws/src/gazebo_ros_demos/rrbot_control/CMakeFiles/CMakeTmp
+Change Dir: /home/somal/catkin_ws/src/gazebo_ros_demos/eng_control/CMakeFiles/CMakeTmp
 
 Run Build Command:/usr/bin/make "cmTryCompileExec2177438992/fast"
 /usr/bin/make -f CMakeFiles/cmTryCompileExec2177438992.dir/build.make CMakeFiles/cmTryCompileExec2177438992.dir/build
-make[1]: Вход в каталог `/home/somal/catkin_ws/src/gazebo_ros_demos/rrbot_control/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/somal/catkin_ws/src/gazebo_ros_demos/rrbot_control/CMakeFiles/CMakeTmp/CMakeFiles 1
+make[1]: Вход в каталог `/home/somal/catkin_ws/src/gazebo_ros_demos/eng_control/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/somal/catkin_ws/src/gazebo_ros_demos/eng_control/CMakeFiles/CMakeTmp/CMakeFiles 1
 Building C object CMakeFiles/cmTryCompileExec2177438992.dir/CheckFunctionExists.c.o
 /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec2177438992.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
 Linking C executable cmTryCompileExec2177438992
@@ -46,7 +46,7 @@ Linking C executable cmTryCompileExec2177438992
 /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec2177438992.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2177438992 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: Выход из каталога `/home/somal/catkin_ws/src/gazebo_ros_demos/rrbot_control/CMakeFiles/CMakeTmp'
+make[1]: Выход из каталога `/home/somal/catkin_ws/src/gazebo_ros_demos/eng_control/CMakeFiles/CMakeTmp'
 make[1]: *** [cmTryCompileExec2177438992] Ошибка 1
 make: *** [cmTryCompileExec2177438992/fast] Ошибка 2
 

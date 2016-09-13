@@ -1,7 +1,7 @@
 prefix=/usr/local
 
-Name: rrbot_control
-Description: Description of rrbot_control
+Name: eng_control
+Description: Description of eng_control
 Version: 0.0.0
 Cflags: 
 Libs: -L/usr/local/lib 

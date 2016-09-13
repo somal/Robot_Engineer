@@ -39,7 +39,7 @@ def callback(data):
 if __name__ == '__main__':
     rospy.init_node('listener', anonymous=True)
     rospy.Subscriber("/joy",Joy, callback)
-    # rospy.Subscriber("/rrbot/joint_left_flipper_controller/state",JointControllerState, flipper_callback)
-#    rospy.Subscriber("/rrbot/joint_left_flipper_controller/state", JointControllerState, callback_for_left_flipper)
+    # rospy.Subscriber("/eng/joint_left_flipper_controller/state",JointControllerState, flipper_callback)
+#    rospy.Subscriber("/eng/joint_left_flipper_controller/state", JointControllerState, callback_for_left_flipper)
     # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()
