@@ -102,7 +102,6 @@
 
       </link>
     </model>
-
   </world>
 </sdf> -->
 
@@ -166,13 +165,8 @@
      <pose>-0 0 0 0 0 0</pose>
      <collision name="environment_model_collision">
        <geometry>
-<<<<<<< HEAD
          <mesh>/
            <uri>file:///home/somal/Robot_Engineer/src/engineer/forest_world/landscape.dae</uri>
-=======
-         <mesh>
-           <uri>file:///home/somal/Robot_Engineer/src/engineer/forest_world/simple_woods_water.stl</uri>
->>>>>>> d6d7d772a8b35c36170e2ee5d75a51279618fe25
            <scale>2 2 2 </scale>
          </mesh>
        </geometry>
@@ -180,11 +174,7 @@
      <visual name="environment_model_visual" cast_shadows="true">
        <geometry>
          <mesh>
-<<<<<<< HEAD
            <uri>file:///home/somal/Robot_Engineer/src/engineer/forest_world/landscape.dae</uri>
-=======
-           <uri>file:///home/somal/Robot_Engineer/src/engineer/forest_world/simple_woods_water.stl</uri>
->>>>>>> d6d7d772a8b35c36170e2ee5d75a51279618fe25
            <scale>2 2 2</scale>
          </mesh>
 
