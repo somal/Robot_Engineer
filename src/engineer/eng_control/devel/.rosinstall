@@ -1,2 +1,0 @@
-- setup-file:
-    local-name: /home/somal/catkin_ws/src/gazebo_ros_demos/rrbot_control/devel/setup.sh
