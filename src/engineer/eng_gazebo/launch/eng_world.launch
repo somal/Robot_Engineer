@@ -14,7 +14,7 @@
   <arg name="z" default="10"/>
   <arg name="roll" default="0"/>
   <arg name="pitch" default="0"/>
-  <arg name="yaw" default="3.14"/>
+  <arg name="yaw" default="0"/>
 
   <include file="$(find forest_world)/forest_world.launch">
     <arg name="debug" value="$(arg debug)" />

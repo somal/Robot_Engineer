@@ -8,7 +8,7 @@ from gazebo_msgs.msg import LinkStates
 import tf
 
 
-MAX_SPEED=10
+MAX_SPEED=5
 MAX_DELTA_SPEED=MAX_SPEED
 
 # Left flipper is a mirror of right flipper, so angles of flippers are inversed (i,-i)
@@ -17,7 +17,7 @@ def callback(data):
     # axes=data.axes
     # print(axes)
 
-    avg_speed=MAX_SPEED*data.linear.y
+    avg_speed=MAX_SPEED*data.linear.x
     delta_speed=MAX_DELTA_SPEED*data.angular.z
     right=avg_speed+delta_speed
     left=avg_speed-delta_speed
@@ -37,11 +37,12 @@ def callback_transformation(data):
     pose=data.pose[index]
 
     br = tf.TransformBroadcaster()
-    br.sendTransform((pose.position.x, pose.position.y, 0),
-                     tf.transformations.quaternion_from_euler(0, 0, pose.orientation.z),
+    br.sendTransform((pose.position.x, pose.position.y, pose.position.z),
+                     #tf.transformations.quaternion_from_euler
+                     (pose.orientation.x, pose.orientation.y, pose.orientation.z, pose.orientation.w),
                      rospy.Time.now(),
                      "base_link",
-                     "map")
+                     "odom")
 
 def listener():
     rospy.init_node('listener', anonymous=True)
