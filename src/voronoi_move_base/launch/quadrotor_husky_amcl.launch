@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+
+<launch>
+   <arg name="name" default="quadrotor"/>
+   <arg name="tf_prefix" default="$(optenv ROS_NAMESPACE)"/>
+   <arg name="x" default="1.0"/>
+   <arg name="y" default="0.0"/>
+   <arg name="z" default="0.3"/>
+
+   <arg name="use_ground_truth_for_tf" default="true"/>
+   <arg name="use_ground_truth_for_control" default="true"/>
+   <arg name="use_pose_estimation" if="$(arg use_ground_truth_for_control)" default="false"/>
+   <arg name="use_pose_estimation" unless="$(arg use_ground_truth_for_control)" default="true"/>
+
+  <arg name="world_name" default="worlds/empty.world"/>
+
+  <arg name="laser_enabled" default="true"/>
+  <arg name="ur5_enabled" default="false"/>
+  <arg name="kinect_enabled" default="false"/>
+
+<!-- Args over -->
+   <!-- load an empty world -->
+   <!--include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(arg world_name)"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+   </include-->
+<!-- Spawn baby Husky ^_^ -->
+  <include file="$(find husky_gazebo)/launch/husky_empty_world.launch">
+    <arg name="world_name" value="$(find husky_gazebo)/worlds/clearpath_playpen.world"/>
+    <!--arg name="world_name" value="$(find fei_gazebo)/worlds/christ.world"/-->
+    <arg name="laser_enabled" value="$(arg laser_enabled)"/>
+    <arg name="ur5_enabled" value="$(arg ur5_enabled)"/>
+    <arg name="kinect_enabled" value="$(arg kinect_enabled)"/>
+  </include>
+
+<!-- Run gmapper  -->
+	<include file="$(find voronoi_move_base)/launch/move_base_voronoi_husky.launch" />
+	<include file="$(find husky_navigation)/launch/amcl.launch" />
+<!-- spawn Quadcopter 1 -->
+<group ns="uav1">
+   <include file="$(find voronoi_move_base)/launch/spawn_quadrotor.launch">
+     <arg name="name" default="quadrotor1"/>
+     <arg name="model" value="$(find voronoi_move_base)/urdf/quadrotor_with_kinect.gazebo.xacro"/>
+     <arg name="tf_prefix" default="uav1"/>
+     <arg name="ns" default="/uav1/uav1/"/>
+     <arg name="x" default="0"/>
+     <arg name="y" default="-1"/>
+     <arg name="z" default="0.3"/>   
+     <arg name="use_ground_truth_for_tf" value="$(arg use_ground_truth_for_tf)"/>
+     <arg name="use_ground_truth_for_control" value="$(arg use_ground_truth_for_control)"/>
+     <arg name="use_pose_estimation" value="$(arg use_pose_estimation)"/>
+   </include>
+</group>   
+
+<group ns="uav2">
+   <include file="$(find voronoi_move_base)/launch/spawn_quadrotor.launch">
+     <arg name="name" default="quadrotor2"/>
+     <arg name="model" value="$(find voronoi_move_base)/urdf/quadrotor_with_kinect.gazebo.xacro"/>
+     <arg name="tf_prefix" default="uav2"/>
+     <arg name="ns" default="/uav2/uav2/"/>
+     <arg name="x" default="0"/>
+     <arg name="y" default="1"/>
+     <arg name="z" default="0.3"/>   
+     <arg name="use_ground_truth_for_tf" value="$(arg use_ground_truth_for_tf)"/>
+     <arg name="use_ground_truth_for_control" value="$(arg use_ground_truth_for_control)"/>
+     <arg name="use_pose_estimation" value="$(arg use_pose_estimation)"/>
+   </include>
+</group>   
+
+   <!-- spawn Husky -->
+<!--group ns="ugv1"-->
+   <!--include file="$(find husky_gazebo)/launch/spawn_husky.launch">
+    <arg name="laser_enabled" value="$(arg laser_enabled)"/>
+    <arg name="ur5_enabled" value="$(arg ur5_enabled)"/>
+    <arg name="kinect_enabled" value="$(arg kinect_enabled)"/>
+  </include-->
+<!--/group-->   
+	<node pkg="topic_tools" type="relay" name="relay_pc1" args="/uav1/camera/depth/points /cameras_joint_depth_points"></node>
+	<node pkg="topic_tools" type="relay" name="relay_pc2" args="/uav2/camera/depth/points /cameras_joint_depth_points"></node>
+	<node pkg="topic_tools" type="relay" name="relay_map" args="/projected_map /map"></node>
+
+	<!-- publish transform from world to odom -->
+	<node pkg="tf" type="static_transform_publisher" name="odom_world_broadcaster" args="0 0 0 0 0 0 world map 100" />
+
+	<!-- Launch octomap -->	
+	<node pkg="octomap_server" type="octomap_server_node" name="octomap_server">
+		<param name="resolution" value="0.1" />
+	
+		<!-- fixed map frame (set to 'map' if SLAM or localization running!) -->
+		<!--param name="frame_id" type="string" value="odom_combined" /-->
+		<param name="frame_id" type="string" value="world" />
+		<param name="base_frame_id" type="string" value="world" />
+	
+		<!-- maximum range to integrate (speedup!) -->
+		<param name="sensor_model/max_range" value="5.0" />
+
+		<!-- let it cut ground from the map -->
+		<param name="filter_ground" value="true" />
+		<!--param name="pointcloud_min" value="1" />
+		<param name="pointcloud_max" value="10" /-->
+	
+		<!-- data source to integrate (PointCloud2) -->
+		<remap from="cloud_in" to="/cameras_joint_depth_points" />
+		<!--<remap from="map" to="projected_map" />-->
+	</node>
+
+</launch>
+

@@ -3,6 +3,7 @@
 <robot name="eng" xmlns:xacro="http://www.ros.org/wiki/xacro">
     <!-- Constants for robot dimensions -->
     <xacro:property name="PI" value="3.1415"/>
+    <xacro:property name="M_PI" value="3.1415"/>
     <xacro:property name="width" value="0"/>
     <!-- Square dimensions (width x width) of beams  0.1-->
     <xacro:property name="camera_link" value="0.05"/>
@@ -14,10 +15,14 @@
     <xacro:property name="big_wheel_radius" value="0.8"/>   <!--was 0.09-->
     <xacro:property name="small_wheel_radius" value="${big_wheel_radius*0.7}"/>   <!--was 0.09-->
     <xacro:property name="ground_clearance" value="0.02517"/>   <!--old 0.05 0.02517-->
-    <xacro:property name="wheel_length" value="0.29"/>
+    <xacro:property name="wheel_length" value="${0.22*scale}"/>
     <xacro:property name="wheel_mass" value="0.1"/>
+    <xacro:property name="scale" value="0.1"/>
+    <xacro:property name="prefix" value="eng"/>
     <xacro:include filename="$(find eng_description)/urdf/eng.gazebo"/>
     <xacro:include filename="$(find eng_description)/urdf/materials.xacro"/>
+    <xacro:include filename="$(find husky_description)/urdf/accessories/sick_lms1xx_mount.urdf.xacro"/>
+
 
     <xacro:macro name="collision_macro"
                  params="mesh_name x y z roll pitch yaw scale">
@@ -49,14 +54,14 @@
     </xacro:macro>
 
     <xacro:macro name="link_macro"
-                 params="x y z name_link  mesh_name  mass material scale ixx ixy ixz iyy iyz izz ">
+                 params="x y z name_link  mesh_name  mass material scale ixx ixy ixz iyy iyz izz roll:=0 pitch:=0 yaw:=0 ">
         <link name="${name_link}">
             <xacro:visual_macro mesh_name="${mesh_name}" x="${x}" y="${y}" z="${z}" roll="0" pitch="0" yaw="0"
                                 material="${material}" scale="${scale}"/>
             <xacro:collision_macro mesh_name="${mesh_name}" x="${x}" y="${y}" z="${z}" roll="0" pitch="0" yaw="0"
                                    scale="${scale}"/>
             <xacro:inertial_macro x="${x}" y="${y}" z="${z}"
-                                  roll="0" pitch="0" yaw="0" mass="${mass}"
+                                  roll="${roll}" pitch="${pitch}" yaw="${yaw}" mass="${mass}"
                                   ixx="${ixx}" ixy="${ixy}" ixz="${ixz}" iyy="${iyy}" iyz="${iyz}" izz="${izz}"/>
         </link>
     </xacro:macro>
@@ -89,13 +94,13 @@
             <visual>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <cylinder radius='${radius}' length="${wheel_length}"/>
+                    <cylinder radius='${radius*scale}' length="${wheel_length*scale}"/>
                  </geometry>
             </visual>
             <collision>
                 <origin xyz="0 0 0" rpy="0 0 0"/>
                 <geometry>
-                    <cylinder radius='${radius}' length="${wheel_length}"/>
+                    <cylinder radius='${radius*scale}' length="${wheel_length*scale}"/>
                 </geometry>
             </collision>
             <xacro:inertial_macro x="0" y="0" z="0"
@@ -122,40 +127,40 @@
         </transmission>
     </xacro:macro>
 
-    <xacro:link_macro name_link="base_link" x="0" y="0" z="0" mesh_name="Base.dae" mass="10" material="orange"
-                      scale="1" ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.000" izz="1"/>
+    <xacro:link_macro name_link="base_link" x="0" y="0" z="0" roll="0" pitch="0" yaw="0" mesh_name="Base2.dae" mass="10" material="orange"
+                      scale="${scale}" ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.000" izz="1"/>
 
-    <xacro:link_macro name_link="right_flipper" x="0" y="0" z="0" mesh_name="RightFlipper.dae" mass="0.775" material="grey"
-                      scale="1" ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.000" izz="1"/>
+    <xacro:link_macro name_link="right_flipper" x="0" y="0" z="0" roll="0" pitch="0" yaw="0" mesh_name="RightFlipper.dae" mass="0.775" material="grey"
+                      scale="${scale}" ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.000" izz="1"/>
 
     <xacro:joint_macro joint_name="joint_right_flipper" type="continuous" parent="base_link" child="right_flipper"
-                       x="2.2" y="1.86" z="-0.25" roll="${-PI*0.5}" pitch="0" yaw="0" axis="1 0 0" />
+                       x="${1.86*scale}" y="${-2.2*scale}" z="${-0.25*scale}" roll="${-PI*0.5}" pitch="0" yaw="${-PI/2}" axis="1 0 0" />
 
-    <xacro:link_macro name_link="left_flipper" x="0" y="0" z="0" mesh_name="LeftFlipper.dae" mass="0.775" material="grey"
-                      scale="1" ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.000" izz="1"/>
+    <xacro:link_macro name_link="left_flipper" x="0" y="0" z="0" roll="0" pitch="0" yaw="0" mesh_name="LeftFlipper.dae" mass="0.775" material="grey"
+                      scale="${scale}" ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.000" izz="1"/>
     <xacro:joint_macro joint_name="joint_left_flipper" type="continuous" parent="base_link" child="left_flipper"
-                       x="-2.2" y="1.86" z="-0.25" roll="${-PI*0.5}" pitch="0" yaw="0" axis="1 0 0"/>
+                       x="${1.86*scale}" y="${2.2*scale}" z="${-0.25*scale}" roll="${-PI*0.5}" pitch="0" yaw="${-PI/2}" axis="1 0 0"/>
 
-    <xacro:wheel name_link="right_front_base_link_wheel" x="2.75" y="1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
-                 radius="${big_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="base_link"/>
-    <xacro:wheel name_link="left_front_base_link_wheel" x="-2.75" y="1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
-                 radius="${big_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="base_link"/>
+    <xacro:wheel name_link="right_front_base_link_wheel" x="${1.86*scale}" y="${-2.75*scale}" z="${-0.25*scale}" roll="0" pitch="${PI*0.5}" yaw="${PI/2}"
+                 radius="${big_wheel_radius}" wheel_length="${wheel_length}" mass="${wheel_mass}" parent="base_link"/>
+    <xacro:wheel name_link="left_front_base_link_wheel" x="${1.86*scale}" y="${2.75*scale}" z="${-0.25*scale}" roll="0" pitch="${PI*0.5}" yaw="${PI/2}"
+                 radius="${big_wheel_radius}" wheel_length="${wheel_length}" mass="${wheel_mass}" parent="base_link"/>
 
-    <xacro:wheel name_link="right_rear_base_link_wheel" x="2.75" y="-1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
-                 radius="${big_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="base_link"/>
-    <xacro:wheel name_link="left_rear_base_link_wheel" x="-2.75" y="-1.86" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
-                 radius="${big_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="base_link"/>
+    <xacro:wheel name_link="right_rear_base_link_wheel" x="${-1.86*scale}" y="${-2.75*scale}" z="${-0.25*scale}" roll="0" pitch="${PI*0.5}" yaw="${PI/2}"
+                 radius="${big_wheel_radius}" wheel_length="${wheel_length}" mass="${wheel_mass}" parent="base_link"/>
+    <xacro:wheel name_link="left_rear_base_link_wheel" x="${-1.86*scale}" y="${2.75*scale}" z="${-0.25*scale}" roll="0" pitch="${PI*0.5}" yaw="${PI/2}"
+                 radius="${big_wheel_radius}" wheel_length="${wheel_length}" mass="${wheel_mass}" parent="base_link"/>
 
-   <xacro:wheel name_link="right_middle_base_link_wheel" x="2.75" y="0" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
-                radius="${big_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="base_link"/>
-   <xacro:wheel name_link="left_middle_base_link_wheel" x="-2.75" y="0" z="-0.25" roll="0" pitch="${PI*0.5}" yaw="${PI}"
-                radius="${big_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="base_link"/>
+   <xacro:wheel name_link="right_middle_base_link_wheel" x="0" y="${-2.75*scale}" z="${-0.25*scale}" roll="0" pitch="${PI*0.5}" yaw="${PI/2}"
+                radius="${big_wheel_radius}" wheel_length="${wheel_length}" mass="${wheel_mass}" parent="base_link"/>
+   <xacro:wheel name_link="left_middle_base_link_wheel" x="0" y="${2.75*scale}" z="${-0.25*scale}" roll="0" pitch="${PI*0.5}" yaw="${PI/2}"
+                radius="${big_wheel_radius}" wheel_length="${wheel_length}" mass="${wheel_mass}" parent="base_link"/>
 
 <!-- y=3.4 x=0.3-->
-    <xacro:wheel name_link="right_flipper_wheel" x="0.5" y="0" z="3.4" roll="0" pitch="${PI*0.5}" yaw="${PI}"
-                 radius="${small_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="right_flipper"/>
-    <xacro:wheel name_link="left_flipper_wheel" x="-0.5" y="0" z="3.4" roll="0" pitch="${PI*0.5}" yaw="${PI}"
-                 radius="${small_wheel_radius}" wheel_length="0.2" mass="${wheel_mass}" parent="left_flipper"/>
+    <xacro:wheel name_link="right_flipper_wheel" x="${0.5*scale}" y="0" z="${3.4*scale}" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                 radius="${small_wheel_radius}" wheel_length="${wheel_length}" mass="${wheel_mass}" parent="right_flipper"/>
+    <xacro:wheel name_link="left_flipper_wheel" x="${-0.5*scale}" y="0" z="${3.4*scale}" roll="0" pitch="${PI*0.5}" yaw="${PI}"
+                 radius="${small_wheel_radius}" wheel_length="${wheel_length}" mass="${wheel_mass}" parent="left_flipper"/>
 
     <!-- <xacro:link_macro name_link="cronstein" x="0" y="0" z="0" mesh_name="cronstain3.dae" mass="0.477" material="red"
                       scale="1" ixx="1" ixy="0.0" ixz="0.0" iyy="1" iyz="0.000" izz="1"/>
@@ -181,7 +186,7 @@
 
 
    <joint name="imu_joint" type="fixed">
-       <axis xyz="1 0 0"/> <!-- 0 1 0 -->
+
        <origin xyz="0 0 0"/>
        <parent link="base_link"/>
        <child link="imu_link"/>
@@ -207,6 +212,17 @@
        </geometry>
      </collision>
    </link>
+
+   <sick_lms1xx_mount prefix="base" topic="scan"/>
+
+   <joint name="laser_mount_joint" type="fixed">
+     <origin xyz="0.0 0.0 ${scale}"
+             rpy="0 0 0" />
+     <parent link="base_link" />
+     <child link="base_laser_mount" />
+   </joint>
+
+
 
 
 </robot>

@@ -8,7 +8,7 @@ from gazebo_msgs.msg import LinkStates
 import tf
 
 
-MAX_SPEED=5
+MAX_SPEED=10
 MAX_DELTA_SPEED=MAX_SPEED
 
 # Left flipper is a mirror of right flipper, so angles of flippers are inversed (i,-i)
@@ -33,6 +33,7 @@ def callback(data):
     pub.publish(flipper)
 
 def callback_transformation(data):
+    # print(data.name)
     index=data.name.index("eng::base_link")
     pose=data.pose[index]
 
