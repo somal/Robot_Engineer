@@ -8,7 +8,7 @@ from gazebo_msgs.msg import LinkStates
 import tf
 
 
-MAX_SPEED=10
+MAX_SPEED=3
 MAX_DELTA_SPEED=MAX_SPEED
 
 # Left flipper is a mirror of right flipper, so angles of flippers are inversed (i,-i)
@@ -21,7 +21,7 @@ def callback(data):
     delta_speed=MAX_DELTA_SPEED*data.angular.z
     right=avg_speed+delta_speed
     left=avg_speed-delta_speed
-    flipper=0.3
+    flipper=-0.1
 
     pub = rospy.Publisher('/eng/right/command', Float64, queue_size=10)
     pub.publish(right)

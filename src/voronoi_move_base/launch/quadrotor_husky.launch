@@ -24,7 +24,8 @@
     <arg name="world_name" value="$(arg world_name)"/>
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
-    <arg name="gui" value="true"/>
+    <ar
+    g name="gui" value="true"/>
     <arg name="headless" value="false"/>
     <arg name="debug" value="false"/>
    </include-->
@@ -194,6 +195,6 @@
 		<!--<remap from="map" to="projected_map" />-->
 	</node>
   <!-- <include file="$(find eng_control)/launch/eng_control.launch"/> -->
-  <!-- <node name="move" pkg="eng_control" type="move_base.py" output="screen"></node> -->
+  <node name="move" pkg="eng_control" type="move_base.py" output="screen"></node>
 
 </launch>

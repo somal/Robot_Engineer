@@ -216,7 +216,7 @@
    <sick_lms1xx_mount prefix="base" topic="scan"/>
 
    <joint name="laser_mount_joint" type="fixed">
-     <origin xyz="0.0 0.0 ${scale}"
+     <origin xyz="0.0 0.0 ${scale*0.3}"
              rpy="0 0 0" />
      <parent link="base_link" />
      <child link="base_laser_mount" />
